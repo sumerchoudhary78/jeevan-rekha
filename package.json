@@ -1,0 +1,15 @@
+{
+  "name": "jeevan-rekha",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI surge call-taker for disaster helplines",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "day1:audio": "node day1/gen-audio.mjs",
+    "day1:test": "node --env-file=.env day1/run.mjs",
+    "day1:test:noisy": "node --env-file=.env day1/run.mjs --set noisy"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+.env
+day1/audio/
+day1/results/
+.DS_Store

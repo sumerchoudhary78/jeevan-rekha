@@ -1,0 +1,153 @@
+{
+  "gazetteers": {
+    "darbhanga": ["Darbhanga", "दरभंगा", "Bahera", "बहेड़ा", "Laheriasarai", "लहेरियासराय", "Benipur", "बेनीपुर", "Kusheshwar Asthan", "कुशेश्वर स्थान", "Shiv Mandir", "शिव मंदिर", "Bagmati", "बागमती"],
+    "supaul": ["Supaul", "सुपौल", "Basantpur", "बसंतपुर", "Bhimnagar", "भीमनगर", "Kosi", "कोसी", "Nirmali", "निर्मली", "Kishanpur", "किशनपुर"],
+    "muzaffarpur": ["Muzaffarpur", "मुजफ्फरपुर", "Aurai", "औराई", "Katra", "कटरा", "Gaighat", "गायघाट", "Panchayat Bhawan", "पंचायत भवन", "Bagmati", "बागमती"],
+    "sitamarhi": ["Sitamarhi", "सीतामढ़ी", "Runnisaidpur", "रुन्नीसैदपुर", "Bajpatti", "बाजपट्टी", "Belsand", "बेलसंड"],
+    "patna": ["Patna", "पटना", "Kankarbagh", "कंकड़बाग", "Rajendra Nagar", "राजेंद्र नगर", "Danapur", "दानापुर", "Diara", "दियारा", "Hanuman Mandir", "हनुमान मंदिर", "Sector 3"],
+    "chennai": ["Chennai", "சென்னை", "Velachery", "வேளச்சேரி", "Vijayanagar", "விஜயநகர்", "Pillaiyar Kovil", "பிள்ளையார் கோவில்", "Tambaram", "தாம்பரம்", "Pallikaranai", "பள்ளிக்கரணை"],
+    "vijayawada": ["Vijayawada", "విజయవాడ", "Singh Nagar", "సింగ్ నగర్", "Dabha Gardens", "డాబా గార్డెన్స్", "Budameru", "బుడమేరు", "Ajit Singh Nagar", "అజిత్ సింగ్ నగర్"]
+  },
+  "cases": [
+    {
+      "id": "01-hi-bahera",
+      "voice": "Lekha",
+      "languageBias": ["Hindi"],
+      "gazetteer": "darbhanga",
+      "text": "हैलो, हैलो, कोई सुन रहा है? हम दरभंगा के बहेड़ा गांव में फंसे हैं, शिव मंदिर के पीछे वाला घर। पानी खिड़की तक आ गया है। घर में पांच लोग हैं, मेरी मां चल नहीं सकती। जल्दी नाव भेजिए।",
+      "expected": {
+        "area": ["bahera", "baheda", "behera", "baheraa"],
+        "landmark": ["shiv", "shiva"],
+        "headcount": [5, 5],
+        "urgency": "critical",
+        "vulnerable": ["elderly", "disabled_or_immobile"]
+      }
+    },
+    {
+      "id": "02-hi-basantpur",
+      "voice": "Lekha",
+      "languageBias": ["Hindi"],
+      "gazetteer": "supaul",
+      "text": "सर, सुपौल ज़िला, बसंतपुर ब्लॉक, भीमनगर के पास वाले सरकारी स्कूल की छत पर हम बारह लोग हैं। चार छोटे बच्चे भी हैं। कोसी का पानी बढ़ता जा रहा है।",
+      "expected": {
+        "area": ["bhimnagar", "bhim nagar", "basantpur"],
+        "landmark": ["school"],
+        "headcount": [12, 12],
+        "urgency": "high",
+        "vulnerable": ["child"]
+      }
+    },
+    {
+      "id": "03-hi-aurai",
+      "voice": "Lekha",
+      "languageBias": ["Hindi"],
+      "gazetteer": "muzaffarpur",
+      "text": "मुजफ्फरपुर, औराई से बोल रहे हैं। पंचायत भवन की छत पर तीस लोग हैं। अभी सब सुरक्षित हैं, पानी नीचे ही है, लेकिन दो दिन से खाना और पीने का पानी खत्म है।",
+      "expected": {
+        "area": ["aurai", "aurayi", "auraai"],
+        "landmark": ["panchayat"],
+        "headcount": [30, 30],
+        "urgency": "medium",
+        "vulnerable": []
+      }
+    },
+    {
+      "id": "04-hi-laheriasarai",
+      "voice": "Lekha",
+      "languageBias": ["Hindi"],
+      "gazetteer": "darbhanga",
+      "text": "मेरा भाई पानी में बह गया! लहेरियासराय पुल के पास, अभी दो मिनट पहले दिख रहा था, अब नहीं दिख रहा। प्लीज़ जल्दी कुछ कीजिए!",
+      "expected": {
+        "area": ["laheriasarai", "laheria sarai", "lahariasarai", "laheriyasarai", "lehriasarai"],
+        "landmark": ["bridge", "pul", "pool"],
+        "headcount": [1, 1],
+        "urgency": "critical",
+        "vulnerable": []
+      }
+    },
+    {
+      "id": "05-hi-runnisaidpur",
+      "voice": "Lekha",
+      "languageBias": ["Hindi"],
+      "gazetteer": "sitamarhi",
+      "text": "सीतामढ़ी के रुन्नीसैदपुर में हमारे घर में तीन लोग फंसे हैं। मेरी पत्नी को प्रसव का दर्द शुरू हो गया है। घर में घुटने तक पानी है और सड़क पूरी डूबी हुई है।",
+      "expected": {
+        "area": ["runnisaidpur", "runni saidpur", "runisaidpur", "runnisaidpur"],
+        "landmark": [],
+        "headcount": [3, 3],
+        "urgency": "critical",
+        "vulnerable": ["pregnant"]
+      }
+    },
+    {
+      "id": "06-hinglish-kankarbagh",
+      "voice": "Lekha",
+      "languageBias": ["Hindi", "English"],
+      "gazetteer": "patna",
+      "text": "Hello, I am calling from Patna, Kankarbagh, Sector 3, near Hanuman Mandir. Ground floor पूरा flooded है, we are four people on the first floor. मेरे father eighty years के हैं, and water is rising very fast. Please send help, जल्दी।",
+      "expected": {
+        "area": ["kankarbagh", "kankar bagh", "kankadbagh"],
+        "landmark": ["hanuman"],
+        "headcount": [4, 4],
+        "urgency": "high",
+        "vulnerable": ["elderly"]
+      }
+    },
+    {
+      "id": "07-hinglish-rajendranagar",
+      "voice": "Lekha",
+      "languageBias": ["Hindi", "English"],
+      "gazetteer": "patna",
+      "text": "भैया, Rajendra Nagar, road number seven पे हम दो लोग हैं, flat के second floor पे। अभी safe हैं, but medicine खत्म हो गई है, मेरे husband की BP की दवाई, और drinking water भी नहीं है।",
+      "expected": {
+        "area": ["rajendra nagar", "rajendranagar"],
+        "landmark": ["road", "7", "seven"],
+        "headcount": [2, 2],
+        "urgency": "medium",
+        "vulnerable": []
+      }
+    },
+    {
+      "id": "08-hinglish-danapur-panic",
+      "voice": "Lekha",
+      "languageBias": ["Hindi", "English"],
+      "gazetteer": "patna",
+      "text": "हां... हां... Danapur, दियारा area... boat भेजो... हमारा पूरा गांव, करीब पचास साठ लोग, एक छत पे... पानी छत तक आ रहा है... बच्चे रो रहे हैं... hello? hello?",
+      "expected": {
+        "area": ["diara", "diyara", "danapur"],
+        "landmark": [],
+        "headcount": [50, 60],
+        "urgency": "critical",
+        "vulnerable": ["child"]
+      }
+    },
+    {
+      "id": "09-ta-velachery",
+      "voice": "Vani",
+      "languageBias": ["Tamil"],
+      "gazetteer": "chennai",
+      "text": "வணக்கம், சென்னை வேளச்சேரி, விஜயநகர், பிள்ளையார் கோவில் அருகில் இருக்கிறோம். எங்கள் வீட்டில் கழுத்து அளவு தண்ணீர். நாங்கள் நான்கு பேர். என் பாட்டியால் நடக்க முடியாது. உடனே படகு அனுப்புங்கள்.",
+      "expected": {
+        "area": ["velachery", "vijayanagar", "vijaya nagar"],
+        "landmark": ["pillaiyar", "pillayar", "ganesh", "vinayagar", "temple", "kovil", "koil"],
+        "headcount": [4, 4],
+        "urgency": "critical",
+        "vulnerable": ["elderly", "disabled_or_immobile"]
+      }
+    },
+    {
+      "id": "10-te-singhnagar",
+      "voice": "Geeta",
+      "languageBias": ["Telugu"],
+      "gazetteer": "vijayawada",
+      "text": "హలో, విజయవాడ సింగ్ నగర్, డాబా గార్డెన్స్ దగ్గర నుంచి మాట్లాడుతున్నాను. మా ఇంట్లో ఆరుగురు ఉన్నాం, ఇద్దరు చిన్న పిల్లలు ఉన్నారు. నీరు పెరుగుతోంది, దయచేసి సహాయం చేయండి.",
+      "expected": {
+        "area": ["singh nagar", "singhnagar", "ajit singh nagar"],
+        "landmark": ["dabha", "daba", "dabba", "garden"],
+        "headcount": [6, 6],
+        "urgency": "high",
+        "vulnerable": ["child"]
+      }
+    }
+  ]
+}
