@@ -1,0 +1,540 @@
+{
+  "darbhanga": {
+    "state": "Bihar",
+    "languageBias": [
+      "Hindi",
+      "English"
+    ],
+    "center": {
+      "lat": 26.0829899,
+      "lon": 86.0324951
+    },
+    "places": [
+      {
+        "name": "Darbhanga",
+        "aliases": [
+          "दरभंगा"
+        ],
+        "kind": "district",
+        "lat": 26.0829899,
+        "lon": 86.0324951,
+        "approximate": false
+      },
+      {
+        "name": "Bahera",
+        "aliases": [
+          "बहेड़ा",
+          "बहेरा",
+          "Baheda",
+          "Behera"
+        ],
+        "kind": "village",
+        "lat": 26.0677516,
+        "lon": 86.1220308,
+        "approximate": false
+      },
+      {
+        "name": "Laheriasarai",
+        "aliases": [
+          "लहेरियासराय",
+          "लहरिया सराय",
+          "Lahariya Sarai",
+          "Laheria Sarai",
+          "Lehriasarai"
+        ],
+        "kind": "locality",
+        "lat": 26.1120951,
+        "lon": 85.9048205,
+        "approximate": false
+      },
+      {
+        "name": "Benipur",
+        "aliases": [
+          "बेनीपुर"
+        ],
+        "kind": "block",
+        "lat": 26.0753546,
+        "lon": 86.1244902,
+        "approximate": false
+      },
+      {
+        "name": "Kusheshwar Asthan",
+        "aliases": [
+          "कुशेश्वर स्थान",
+          "Kusheshwarsthan"
+        ],
+        "kind": "block",
+        "lat": 25.8301358,
+        "lon": 86.2663573,
+        "approximate": false
+      },
+      {
+        "name": "Hayaghat",
+        "aliases": [
+          "हायाघाट"
+        ],
+        "kind": "block",
+        "lat": 26.0369841,
+        "lon": 85.911681,
+        "approximate": false
+      },
+      {
+        "name": "Bahadurpur",
+        "aliases": [
+          "बहादुरपुर"
+        ],
+        "kind": "block",
+        "lat": 26.0908399,
+        "lon": 85.9942704,
+        "approximate": false
+      }
+    ],
+    "landmarks": [
+      "Shiv Mandir",
+      "शिव मंदिर",
+      "Bagmati",
+      "बागमती",
+      "Kamla",
+      "कमला",
+      "Pul",
+      "पुल",
+      "School",
+      "स्कूल"
+    ]
+  },
+  "supaul": {
+    "state": "Bihar",
+    "languageBias": [
+      "Hindi",
+      "English"
+    ],
+    "center": {
+      "lat": 26.2768089,
+      "lon": 86.7959614
+    },
+    "places": [
+      {
+        "name": "Supaul",
+        "aliases": [
+          "सुपौल"
+        ],
+        "kind": "district",
+        "lat": 26.2768089,
+        "lon": 86.7959614,
+        "approximate": false
+      },
+      {
+        "name": "Basantpur",
+        "aliases": [
+          "बसंतपुर"
+        ],
+        "kind": "block",
+        "lat": 26.4719652,
+        "lon": 86.9763441,
+        "approximate": false
+      },
+      {
+        "name": "Bhimnagar",
+        "aliases": [
+          "भीमनगर",
+          "Bhim Nagar"
+        ],
+        "kind": "village",
+        "lat": 26.5129021,
+        "lon": 86.9616386,
+        "approximate": false
+      },
+      {
+        "name": "Nirmali",
+        "aliases": [
+          "निर्मली"
+        ],
+        "kind": "town",
+        "lat": 26.3789228,
+        "lon": 86.7324221,
+        "approximate": false
+      },
+      {
+        "name": "Kishanpur",
+        "aliases": [
+          "किशनपुर"
+        ],
+        "kind": "block",
+        "lat": 26.2367273,
+        "lon": 86.6793968,
+        "approximate": false
+      }
+    ],
+    "landmarks": [
+      "Kosi",
+      "कोसी",
+      "Barrage",
+      "बराज",
+      "School",
+      "स्कूल"
+    ]
+  },
+  "muzaffarpur": {
+    "state": "Bihar",
+    "languageBias": [
+      "Hindi",
+      "English"
+    ],
+    "center": {
+      "lat": 26.1482548,
+      "lon": 85.3316097
+    },
+    "places": [
+      {
+        "name": "Muzaffarpur",
+        "aliases": [
+          "मुजफ्फरपुर"
+        ],
+        "kind": "district",
+        "lat": 26.1482548,
+        "lon": 85.3316097,
+        "approximate": false
+      },
+      {
+        "name": "Aurai",
+        "aliases": [
+          "औराई",
+          "Auraai"
+        ],
+        "kind": "block",
+        "lat": 26.3172692,
+        "lon": 85.5636227,
+        "approximate": false
+      },
+      {
+        "name": "Katra",
+        "aliases": [
+          "कटरा"
+        ],
+        "kind": "block",
+        "lat": 26.2430103,
+        "lon": 85.6505849,
+        "approximate": false
+      },
+      {
+        "name": "Gaighat",
+        "aliases": [
+          "गायघाट"
+        ],
+        "kind": "block",
+        "lat": 26.1419165,
+        "lon": 85.6535113,
+        "approximate": false
+      }
+    ],
+    "landmarks": [
+      "Panchayat Bhawan",
+      "पंचायत भवन",
+      "Bagmati",
+      "बागमती"
+    ]
+  },
+  "sitamarhi": {
+    "state": "Bihar",
+    "languageBias": [
+      "Hindi",
+      "English"
+    ],
+    "center": {
+      "lat": 26.5942841,
+      "lon": 85.500428
+    },
+    "places": [
+      {
+        "name": "Sitamarhi",
+        "aliases": [
+          "सीतामढ़ी"
+        ],
+        "kind": "district",
+        "lat": 26.5942841,
+        "lon": 85.500428,
+        "approximate": false
+      },
+      {
+        "name": "Runnisaidpur",
+        "aliases": [
+          "रुन्नीसैदपुर",
+          "Runni Saidpur"
+        ],
+        "kind": "block",
+        "lat": 26.5942841,
+        "lon": 85.500428,
+        "approximate": true
+      },
+      {
+        "name": "Bajpatti",
+        "aliases": [
+          "बाजपट्टी"
+        ],
+        "kind": "block",
+        "lat": 26.5381082,
+        "lon": 85.6470735,
+        "approximate": false
+      },
+      {
+        "name": "Belsand",
+        "aliases": [
+          "बेलसंड"
+        ],
+        "kind": "block",
+        "lat": 26.4322849,
+        "lon": 85.394562,
+        "approximate": false
+      }
+    ],
+    "landmarks": []
+  },
+  "patna": {
+    "state": "Bihar",
+    "languageBias": [
+      "Hindi",
+      "English"
+    ],
+    "center": {
+      "lat": 25.6093239,
+      "lon": 85.1235252
+    },
+    "places": [
+      {
+        "name": "Patna",
+        "aliases": [
+          "पटना"
+        ],
+        "kind": "district",
+        "lat": 25.6093239,
+        "lon": 85.1235252,
+        "approximate": false
+      },
+      {
+        "name": "Kankarbagh",
+        "aliases": [
+          "कंकड़बाग",
+          "Kankar Bagh"
+        ],
+        "kind": "locality",
+        "lat": 25.6018853,
+        "lon": 85.1666591,
+        "approximate": false
+      },
+      {
+        "name": "Rajendra Nagar",
+        "aliases": [
+          "राजेंद्र नगर",
+          "Rajendranagar"
+        ],
+        "kind": "locality",
+        "lat": 25.6005216,
+        "lon": 85.1640085,
+        "approximate": false
+      },
+      {
+        "name": "Danapur",
+        "aliases": [
+          "दानापुर"
+        ],
+        "kind": "town",
+        "lat": 25.6358901,
+        "lon": 85.0474045,
+        "approximate": false
+      },
+      {
+        "name": "Danapur Diara",
+        "aliases": [
+          "दियारा",
+          "Diara",
+          "Diyara"
+        ],
+        "kind": "village",
+        "near": "Danapur",
+        "lat": 25.6093239,
+        "lon": 85.1235252,
+        "approximate": true
+      },
+      {
+        "name": "Boring Road",
+        "aliases": [
+          "बोरिंग रोड"
+        ],
+        "kind": "locality",
+        "lat": 25.611005,
+        "lon": 85.1208328,
+        "approximate": false
+      },
+      {
+        "name": "Patliputra Colony",
+        "aliases": [
+          "पाटलिपुत्र कॉलोनी"
+        ],
+        "kind": "locality",
+        "lat": 25.6291729,
+        "lon": 85.1095929,
+        "approximate": false
+      },
+      {
+        "name": "Digha",
+        "aliases": [
+          "दीघा"
+        ],
+        "kind": "locality",
+        "lat": 25.6442176,
+        "lon": 85.0907338,
+        "approximate": false
+      }
+    ],
+    "landmarks": [
+      "Hanuman Mandir",
+      "हनुमान मंदिर",
+      "Sector 3",
+      "Road Number 7",
+      "Gandhi Maidan",
+      "गांधी मैदान"
+    ]
+  },
+  "chennai": {
+    "state": "Tamil Nadu",
+    "languageBias": [
+      "Tamil",
+      "English"
+    ],
+    "center": {
+      "lat": 13.0800915,
+      "lon": 80.2807978
+    },
+    "places": [
+      {
+        "name": "Chennai",
+        "aliases": [
+          "சென்னை"
+        ],
+        "kind": "district",
+        "lat": 13.0800915,
+        "lon": 80.2807978,
+        "approximate": false
+      },
+      {
+        "name": "Velachery",
+        "aliases": [
+          "வேளச்சேரி"
+        ],
+        "kind": "locality",
+        "lat": 12.9772611,
+        "lon": 80.2209183,
+        "approximate": false
+      },
+      {
+        "name": "Vijayanagar",
+        "aliases": [
+          "விஜயநகர்",
+          "Vijaya Nagar"
+        ],
+        "kind": "locality",
+        "near": "Velachery",
+        "lat": 12.9752323,
+        "lon": 80.2195795,
+        "approximate": false
+      },
+      {
+        "name": "Tambaram",
+        "aliases": [
+          "தாம்பரம்"
+        ],
+        "kind": "locality",
+        "lat": 12.9257923,
+        "lon": 80.1179194,
+        "approximate": false
+      },
+      {
+        "name": "Pallikaranai",
+        "aliases": [
+          "பள்ளிக்கரணை"
+        ],
+        "kind": "locality",
+        "lat": 12.9304748,
+        "lon": 80.2077692,
+        "approximate": false
+      },
+      {
+        "name": "Mudichur",
+        "aliases": [
+          "முடிச்சூர்"
+        ],
+        "kind": "locality",
+        "lat": 12.9149849,
+        "lon": 80.0688419,
+        "approximate": false
+      }
+    ],
+    "landmarks": [
+      "Pillaiyar Kovil",
+      "பிள்ளையார் கோவில்",
+      "Adyar",
+      "அடையாறு"
+    ]
+  },
+  "vijayawada": {
+    "state": "Andhra Pradesh",
+    "languageBias": [
+      "Telugu",
+      "English"
+    ],
+    "center": {
+      "lat": 16.5115306,
+      "lon": 80.6160469
+    },
+    "places": [
+      {
+        "name": "Vijayawada",
+        "aliases": [
+          "విజయవాడ"
+        ],
+        "kind": "district",
+        "lat": 16.5115306,
+        "lon": 80.6160469,
+        "approximate": false
+      },
+      {
+        "name": "Singh Nagar",
+        "aliases": [
+          "సింగ్ నగర్",
+          "Ajit Singh Nagar",
+          "అజిత్ సింగ్ నగర్",
+          "Singhnagar"
+        ],
+        "kind": "locality",
+        "lat": 16.5394512,
+        "lon": 80.6404977,
+        "approximate": false
+      },
+      {
+        "name": "Dabha Gardens",
+        "aliases": [
+          "డాబా గార్డెన్స్",
+          "Daba Gardens"
+        ],
+        "kind": "locality",
+        "lat": 16.5115306,
+        "lon": 80.6160469,
+        "approximate": true
+      },
+      {
+        "name": "Payakapuram",
+        "aliases": [
+          "పాయకాపురం"
+        ],
+        "kind": "locality",
+        "lat": 16.5489197,
+        "lon": 80.6496014,
+        "approximate": false
+      }
+    ],
+    "landmarks": [
+      "Budameru",
+      "బుడమేరు"
+    ]
+  }
+}

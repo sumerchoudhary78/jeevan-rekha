@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeevan Rekha</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+    h1 { font-size: clamp(30px, 5vw, 44px); letter-spacing: -0.02em; margin: 18px 0 8px; line-height: 1.1; }
+    .lead { font-size: 18px; color: var(--ink-2); max-width: 680px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 32px 0; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); text-decoration: none; color: inherit; display: block; }
+    .card:hover { border-color: var(--brand); }
+    .card h2 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--ink-2); font-size: 14px; }
+    ol { color: var(--ink-2); padding-left: 20px; }
+    ol li { margin: 6px 0; }
+    .note { font-size: 13px; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 32px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand"><span class="brand-mark">ज</span> Jeevan Rekha</div>
+    <h1>When the flood helpline is busy, an AI answers.</h1>
+    <p class="lead">In a flood, disaster helplines are flooded too. Jeevan Rekha takes overflow calls in Hindi, Tamil, Telugu and English, asks only what a rescue boat needs, reads numbers back to avoid fatal mishearings, merges duplicate reports and hands human dispatchers a ranked queue.</p>
+    <div class="cards">
+      <a class="card" href="/caller"><h2>📞 Call the helpline</h2><p>Talk to the AI call-taker from your browser, as a person stranded by a flood would.</p></a>
+      <a class="card" href="/control"><h2>🗺 Control room</h2><p>Watch calls being answered live, cases merging, and the rescue queue reprioritising. Includes a flood-night simulation.</p></a>
+    </div>
+    <h2 style="font-size:18px">How it works</h2>
+    <ol>
+      <li>Caller audio streams to <b>Muse Voice Transcribe</b>, biased with the district's village and landmark names, which is what makes noisy phone audio usable.</li>
+      <li><b>Muse Spark</b> runs the conversation: one question at a time, in the caller's language, until location, confirmed headcount and vulnerable people are known.</li>
+      <li>Each report becomes a case. Muse Spark judges whether it duplicates an open case nearby (same people, same building) and merges it, never lowering urgency or headcount.</li>
+      <li>Cases are ranked by urgency, vulnerable people, headcount and waiting time. Humans assign boats; the AI never refuses or deprioritises anyone.</li>
+    </ol>
+    <p class="note">Built for the Meta Global AI Developer Hackathon 2026. Demo data only: scripted calls, synthetic voices, no real helpline is connected.</p>
+  </main>
+</body>
+</html>

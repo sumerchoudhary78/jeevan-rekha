@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeevan Rekha · Control Room</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    body { display: flex; flex-direction: column; height: 100vh; }
+    header {
+      display: flex; align-items: center; gap: 16px; padding: 12px 18px; background: var(--panel);
+      border-bottom: 1px solid var(--line); flex-wrap: wrap;
+    }
+    .stats { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+    .stat { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 4px 10px; font-size: 12px; color: var(--ink-2); }
+    .stat b { display: block; font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .actions { display: flex; gap: 8px; }
+    .grid { flex: 1; display: grid; grid-template-columns: 340px 1fr 400px; min-height: 0; }
+    .col { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--line); background: var(--panel); }
+    .col:last-child { border-right: 0; }
+    .col h2 { margin: 0; padding: 12px 16px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; }
+    .scroll { overflow-y: auto; flex: 1; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+    #map { height: 100%; width: 100%; }
+    .call { border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--panel-2); font-size: 13px; }
+    .call.live { border-color: var(--brand); }
+    .call .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 6px; }
+    .call .lines { display: flex; flex-direction: column; gap: 4px; max-height: 150px; overflow-y: auto; }
+    .call .line { padding: 4px 8px; border-radius: 8px; }
+    .call .line.agent { background: var(--agent); }
+    .call .line.caller { background: var(--caller); }
+    .call .line.partial { opacity: 0.6; font-style: italic; }
+    .call .outcome { margin-top: 6px; font-size: 12px; color: var(--ink-2); }
+    .case { border: 1px solid var(--line); border-left: 4px solid var(--low); border-radius: 12px; padding: 10px 12px; background: var(--panel); cursor: pointer; }
+    .case.critical { border-left-color: var(--critical); }
+    .case.high { border-left-color: var(--high); }
+    .case.medium { border-left-color: var(--medium); }
+    .case.assigned { opacity: 0.65; }
+    .case.flash { animation: flash 1.2s; }
+    @keyframes flash { from { background: var(--agent); } }
+    .case .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .case .where { font-weight: 600; margin: 4px 0 2px; }
+    .case .facts { font-size: 13px; color: var(--ink-2); }
+    .case .badges { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+    .case .btns { display: flex; gap: 6px; margin-top: 8px; }
+    .case .btns button { padding: 4px 10px; font-size: 12px; }
+    .case details { margin-top: 6px; font-size: 12px; color: var(--ink-2); }
+    .case details pre { white-space: pre-wrap; font-family: inherit; margin: 4px 0; background: var(--panel-2); padding: 6px; border-radius: 6px; }
+    .prio { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 18px; }
+    .empty { color: var(--ink-3); font-size: 13px; text-align: center; padding: 30px 10px; }
+    @media (max-width: 1100px) {
+      body { height: auto; }
+      .grid { grid-template-columns: 1fr; }
+      .col { border-right: 0; border-bottom: 1px solid var(--line); max-height: none; }
+      #mapCol { height: 420px; }
+      .scroll { max-height: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="brand-mark">ज</span> Jeevan Rekha <span class="muted" style="font-weight:400">· Control room</span></div>
+    <div class="stats">
+      <div class="stat"><b id="sCalls">0</b>calls answered by AI</div>
+      <div class="stat"><b id="sLive">0</b>live now</div>
+      <div class="stat"><b id="sOpen">0</b>open cases</div>
+      <div class="stat"><b id="sPeople">0</b>people awaiting rescue</div>
+      <div class="stat"><b id="sMerged">0</b>duplicate reports merged</div>
+    </div>
+    <div class="actions">
+      <a href="/caller" target="_blank"><button>Open caller phone ↗</button></a>
+      <button class="primary" id="surgeBtn">Simulate flood night</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </header>
+  <div class="grid">
+    <section class="col">
+      <h2>AI call-takers <span id="liveLabel"></span></h2>
+      <div class="scroll" id="calls"><div class="empty">Overflow calls appear here as the AI answers them.</div></div>
+    </section>
+    <section class="col" id="mapCol"><div id="map"></div></section>
+    <section class="col">
+      <h2>Rescue queue <span>by priority</span></h2>
+      <div class="scroll" id="queue"><div class="empty">No open cases.</div></div>
+    </section>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/control.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "darbhanga": {
+    "state": "Bihar",
+    "languageBias": ["Hindi", "English"],
+    "places": [
+      { "name": "Darbhanga", "aliases": ["दरभंगा"], "kind": "district" },
+      { "name": "Bahera", "aliases": ["बहेड़ा", "बहेरा", "Baheda", "Behera"], "kind": "village" },
+      { "name": "Laheriasarai", "aliases": ["लहेरियासराय", "लहरिया सराय", "Lahariya Sarai", "Laheria Sarai", "Lehriasarai"], "kind": "locality" },
+      { "name": "Benipur", "aliases": ["बेनीपुर"], "kind": "block" },
+      { "name": "Kusheshwar Asthan", "aliases": ["कुशेश्वर स्थान", "Kusheshwarsthan"], "kind": "block" },
+      { "name": "Hayaghat", "aliases": ["हायाघाट"], "kind": "block" },
+      { "name": "Bahadurpur", "aliases": ["बहादुरपुर"], "kind": "block" }
+    ],
+    "landmarks": ["Shiv Mandir", "शिव मंदिर", "Bagmati", "बागमती", "Kamla", "कमला", "Pul", "पुल", "School", "स्कूल"]
+  },
+  "supaul": {
+    "state": "Bihar",
+    "languageBias": ["Hindi", "English"],
+    "places": [
+      { "name": "Supaul", "aliases": ["सुपौल"], "kind": "district" },
+      { "name": "Basantpur", "aliases": ["बसंतपुर"], "kind": "block" },
+      { "name": "Bhimnagar", "aliases": ["भीमनगर", "Bhim Nagar"], "kind": "village" },
+      { "name": "Nirmali", "aliases": ["निर्मली"], "kind": "town" },
+      { "name": "Kishanpur", "aliases": ["किशनपुर"], "kind": "block" }
+    ],
+    "landmarks": ["Kosi", "कोसी", "Barrage", "बराज", "School", "स्कूल"]
+  },
+  "muzaffarpur": {
+    "state": "Bihar",
+    "languageBias": ["Hindi", "English"],
+    "places": [
+      { "name": "Muzaffarpur", "aliases": ["मुजफ्फरपुर"], "kind": "district" },
+      { "name": "Aurai", "aliases": ["औराई", "Auraai"], "kind": "block" },
+      { "name": "Katra", "aliases": ["कटरा"], "kind": "block" },
+      { "name": "Gaighat", "aliases": ["गायघाट"], "kind": "block" }
+    ],
+    "landmarks": ["Panchayat Bhawan", "पंचायत भवन", "Bagmati", "बागमती"]
+  },
+  "sitamarhi": {
+    "state": "Bihar",
+    "languageBias": ["Hindi", "English"],
+    "places": [
+      { "name": "Sitamarhi", "aliases": ["सीतामढ़ी"], "kind": "district" },
+      { "name": "Runnisaidpur", "aliases": ["रुन्नीसैदपुर", "Runni Saidpur"], "kind": "block" },
+      { "name": "Bajpatti", "aliases": ["बाजपट्टी"], "kind": "block" },
+      { "name": "Belsand", "aliases": ["बेलसंड"], "kind": "block" }
+    ],
+    "landmarks": []
+  },
+  "patna": {
+    "state": "Bihar",
+    "languageBias": ["Hindi", "English"],
+    "places": [
+      { "name": "Patna", "aliases": ["पटना"], "kind": "district" },
+      { "name": "Kankarbagh", "aliases": ["कंकड़बाग", "Kankar Bagh"], "kind": "locality" },
+      { "name": "Rajendra Nagar", "aliases": ["राजेंद्र नगर", "Rajendranagar"], "kind": "locality" },
+      { "name": "Danapur", "aliases": ["दानापुर"], "kind": "town" },
+      { "name": "Danapur Diara", "aliases": ["दियारा", "Diara", "Diyara"], "kind": "village", "near": "Danapur" },
+      { "name": "Boring Road", "aliases": ["बोरिंग रोड"], "kind": "locality" },
+      { "name": "Patliputra Colony", "aliases": ["पाटलिपुत्र कॉलोनी"], "kind": "locality" },
+      { "name": "Digha", "aliases": ["दीघा"], "kind": "locality" }
+    ],
+    "landmarks": ["Hanuman Mandir", "हनुमान मंदिर", "Sector 3", "Road Number 7", "Gandhi Maidan", "गांधी मैदान"]
+  },
+  "chennai": {
+    "state": "Tamil Nadu",
+    "languageBias": ["Tamil", "English"],
+    "places": [
+      { "name": "Chennai", "aliases": ["சென்னை"], "kind": "district" },
+      { "name": "Velachery", "aliases": ["வேளச்சேரி"], "kind": "locality" },
+      { "name": "Vijayanagar", "aliases": ["விஜயநகர்", "Vijaya Nagar"], "kind": "locality", "near": "Velachery" },
+      { "name": "Tambaram", "aliases": ["தாம்பரம்"], "kind": "locality" },
+      { "name": "Pallikaranai", "aliases": ["பள்ளிக்கரணை"], "kind": "locality" },
+      { "name": "Mudichur", "aliases": ["முடிச்சூர்"], "kind": "locality" }
+    ],
+    "landmarks": ["Pillaiyar Kovil", "பிள்ளையார் கோவில்", "Adyar", "அடையாறு"]
+  },
+  "vijayawada": {
+    "state": "Andhra Pradesh",
+    "languageBias": ["Telugu", "English"],
+    "places": [
+      { "name": "Vijayawada", "aliases": ["విజయవాడ"], "kind": "district" },
+      { "name": "Singh Nagar", "aliases": ["సింగ్ నగర్", "Ajit Singh Nagar", "అజిత్ సింగ్ నగర్", "Singhnagar"], "kind": "locality" },
+      { "name": "Dabha Gardens", "aliases": ["డాబా గార్డెన్స్", "Daba Gardens"], "kind": "locality" },
+      { "name": "Payakapuram", "aliases": ["పాయకాపురం"], "kind": "locality" }
+    ],
+    "landmarks": ["Budameru", "బుడమేరు"]
+  }
+}

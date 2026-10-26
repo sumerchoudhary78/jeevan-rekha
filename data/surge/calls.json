@@ -1,0 +1,29 @@
+{
+  "note": "Scripted flood-night calls. Calls sharing a `group` describe the same people and should merge into one case; different groups must stay separate.",
+  "calls": [
+    { "id": "s01", "group": "bahera-shiv", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "हैलो! दरभंगा, बहेड़ा गांव, शिव मंदिर के पीछे वाला घर। हम पांच लोग हैं, पानी खिड़की तक आ गया है, मेरी मां चल नहीं सकती।" },
+    { "id": "s02", "group": "patna-kankarbagh", "district": "patna", "voice": "Rishi", "lang": "en", "text": "Hello, this is Kankarbagh Sector 3 in Patna, near the Hanuman Mandir. Ground floor is fully flooded. We are four people on the first floor, my father is eighty years old. Water is rising fast." },
+    { "id": "s03", "group": "laheriasarai-missing", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "मेरा भाई पानी में बह गया! लहेरियासराय पुल के पास, अभी दो मिनट पहले दिख रहा था। जल्दी कुछ कीजिए!" },
+    { "id": "s04", "group": "diara-roof", "district": "patna", "voice": "Lekha", "lang": "hi", "text": "दानापुर दियारा से बोल रहे हैं। पूरा गांव एक छत पर है, करीब पचास साठ लोग, पानी छत तक आ रहा है, बच्चे रो रहे हैं।" },
+    { "id": "s05", "group": "bahera-shiv", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "मैं बहेड़ा से बोल रहा हूं, शिव मंदिर के पीछे रामबाबू जी के घर में लोग फंसे हैं, उनकी बूढ़ी मां भी है। पानी बहुत ऊपर है।" },
+    { "id": "s06", "group": "bhimnagar-school", "district": "supaul", "voice": "Lekha", "lang": "hi", "text": "सुपौल, भीमनगर के सरकारी स्कूल की छत पर हम बारह लोग हैं, चार छोटे बच्चे हैं। कोसी का पानी बढ़ रहा है।" },
+    { "id": "s07", "group": "rajendra-nagar", "district": "patna", "voice": "Tara", "lang": "en", "text": "Hi, Rajendra Nagar, road number seven, Patna. Two of us on the second floor, we are safe for now but we have run out of drinking water and my husband's blood pressure medicine." },
+    { "id": "s08", "group": "velachery", "district": "chennai", "voice": "Vani", "lang": "ta", "text": "சென்னை வேளச்சேரி, விஜயநகர், பிள்ளையார் கோவில் அருகில். வீட்டில் கழுத்து அளவு தண்ணீர். நாங்கள் நான்கு பேர், என் பாட்டியால் நடக்க முடியாது." },
+    { "id": "s09", "group": "bahera-school", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "बहेड़ा गांव में स्कूल के पास वाले घर में हम तीन लोग हैं। पानी घुटने तक है, अभी ठीक हैं, लेकिन खाना खत्म है।" },
+    { "id": "s10", "group": "singh-nagar", "district": "vijayawada", "voice": "Geeta", "lang": "te", "text": "విజయవాడ సింగ్ నగర్, డాబా గార్డెన్స్ దగ్గర. మా ఇంట్లో ఆరుగురు ఉన్నాం, ఇద్దరు చిన్న పిల్లలు. నీరు పెరుగుతోంది." },
+    { "id": "s11", "group": "diara-roof", "district": "patna", "voice": "Aman", "lang": "en", "text": "Sir, my whole village in Danapur Diara is stuck on one roof, around sixty people. My mother is there. The water is almost at the roof. Please send boats." },
+    { "id": "s12", "group": "aurai-panchayat", "district": "muzaffarpur", "voice": "Lekha", "lang": "hi", "text": "मुजफ्फरपुर, औराई, पंचायत भवन की छत पर तीस लोग हैं। सब सुरक्षित हैं पर दो दिन से खाना और पानी नहीं है।" },
+    { "id": "s13", "group": "runnisaidpur-labour", "district": "sitamarhi", "voice": "Lekha", "lang": "hi", "text": "सीतामढ़ी रुन्नीसैदपुर, मेरी पत्नी को प्रसव का दर्द शुरू हो गया है। घर में तीन लोग हैं, घुटने तक पानी है।" },
+    { "id": "s14", "group": "patna-kankarbagh", "district": "patna", "voice": "Lekha", "lang": "hi", "text": "कंकड़बाग सेक्टर तीन, हनुमान मंदिर के पास, शर्मा जी के घर में चार लोग फंसे हैं। उनके पिताजी अस्सी साल के हैं।" },
+    { "id": "s15", "group": "benipur-family", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "बेनीपुर ब्लॉक, बागमती के किनारे, हम सात लोग हैं, एक बच्चा दो महीने का है। पानी कमर तक है।" },
+    { "id": "s16", "group": "tambaram", "district": "chennai", "voice": "Vani", "lang": "ta", "text": "தாம்பரம், முடிச்சூர் சாலை அருகில். நாங்கள் இரண்டு பேர் மாடியில் பாதுகாப்பாக இருக்கிறோம், குடிநீர் தேவை." },
+    { "id": "s17", "group": "bhimnagar-school", "district": "supaul", "voice": "Rishi", "lang": "en", "text": "I am calling for my family in Bhimnagar, Supaul. They are on the roof of the government school, twelve people with small children. The Kosi water keeps rising." },
+    { "id": "s18", "group": "digha", "district": "patna", "voice": "Tara", "lang": "en", "text": "Digha, Patna, near the ghat. One elderly man is alone on the ground floor and cannot climb the stairs. Water is at knee level and rising." },
+    { "id": "s19", "group": "kusheshwar-boat", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "कुशेश्वर स्थान से, हमारी नाव पलट गई, दो लोग पानी में हैं, पेड़ पकड़े हुए हैं!" },
+    { "id": "s20", "group": "bahera-shiv", "district": "darbhanga", "voice": "Aman", "lang": "en", "text": "I am calling from Delhi. My family is in Bahera village, Darbhanga, house behind the Shiv temple. Five people, my grandmother cannot walk. Please help them." },
+    { "id": "s21", "group": "payakapuram", "district": "vijayawada", "voice": "Geeta", "lang": "te", "text": "విజయవాడ పాయకాపురం. మేము పది మంది మేడ మీద ఉన్నాం, సురక్షితంగా ఉన్నాం కానీ ఆహారం లేదు." },
+    { "id": "s22", "group": "kishanpur", "district": "supaul", "voice": "Lekha", "lang": "hi", "text": "किशनपुर, सुपौल। एक गर्भवती महिला और दो बुजुर्ग फंसे हैं, पानी तेजी से बढ़ रहा है।" },
+    { "id": "s23", "group": "boring-road", "district": "patna", "voice": "Rishi", "lang": "en", "text": "Boring Road, Patna, near the petrol pump. Our basement is flooded, everyone is upstairs and safe. Just reporting it." },
+    { "id": "s24", "group": "hayaghat-roof", "district": "darbhanga", "voice": "Lekha", "lang": "hi", "text": "हायाघाट में हम पंद्रह लोग एक मकान की छत पर हैं, पानी छाती तक है नीचे, दो लोग बीमार हैं।" }
+  ]
+}

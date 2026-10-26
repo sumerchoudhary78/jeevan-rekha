@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeevan Rekha · Caller</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body { display: grid; place-items: start center; padding: 24px 16px; }
+    .phone {
+      width: 100%; max-width: 440px; background: var(--panel); border: 1px solid var(--line); border-radius: 28px;
+      box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; min-height: 760px;
+    }
+    .top { padding: 18px 20px 12px; border-bottom: 1px solid var(--line); }
+    .top .row { display: flex; justify-content: space-between; align-items: center; }
+    .settings { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+    .settings label { font-size: 12px; color: var(--ink-3); display: grid; gap: 4px; }
+    .settings .wide { grid-column: span 2; }
+    .status { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); margin-top: 10px; min-height: 20px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); }
+    .dot.live { background: var(--ok); animation: pulse 1.2s infinite; }
+    .dot.speaking { background: var(--brand); }
+    .dot.thinking { background: var(--high); animation: pulse 0.8s infinite; }
+    @keyframes pulse { 50% { opacity: 0.3; } }
+    .chat { flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; max-height: 430px; }
+    .empty { margin: auto; text-align: center; color: var(--ink-3); font-size: 14px; padding: 0 20px; }
+    .understood { margin: 0 16px 12px; padding: 12px; border: 1px dashed var(--line); border-radius: 12px; font-size: 13px; display: none; }
+    .understood.show { display: block; }
+    .understood h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); }
+    .understood dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; }
+    .understood dt { color: var(--ink-3); }
+    .understood dd { margin: 0; }
+    .controls { padding: 16px 20px 22px; display: flex; justify-content: center; border-top: 1px solid var(--line); }
+    .call-btn { width: 72px; height: 72px; border-radius: 50%; border: 0; font-size: 28px; color: #fff; display: grid; place-items: center; }
+    .call-btn.start { background: #2e9e48; }
+    .call-btn.end { background: #d63031; }
+    .done-card { margin: 0 16px 12px; padding: 14px; border-radius: 12px; background: var(--ok-bg); color: var(--ok); font-weight: 600; display: none; text-align: center; }
+    .done-card.show { display: block; }
+  </style>
+</head>
+<body>
+  <main class="phone">
+    <div class="top">
+      <div class="row">
+        <div class="brand"><span class="brand-mark">ज</span> Jeevan Rekha</div>
+        <a class="tiny" href="/control" target="_blank">Control room ↗</a>
+      </div>
+      <div class="tiny" style="margin-top:4px">Flood helpline overflow · answered by AI when every call-taker is busy</div>
+      <div class="settings" id="settings">
+        <label>Language
+          <select id="lang">
+            <option value="hi-IN">हिन्दी / Hinglish</option>
+            <option value="en-IN">English</option>
+            <option value="ta-IN">தமிழ்</option>
+            <option value="te-IN">తెలుగు</option>
+          </select>
+        </label>
+        <label>District (helps recognise place names)
+          <select id="district"><option value="">Any</option></select>
+        </label>
+        <label class="wide">Caller number (known from the phone line)
+          <input id="caller" value="+91 98100 00001">
+        </label>
+      </div>
+      <div class="status"><span class="dot" id="dot"></span><span id="status">Ready. Press the green button to call.</span></div>
+    </div>
+    <div class="chat" id="chat">
+      <div class="empty" id="empty">Speak naturally, in Hindi, English, Tamil or Telugu, like a real distress call.<br><br>Use headphones so the agent's voice is not picked up by your mic.</div>
+    </div>
+    <div class="understood" id="understood">
+      <h3>What the AI has understood</h3>
+      <dl id="record"></dl>
+    </div>
+    <div class="done-card" id="done"></div>
+    <div class="controls">
+      <button class="call-btn start" id="callBtn" aria-label="Call">✆</button>
+    </div>
+  </main>
+  <script src="/caller.js" type="module"></script>
+</body>
+</html>

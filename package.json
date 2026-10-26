@@ -8,8 +8,15 @@
     "node": ">=22"
   },
   "scripts": {
+    "start": "node --env-file=.env server/index.mjs",
+    "surge:audio": "node scripts/gen-surge-audio.mjs",
+    "surge:eval": "node --env-file=.env scripts/surge-cli.mjs",
+    "call:fake": "node scripts/fake-caller.mjs",
     "day1:audio": "node day1/gen-audio.mjs",
     "day1:test": "node --env-file=.env day1/run.mjs",
     "day1:test:noisy": "node --env-file=.env day1/run.mjs --set noisy"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
   }
 }
