@@ -1,7 +1,7 @@
 // End-to-end test of the live call path without a microphone: synthesizes each caller
 // line with macOS `say`, streams it to /ws/call at real-time pace (silence in between,
 // as a phone line would), and waits for the agent's reply before speaking again.
-//   node scripts/fake-caller.mjs [ws://localhost:8787]
+//   node scripts/fake-caller.mjs [ws://localhost:8787] [district|any]
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -10,6 +10,7 @@ import { setTimeout as sleep } from 'node:timers/promises';
 import WebSocket from 'ws';
 
 const base = process.argv[2] ?? 'ws://localhost:8787';
+const district = process.argv[3] === 'any' ? '' : (process.argv[3] ?? 'darbhanga');
 const lines = [
   'हैलो, हम दरभंगा के बहेड़ा गांव में फंसे हैं, पानी बहुत बढ़ गया है',
   'शिव मंदिर के पीछे वाला घर है',
@@ -29,7 +30,7 @@ const clips = lines.map((text, i) => {
   return readFileSync(wav).subarray(44);
 });
 
-const ws = new WebSocket(`${base}/ws/call?lang=hi-IN&district=darbhanga&caller=%2B91-90000-00001`);
+const ws = new WebSocket(`${base}/ws/call?lang=hi-IN&district=${district}&caller=%2B91-90000-00001`);
 let queue = Buffer.alloc(0);
 let agentTurns = 0;
 let done = false;
