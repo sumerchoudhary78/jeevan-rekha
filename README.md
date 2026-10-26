@@ -134,5 +134,6 @@ caller photo ──▶ SAM 3.1 + Muse Spark ──────▶ photo evidence
 - Demo only: no real helpline is connected; telephony (Exotel/Twilio) would replace the browser phone.
 - Muse Voice Transcribe covers Hindi, Bengali, Marathi, Tamil, Telugu, Kannada and English among Indian languages; not Malayalam, Assamese or Odia yet.
 - Spoken replies use the browser's speech synthesis; Meta's API has no text-to-speech model.
+- The browser phone is half-duplex: while the agent speaks it sends silence (so it never transcribes itself), so a caller who talks over the agent is not heard and the agent asks again. Tested end to end through a real microphone (speech played from laptop speakers); no human caller has been tested yet.
 - The gazetteer covers 7 districts for the demo; three places resolve only to their district centre and are marked approximate.
 - Evaluations use synthetic voices; accuracy on real distress calls is not yet measured.

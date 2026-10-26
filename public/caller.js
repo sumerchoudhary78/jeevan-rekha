@@ -189,3 +189,9 @@ $('photoInput').onchange = async () => {
 
 $('callBtn').onclick = () => (ws ? endCall() : startCall().catch((err) => { setStatus(`Could not start: ${err.message}`); endCall(); }));
 speechSynthesis.getVoices();
+
+// Kiosk / test mode: /caller?autocall=1&lang=hi-IN&district=darbhanga starts the call on load.
+const query = new URLSearchParams(location.search);
+if (query.has('lang')) $('lang').value = query.get('lang');
+if (query.has('district')) $('district').value = query.get('district');
+if (query.get('autocall') === '1') startCall().catch((err) => setStatus(`Could not start: ${err.message}`));
