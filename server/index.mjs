@@ -11,6 +11,8 @@ import { extname, join, normalize } from 'node:path';
 import { WebSocketServer } from 'ws';
 import { CallSession } from '../lib/call-session.mjs';
 import { gazetteer } from '../lib/gazetteer.mjs';
+import { applyPhotoEvidence } from '../lib/intake.mjs';
+import { analysePhoto } from '../lib/photo.mjs';
 import { CaseStore } from '../lib/store.mjs';
 import { runSurge } from '../lib/surge.mjs';
 
@@ -19,7 +21,14 @@ const publicDir = join(import.meta.dirname, '..', 'public');
 const store = new CaseStore(process.env.STORE_PATH ?? ':memory:');
 const bus = new EventEmitter();
 const sseClients = new Set();
+const photos = new Map(); // caseId -> { mime, bytes } of the latest photo (demo: kept in memory)
 let surgeRunning = false;
+const stats = { callsAnswered: 0, merged: 0 };
+bus.on('call', (e) => {
+  if (e.type === 'started') stats.callsAnswered++;
+  if (e.type === 'merged') stats.merged++;
+});
+const snapshot = () => ({ kind: 'snapshot', cases: store.list(), stats });
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.json': 'application/json' };
 const PAGES = { '/': 'index.html', '/caller': 'caller.html', '/control': 'control.html' };
@@ -32,7 +41,7 @@ store.on('change', (e) => broadcast({ kind: 'case', ...e }));
 bus.on('call', (e) => broadcast({ kind: 'call', ...e }));
 bus.on('surge', (e) => broadcast({ kind: 'surge', ...e }));
 // Waiting time feeds priority, so re-rank the queue periodically.
-setInterval(() => broadcast({ kind: 'snapshot', cases: store.list() }), 15000).unref();
+setInterval(() => broadcast(snapshot()), 15000).unref();
 
 const json = (res, status, body) => {
   res.writeHead(status, { 'Content-Type': 'application/json' });
@@ -48,7 +57,7 @@ async function readJson(req) {
 async function handleApi(req, res, url) {
   if (url.pathname === '/api/events') {
     res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' });
-    res.write(`data: ${JSON.stringify({ kind: 'snapshot', cases: store.list() })}\n\n`);
+    res.write(`data: ${JSON.stringify(snapshot())}\n\n`);
     sseClients.add(res);
     req.on('close', () => sseClients.delete(res));
     return;
@@ -70,6 +79,24 @@ async function handleApi(req, res, url) {
       verb === 'rescued' ? { status: 'rescued' } : { status: 'open', assignedTeam: null };
     return json(res, 200, store.update(id, patch, verb));
   }
+  const photo = url.pathname.match(/^\/api\/cases\/(JR-\d+)\/photo$/);
+  if (photo && req.method === 'GET') {
+    const p = photos.get(photo[1]);
+    if (!p) return json(res, 404, { error: 'no photo' });
+    res.writeHead(200, { 'Content-Type': p.mime });
+    return res.end(p.bytes);
+  }
+  if (photo && req.method === 'POST') {
+    const id = photo[1];
+    if (!store.get(id)) return json(res, 404, { error: 'no such case' });
+    const { dataUrl } = await readJson(req);
+    const m = /^data:(image\/(?:jpeg|png|webp));base64,(.+)$/.exec(dataUrl ?? '');
+    if (!m) return json(res, 400, { error: 'expected a JPEG, PNG or WebP data URL' });
+    photos.set(id, { mime: m[1], bytes: Buffer.from(m[2], 'base64') });
+    const evidence = await analysePhoto(dataUrl);
+    const updated = applyPhotoEvidence(store, id, evidence);
+    return json(res, 200, { case: updated, evidence });
+  }
   if (url.pathname === '/api/surge' && req.method === 'POST') {
     if (surgeRunning) return json(res, 409, { error: 'surge already running' });
     surgeRunning = true;
@@ -80,7 +107,9 @@ async function handleApi(req, res, url) {
   }
   if (url.pathname === '/api/reset' && req.method === 'POST') {
     store.reset();
-    broadcast({ kind: 'snapshot', cases: [] });
+    photos.clear();
+    Object.assign(stats, { callsAnswered: 0, merged: 0 });
+    broadcast(snapshot());
     return json(res, 200, { ok: true });
   }
   json(res, 404, { error: 'not found' });

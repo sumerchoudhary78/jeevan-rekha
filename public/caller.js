@@ -6,6 +6,7 @@ let agentSpeaking = false;
 let pending = new Float32Array(0);
 let partialEl = null;
 let callComplete = false;
+let caseId = null;
 
 const config = await fetch('/api/config').then((r) => r.json());
 for (const d of config.districts) $('district').append(new Option(`${d.name}, ${d.state}`, d.key));
@@ -92,6 +93,8 @@ function onSamples(samples) {
 
 async function startCall() {
   callComplete = false;
+  caseId = null;
+  $('photoBtn').disabled = true;
   $('done').classList.remove('show');
   $('chat').innerHTML = '';
   $('understood').classList.remove('show');
@@ -118,6 +121,10 @@ async function startCall() {
       bubble('caller', msg.text);
       setStatus('Thinking…', 'thinking');
     } else if (msg.type === 'agent') {
+      if (msg.caseId) {
+        caseId = msg.caseId;
+        $('photoBtn').disabled = false;
+      }
       bubble('agent', msg.text);
       showRecord(msg.record, msg.caseId);
       if (msg.complete) callComplete = true;
@@ -152,6 +159,33 @@ function endCall() {
   if (!callComplete) setStatus('Call ended.');
   else setStatus('Call complete. Help is being coordinated.');
 }
+
+// Photos are downscaled in the browser (long side 1280 px) before upload.
+async function toJpegDataUrl(file) {
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, 1280 / Math.max(bitmap.width, bitmap.height));
+  const canvas = Object.assign(document.createElement('canvas'), { width: Math.round(bitmap.width * scale), height: Math.round(bitmap.height * scale) });
+  canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  return canvas.toDataURL('image/jpeg', 0.85);
+}
+
+$('photoBtn').onclick = () => $('photoInput').click();
+$('photoInput').onchange = async () => {
+  const file = $('photoInput').files[0];
+  $('photoInput').value = '';
+  if (!file || !caseId) return;
+  const dataUrl = await toJpegDataUrl(file);
+  const img = Object.assign(document.createElement('img'), { src: dataUrl });
+  img.style.cssText = 'max-width:100%;border-radius:8px;display:block';
+  bubble('caller', img);
+  const note = bubble('agent', 'Photo received. Counting people and checking the water level…');
+  const res = await fetch(`/api/cases/${caseId}/photo`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ dataUrl }) });
+  if (!res.ok) return (note.lastChild.textContent = 'Sorry, the photo could not be analysed.');
+  const { evidence } = await res.json();
+  note.lastChild.textContent =
+    `Photo added to case ${caseId}: ${evidence.people.count} people counted, water at ${evidence.scene.water_level.replaceAll('_', ' ')} level. ` +
+    'The rescue team can see it.';
+};
 
 $('callBtn').onclick = () => (ws ? endCall() : startCall().catch((err) => { setStatus(`Could not start: ${err.message}`); endCall(); }));
 speechSynthesis.getVoices();

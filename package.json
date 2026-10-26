@@ -14,7 +14,8 @@
     "call:fake": "node scripts/fake-caller.mjs",
     "day1:audio": "node day1/gen-audio.mjs",
     "day1:test": "node --env-file=.env day1/run.mjs",
-    "day1:test:noisy": "node --env-file=.env day1/run.mjs --set noisy"
+    "day1:test:noisy": "node --env-file=.env day1/run.mjs --set noisy",
+    "test": "node --test \"test/*.test.mjs\""
   },
   "dependencies": {
     "ws": "^8.22.0"

@@ -30,7 +30,8 @@
     .understood dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; }
     .understood dt { color: var(--ink-3); }
     .understood dd { margin: 0; }
-    .controls { padding: 16px 20px 22px; display: flex; justify-content: center; border-top: 1px solid var(--line); }
+    .controls { padding: 16px 20px 22px; display: flex; justify-content: center; align-items: center; gap: 18px; border-top: 1px solid var(--line); }
+    .photo-btn { border-radius: 999px; padding: 10px 16px; }
     .call-btn { width: 72px; height: 72px; border-radius: 50%; border: 0; font-size: 28px; color: #fff; display: grid; place-items: center; }
     .call-btn.start { background: #2e9e48; }
     .call-btn.end { background: #d63031; }
@@ -73,7 +74,9 @@
     </div>
     <div class="done-card" id="done"></div>
     <div class="controls">
+      <button class="photo-btn" id="photoBtn" disabled title="Available once your case is open">📷 Send photo</button>
       <button class="call-btn start" id="callBtn" aria-label="Call">✆</button>
+      <input type="file" id="photoInput" accept="image/*" capture="environment" hidden>
     </div>
   </main>
   <script src="/caller.js" type="module"></script>

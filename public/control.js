@@ -73,12 +73,15 @@ function caseCard(c) {
       ${c.possibleDuplicateOf ? `<span class="badge u-medium" title="A human should check">possible duplicate of ${esc(c.possibleDuplicateOf)}</span>` : ''}
       ${c.assignedTeam ? `<span class="badge b-ok">${esc(c.assignedTeam)}</span>` : ''}
       ${c.approximate ? '<span class="badge b-neutral">approx. location</span>' : ''}
+      ${c.photoEvidence ? `<span class="badge b-ok">📷 SAM 3.1 counted ${c.photoEvidence.samCount}</span>` : ''}
     </div>
     <div class="btns">
       ${c.status === 'open' ? '<button data-act="assign">Assign boat</button>' : '<button data-act="reopen">Unassign</button>'}
       <button data-act="rescued">Mark rescued</button>
     </div>
+    ${c.photoEvidence ? `<div class="photo"><canvas data-photo="${c.id}"></canvas><div class="tiny">${esc(c.photoEvidence.scene.rescue_notes)}</div></div>` : ''}
     <details><summary>Call transcripts (${c.reports.length})</summary>${transcripts}</details>`;
+  if (c.photoEvidence) drawPhoto(el.querySelector('canvas'), c);
   el.onclick = (e) => {
     const act = e.target.dataset?.act;
     if (act) {
@@ -94,6 +97,35 @@ function caseCard(c) {
     }
   };
   return el;
+}
+
+// The caller's photo with SAM 3.1's person boxes drawn on top.
+const photoCache = new Map();
+function drawPhoto(canvas, c) {
+  const key = `${c.id}:${c.photoEvidence.at}`;
+  let img = photoCache.get(key);
+  if (!img) {
+    img = new Image();
+    img.src = `/api/cases/${c.id}/photo?t=${c.photoEvidence.at}`;
+    photoCache.set(key, img);
+  }
+  const paint = () => {
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    ctx.lineWidth = Math.max(3, img.naturalWidth / 300);
+    ctx.strokeStyle = '#ffd43b';
+    ctx.font = `${Math.max(16, img.naturalWidth / 50)}px sans-serif`;
+    ctx.fillStyle = '#ffd43b';
+    for (const b of c.photoEvidence.boxes) {
+      const sx = img.naturalWidth / b.w;
+      const sy = img.naturalHeight / b.h;
+      ctx.strokeRect(b.x1 * sx, b.y1 * sy, (b.x2 - b.x1) * sx, (b.y2 - b.y1) * sy);
+    }
+  };
+  if (img.complete && img.naturalWidth) paint();
+  else img.addEventListener('load', paint, { once: true });
 }
 
 function renderQueue(flashId) {
@@ -176,7 +208,9 @@ events.onmessage = (msg) => {
   const e = JSON.parse(msg.data);
   if (e.kind === 'snapshot') {
     cases = new Map(e.cases.map((c) => [c.id, c]));
-    if (!e.cases.length) {
+    callsAnswered = Math.max(callsAnswered, e.stats.callsAnswered);
+    mergedCount = Math.max(mergedCount, e.stats.merged);
+    if (!e.cases.length && !e.stats.callsAnswered) {
       for (const m of markers.values()) m.remove();
       markers.clear();
       calls.clear();
