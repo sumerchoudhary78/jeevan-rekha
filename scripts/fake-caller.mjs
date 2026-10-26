@@ -11,6 +11,7 @@ import WebSocket from 'ws';
 
 const base = process.argv[2] ?? 'ws://localhost:8787';
 const district = process.argv[3] === 'any' ? '' : (process.argv[3] ?? 'darbhanga');
+const code = process.env.DEMO_PASSCODE ? `&code=${encodeURIComponent(process.env.DEMO_PASSCODE)}` : '';
 const lines = [
   'हैलो, हम दरभंगा के बहेड़ा गांव में फंसे हैं, पानी बहुत बढ़ गया है',
   'शिव मंदिर के पीछे वाला घर है',
@@ -30,7 +31,7 @@ const clips = lines.map((text, i) => {
   return readFileSync(wav).subarray(44);
 });
 
-const ws = new WebSocket(`${base}/ws/call?lang=hi-IN&district=${district}&caller=%2B91-90000-00001`);
+const ws = new WebSocket(`${base}/ws/call?lang=hi-IN&district=${district}&caller=%2B91-90000-00001${code}`);
 let queue = Buffer.alloc(0);
 let agentTurns = 0;
 let done = false;
@@ -58,7 +59,7 @@ while (!done && Date.now() - t0 < 180000) {
   await sleep(80);
 }
 await sleep(1500);
-const res = await fetch(`${base.replace('ws', 'http')}/api/cases`);
+const res = await fetch(`${base.replace('ws', 'http')}/api/cases?${code.slice(1)}`);
 const cases = await res.json();
 for (const c of cases) {
   console.log(`\nCASE ${c.id} ${c.urgency} priority=${c.priority} people=${c.headcountMin}-${c.headcountMax} confirmed=${c.headcountConfirmed}`);

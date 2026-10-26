@@ -38,6 +38,10 @@ Each report becomes a geocoded case. Muse Spark decides whether a new report is 
 - Flood night of 24 overlapping calls: **0 wrong merges**; 4 of 5 duplicate groups merged automatically and the 5th flagged for human review.
 - SAM 3.1 counted **8 of 8 people** on the demo rooftop photo.
 
+## Live demo
+
+https://sumerchoudhary78--jeevan-rekha-web.us-east.modal.run/?code=PASSCODE (passcode is in `.env` as `DEMO_PASSCODE`; paste the full link into the form). Use `/caller` (Chrome, headphones) and `/control` → *Simulate flood night*.
+
 ## Built with
 
 Node.js, WebSockets, node:sqlite, Leaflet + OpenStreetMap, Web Audio (AudioWorklet), browser speech synthesis.

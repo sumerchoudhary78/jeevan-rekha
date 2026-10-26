@@ -125,8 +125,21 @@ function serveStatic(res, pathname) {
   createReadStream(file).pipe(res);
 }
 
+// Optional passcode for public deployments, so strangers can't spend the Meta API credits.
+// Visiting any page with ?code=<passcode> sets a cookie; everything else then requires it.
+const PASSCODE = process.env.DEMO_PASSCODE;
+const hasAccess = (req, url) =>
+  !PASSCODE || url.searchParams.get('code') === PASSCODE || (req.headers.cookie ?? '').split(/;\s*/).includes(`jr_access=${PASSCODE}`);
+
 const server = createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
+  if (!hasAccess(req, url)) {
+    res.writeHead(401, { 'Content-Type': 'text/html; charset=utf-8' });
+    return res.end('<p style="font-family:sans-serif;padding:24px">Jeevan Rekha demo: open the link with <code>?code=&lt;passcode&gt;</code>.</p>');
+  }
+  if (PASSCODE && url.searchParams.get('code') === PASSCODE) {
+    res.setHeader('Set-Cookie', `jr_access=${PASSCODE}; Path=/; HttpOnly; SameSite=Lax; Max-Age=2592000`);
+  }
   if (url.pathname.startsWith('/api/')) {
     handleApi(req, res, url).catch((err) => json(res, 500, { error: err.message }));
   } else {
@@ -137,7 +150,7 @@ const server = createServer((req, res) => {
 const wss = new WebSocketServer({ noServer: true });
 server.on('upgrade', (req, socket, head) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
-  if (url.pathname !== '/ws/call') return socket.destroy();
+  if (url.pathname !== '/ws/call' || !hasAccess(req, url)) return socket.destroy();
   wss.handleUpgrade(req, socket, head, (ws) => {
     const send = (msg) => ws.readyState === ws.OPEN && ws.send(JSON.stringify(msg));
     const session = new CallSession({

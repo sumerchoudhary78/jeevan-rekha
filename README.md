@@ -15,6 +15,8 @@ Callers can also send a photo: SAM 3.1 counts the people on the roof and Muse Sp
 
 The AI never decides that someone will not be rescued. It collects, confirms and ranks; **humans dispatch**.
 
+**Live demo:** https://sumerchoudhary78--jeevan-rekha-web.us-east.modal.run (append `?code=<passcode>`; the passcode is in the submission form so the Meta API credits aren't open to everyone). Pages: `/caller` and `/control`.
+
 Built for the Meta Global AI Developer Hackathon 2026 (Indie track, *Build for Your World*). Everything in this repository was built during the hackathon.
 
 ---
@@ -38,7 +40,7 @@ Built for the Meta Global AI Developer Hackathon 2026 (Indie track, *Build for Y
 | **Muse Spark** (`muse-spark-1.3`) | The call-taker agent (`reasoning_effort: minimal`, ~2.5 s per turn), structured extraction, duplicate judgement, photo scene reading, all with strict JSON schemas. |
 | **SAM 3.1** (`sam-3.1`) | Concept segmentation (`"person"`) on caller photos via the Responses API; boxes drawn in the control room. |
 | **Muse Image** (`muse-image-1.0`) | Generated the synthetic demo rooftop photo (`data/photos/`), so no real victim's image is used. |
-| **Open weights** | Triage and/or the agent can run on **Muse Spark Open** (Baseten) or **Muse Glimmer 30B** (self-hosted on Modal via vLLM, `deploy/modal_glimmer.py`) by changing env vars. Not yet run: waiting on partner credits. |
+| **Open weights** | Triage and/or the agent can run on **Muse Spark Open** (Baseten or Fireworks serverless) or **Muse Glimmer 30B** self-hosted on Modal (`deploy/modal_glimmer_gguf.py`: Meta's Q4_K_M GGUF on one L4 via llama.cpp; `deploy/modal_glimmer.py`: BF16 on an H100 via vLLM) by changing env vars. **Not yet run:** every partner currently requires credits or a payment method for GPU/serverless inference. |
 
 ## Results
 
@@ -95,6 +97,8 @@ npm run day1:test:noisy
 npm run surge:eval          # duplicate-merging accuracy over the flood night
 npm run call:fake           # end-to-end live call over the WebSocket with synthetic speech (server must be running)
 ```
+
+Deploy (Modal, CPU only): `modal secret create jeevan-rekha-meta MODEL_API_KEY=… DEMO_PASSCODE=…` then `modal deploy deploy/modal_app.py`. Setting `DEMO_PASSCODE` locally enables the same gate.
 
 Open weights: set `LLM_BASE_URL` / `LLM_MODEL` / `LLM_API_KEY` to Muse Spark Open on Baseten or to the Modal deployment, and re-run the evaluations. `AGENT_LLM_*` lets the live conversation stay on low-latency hosted Muse Spark while triage runs on open weights.
 
