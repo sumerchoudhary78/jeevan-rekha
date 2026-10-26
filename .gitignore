@@ -3,3 +3,4 @@ node_modules/
 day1/audio/
 day1/results/
 .DS_Store
+__pycache__/
