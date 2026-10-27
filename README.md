@@ -37,10 +37,11 @@ Built for the Meta Global AI Developer Hackathon 2026 (Indie track, *Build for Y
 | Model | Used for |
 |---|---|
 | **Muse Voice Transcribe** (`muse-voice-transcribe-1.0`) | Realtime WebSocket transcription with endpointing for live calls; file transcription for recorded calls. **Keyword biasing** with each district's villages, localities and landmarks (Roman and native script), plus language biasing. |
-| **Muse Spark** (`muse-spark-1.3`) | The call-taker agent (`reasoning_effort: minimal`, ~2.5 s per turn), structured extraction, duplicate judgement, photo scene reading, all with strict JSON schemas. |
+| **Muse Spark** (`muse-spark-1.3`) | The live call-taker agent (`reasoning_effort: minimal`, ~2.5 s per turn, strict JSON schema). |
+| **Muse Spark Open** (`meta-models/muse-spark-open-1026`, open weights on Baseten) | **Default for all triage:** structured extraction, the duplicate judge, and photo scene reading (vision). Same code path, switched by `LLM_*` env vars. |
 | **SAM 3.1** (`sam-3.1`) | Concept segmentation (`"person"`) on caller photos via the Responses API; boxes drawn in the control room. |
 | **Muse Image** (`muse-image-1.0`) | Generated the synthetic demo rooftop photo (`data/photos/`), so no real victim's image is used. |
-| **Open weights** | Triage and/or the agent can run on **Muse Spark Open** (Baseten or Fireworks serverless) or **Muse Glimmer 30B** self-hosted on Modal (`deploy/modal_glimmer_gguf.py`: Meta's Q4_K_M GGUF on one L4 via llama.cpp; `deploy/modal_glimmer.py`: BF16 on an H100 via vLLM) by changing env vars. **Not yet run:** every partner currently requires credits or a payment method for GPU/serverless inference. |
+| **Muse Glimmer 30B** (optional, self-hosted) | `deploy/modal_glimmer_gguf.py` (Meta's Q4_K_M GGUF on one L4 via llama.cpp) and `deploy/modal_glimmer.py` (BF16 on an H100 via vLLM). Not run: Modal requires a payment method for GPUs. |
 
 ## Results
 
@@ -62,6 +63,18 @@ Urgency was correct in every run. Without biasing, noisy audio turned *Kankarbag
 - The 5th, a garbled third-party call ("second temple" for "Shiv temple"), was flagged **possible duplicate** for a human instead of being merged.
 - A same-village, different-house report stayed separate.
 - 24 calls are processed in about 90 s with 4 concurrent workers.
+
+**Open weights: Muse Spark Open on Baseten** (same scripts, triage switched by env vars; ASR is still Muse Voice Transcribe). Keyword-biased results, 2 runs each, with the closed model re-run once on the same prompt:
+
+| | Muse Spark Open (open weights) | Muse Spark 1.3 (hosted) |
+|---|---|---|
+| Day-1 noisy audio | **19/20** calls correct | 9/10 |
+| Day-1 clean audio | 17/20 | 9/10 |
+| Flood night, wrong merges | **0** in both runs | 0 |
+| Flood night, duplicate groups | run 1: 4/5 merged + 1 flagged (same as hosted); run 2: 4/5 merged, 1 split when ASR heard *Bahera* as "Bahad" | 4/5 merged + 1 flagged |
+| Photo scene (vision) | 8 people, water at roof, approach notes (~10 s with SAM in parallel) | 8 people, water at roof (~5.5 s) |
+
+Almost every remaining miss is an ASR mishearing shared by both models ("Tankarbagh", "diarrhea area" for *Diara area*). The first open-weights run surfaced one real problem: the model tagged vulnerable groups nobody mentioned (all five on a "we are safe, need medicine" call) and repeated tags. An explicit prompt rule plus de-duplication fixed it, and the numbers above are after that fix. The live conversation stays on hosted Muse Spark: on open weights it asked the same questions correctly, but turns took 2–5 s with one 12.7 s outlier, too slow for a phone call.
 
 **Photo:** on the demo rooftop image SAM 3.1 counted 8 of 8 people; Muse Spark independently counted 8, flagged the child and elderly woman, and judged water at roof level (about 5.5 s for both).
 
@@ -100,7 +113,7 @@ npm run call:fake           # end-to-end live call over the WebSocket with synth
 
 Deploy (Modal, CPU only): `modal secret create jeevan-rekha-meta MODEL_API_KEY=… DEMO_PASSCODE=…` then `modal deploy deploy/modal_app.py`. Setting `DEMO_PASSCODE` locally enables the same gate.
 
-Open weights: set `LLM_BASE_URL` / `LLM_MODEL` / `LLM_API_KEY` to Muse Spark Open on Baseten or to the Modal deployment, and re-run the evaluations. `AGENT_LLM_*` lets the live conversation stay on low-latency hosted Muse Spark while triage runs on open weights.
+Models: `LLM_BASE_URL` / `LLM_MODEL` / `LLM_API_KEY` choose the triage model (default in `.env.example`: Muse Spark Open on Baseten); `AGENT_LLM_*` choose the live conversation model (hosted Muse Spark). The control room header shows which model serves each role.
 
 ## Architecture
 

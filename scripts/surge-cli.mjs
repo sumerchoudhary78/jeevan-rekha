@@ -24,6 +24,7 @@ for (const c of store.list()) {
   if (groups.length > 1) wrongMerges++;
   for (const g of groups) groupsSeen.set(g, (groupsSeen.get(g) ?? 0) + 1);
   console.log(`${String(c.priority).padStart(4)} ${c.id} ${c.urgency.padEnd(8)} ${String(c.headcountMin + '-' + c.headcountMax).padEnd(6)} ${c.place ?? c.area} [${c.vulnerable.join(',')}] reports=${c.reports.length} groups=${groups.join('+')}`);
+  if (!c.headcountMax) console.log(`       no headcount; heard: ${c.reports.map((r) => r.transcript).join(' | ')}`);
 }
 const missedMerges = [...groupsSeen.values()].filter((n) => n > 1).length;
 const flagged = store.list().filter((c) => c.possibleDuplicateOf && groupOf[c.reports[0].callId] === groupOf[store.get(c.possibleDuplicateOf).reports[0].callId]).length;

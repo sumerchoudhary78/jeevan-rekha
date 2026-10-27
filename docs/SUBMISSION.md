@@ -8,7 +8,7 @@ Ready to paste into the Cerebral Valley submission form. Check every number agai
 
 **Track:** Indie Developer · **Problem statement:** Build for Your World
 
-**Bonus categories it fits:** Best Agentic Use-Case. Best Build on Meta Open Weight Models only if the Baseten or Modal run lands before the deadline.
+**Bonus categories it fits:** Best Agentic Use-Case; Best Build on Meta Open Weight Models (all triage runs on Muse Spark Open via Baseten).
 
 ## Description
 
@@ -26,10 +26,10 @@ Each report becomes a geocoded case. Muse Spark decides whether a new report is 
 ## How we used Meta's models
 
 - **Muse Voice Transcribe:** realtime WebSocket with endpointing for live calls, file transcription for recorded calls, keyword biasing with each district's gazetteer (Roman and native script), and language biasing.
-- **Muse Spark 1.3:** the call-taker agent (`reasoning_effort: minimal`, about 2.5 s per turn), structured extraction, duplicate judgement and photo scene reading, all with strict JSON schemas.
+- **Muse Spark 1.3 (hosted):** the live call-taker agent (`reasoning_effort: minimal`, about 2.5 s per turn, strict JSON schema).
+- **Muse Spark Open (open weights, Baseten):** all triage: structured extraction, the duplicate judge and photo scene reading (vision).
 - **SAM 3.1:** person segmentation on caller photos; boxes rendered for dispatchers.
 - **Muse Image:** a synthetic demo photo, so no real victim's image is used.
-- **Open weights:** the triage path runs on Muse Spark Open (Baseten) or Muse Glimmer (Modal + vLLM) via configuration.
 
 ## Results (synthetic voices, live Meta API)
 
@@ -37,6 +37,7 @@ Each report becomes a geocoded case. Muse Spark decides whether a new report is 
 - **Urgency correct on every call** across all test runs.
 - Flood night of 24 overlapping calls: **0 wrong merges**; 4 of 5 duplicate groups merged automatically and the 5th flagged for human review.
 - SAM 3.1 counted **8 of 8 people** on the demo rooftop photo.
+- **Open weights at parity:** with triage on Muse Spark Open, 19/20 calls correct on noisy audio (2 runs) and 0 wrong merges on the flood night in both runs. The first open-weights run over-tagged vulnerable groups; a prompt rule and de-duplication fixed it.
 
 ## Live demo
 

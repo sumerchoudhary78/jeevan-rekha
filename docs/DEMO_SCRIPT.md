@@ -32,11 +32,11 @@ Rule from the organisers: open with one line saying what existed before. For Jee
 
 ### 1:55–2:30 · How it works (one diagram, then numbers)
 
-- Muse Voice Transcribe, **primed with district village and landmark names**: on noisy phone-band audio this took location accuracy from **6/10 to 10/10**.
+- Muse Voice Transcribe, **primed with district village and landmark names**: on noisy phone-band audio this took location accuracy from **16/20 to 20/20** over two runs.
 - Muse Spark runs each turn with `reasoning_effort: minimal`, about **2.5 s** per turn.
 - The duplicate judge has three verdicts (same group / same pickup point / possible duplicate) and made **0 wrong merges** across the 24-call night.
 - SAM 3.1 counts people and Muse Spark reads the water level from caller photos.
-- *(If Baseten or Modal credits arrive)* triage runs on open-weight Muse Spark Open or Muse Glimmer.
+- All triage (extraction, duplicate judge, photo reading) runs on **open-weight Muse Spark Open** on Baseten: 19/20 noisy calls correct, 0 wrong merges. Point at the model line in the control-room header.
 
 ### 2:30–2:50 · Safety by design
 

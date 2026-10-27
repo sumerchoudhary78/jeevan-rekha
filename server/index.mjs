@@ -12,6 +12,7 @@ import { WebSocketServer } from 'ws';
 import { CallSession } from '../lib/call-session.mjs';
 import { gazetteer } from '../lib/gazetteer.mjs';
 import { applyPhotoEvidence } from '../lib/intake.mjs';
+import { modelsInUse } from '../lib/meta.mjs';
 import { analysePhoto } from '../lib/photo.mjs';
 import { CaseStore } from '../lib/store.mjs';
 import { runSurge } from '../lib/surge.mjs';
@@ -64,7 +65,7 @@ async function handleApi(req, res, url) {
   }
   if (url.pathname === '/api/config') {
     const districts = Object.entries(gazetteer).map(([key, d]) => ({ key, name: d.places.find((p) => p.kind === 'district').name, state: d.state, center: d.center }));
-    return json(res, 200, { districts });
+    return json(res, 200, { districts, models: modelsInUse() });
   }
   if (url.pathname === '/api/cases' && req.method === 'GET') {
     return json(res, 200, store.list({ includeClosed: url.searchParams.has('all') }));

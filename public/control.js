@@ -203,6 +203,11 @@ function onCallEvent(e) {
   renderStats();
 }
 
+fetch('/api/config').then((r) => r.json()).then(({ models }) => {
+  const label = ({ model, host }) => `${model}${model.includes('open') ? ' (open weights)' : ''} on ${host}`;
+  $('models').textContent = `Conversation: ${label(models.conversation)} · Triage: ${label(models.triage)}`;
+});
+
 const events = new EventSource('/api/events');
 events.onmessage = (msg) => {
   const e = JSON.parse(msg.data);
