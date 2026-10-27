@@ -76,6 +76,19 @@ Urgency was correct in every run. Without biasing, noisy audio turned *Kankarbag
 
 Almost every remaining miss is an ASR mishearing shared by both models ("Tankarbagh", "diarrhea area" for *Diara area*). The first open-weights run surfaced one real problem: the model tagged vulnerable groups nobody mentioned (all five on a "we are safe, need medicine" call) and repeated tags. An explicit prompt rule plus de-duplication fixed it, and the numbers above are after that fix. The live conversation stays on hosted Muse Spark: on open weights it asked the same questions correctly, but turns took 2–5 s with one 12.7 s outlier, too slow for a phone call.
 
+**Misheard place names** (`npm run place:eval`, no API calls): the matcher is replayed over all 233 distinct real transcripts the day-1 runs produced (clean and noisy, with and without biasing), plus 30 lines naming places that are *not* in the gazetteer, including near-misses such as *Basantpatti*, *Benipatti* and *Gaighati*.
+
+| | Spelling-only matcher (before) | Sound-key matcher (after) |
+|---|---|---|
+| Place found in the raw transcript | 200/233 | **217/233** (179 exact, 38 to confirm with the caller) |
+| Place found in the extracted area | 218/233 | **223/233** |
+| Wrong place | 0 | 0 |
+| Not-in-gazetteer lines rejected | 29/30 (the other was silently placed) | 29/30 (the other triggers a confirmation question) |
+
+The sound key folds consonants into classes across Devanagari and Latin (aspirated = plain, retroflex = dental, vowels dropped), and Devanagari is also compared with its vowel signs stripped. That catches *बहड* → Bahera, *Tankarbagh* → Kankarbagh and *औरई* → Aurai, without letting *Bahad* match Bahadurpur. The 0.84 threshold was chosen on this same data, so these are not held-out numbers. What's left is mostly unrecoverable from text: *Aurai* split into "और आई" ("and came"), *Kankarbagh* heard as "Shankar Ghat".
+
+In a call, a fuzzy match becomes one specific question using the known spelling (*"बहेड़ा, सही?"*). `npm run place:dialog` scripts five situations against the live agent (garbled name confirmed in Hindi and in English, garbled name rejected, village not in the gazetteer, exact name): **15/15 over 3 runs**. A place is put to the caller at most once, an exact name costs no question, and an unconfirmed place keeps the case marked approximate. Recorded calls cannot ask, so they fall back to the sound match inside the call's district and stay approximate. On the flood night, the report heard as "Bahad" is now flagged as a possible duplicate of the Bahera case instead of silently opening a separate one; wrong merges stayed at 0 over 2 runs.
+
 **Photo:** on the demo rooftop image SAM 3.1 counted 8 of 8 people; Muse Spark independently counted 8, flagged the child and elderly woman, and judged water at roof level (about 5.5 s for both).
 
 ## Safety design
@@ -83,7 +96,7 @@ Almost every remaining miss is an ASR mishearing shared by both models ("Tankarb
 - The agent never refuses, deprioritises or closes a case. Humans assign boats.
 - Merges and photo evidence can only raise urgency and headcount.
 - Missing information raises priority and a callback flag; it never ranks a caller lower.
-- Headcounts are confirmed by digit-by-digit read-back; place names are confirmed against the gazetteer.
+- Headcounts are confirmed by digit-by-digit read-back. A misheard place name is confirmed once by its known spelling, and an unconfirmed place keeps the case marked approximate; the agent never swaps an unknown village for a known one.
 - No medical advice. Medical emergencies (labour, unconscious, bedridden with water inside) are marked critical for the rescue team.
 - No arrival times are promised.
 
@@ -108,6 +121,8 @@ npm run day1:audio          # regenerate the day-1 test audio (macOS `say` + ffm
 npm run day1:test           # extraction accuracy, biased vs unbiased
 npm run day1:test:noisy
 npm run surge:eval          # duplicate-merging accuracy over the flood night
+npm run place:eval          # place-name resolution on saved real transcripts (no API calls)
+npm run place:dialog        # misheard-place scenarios against the live agent
 npm run call:fake           # end-to-end live call over the WebSocket with synthetic speech (server must be running)
 ```
 
@@ -134,7 +149,8 @@ caller photo ──▶ SAM 3.1 + Muse Spark ──────▶ photo evidence
 | `lib/agent.mjs` | Call-taker policy and turn schema |
 | `lib/call-session.mjs` | One live call: audio in, agent turns out, case updates |
 | `lib/intake.mjs` | Duplicate judgement, merging, photo evidence |
-| `lib/gazetteer.mjs` | Keyword lists and fuzzy place resolution (Latin and Indic scripts) |
+| `lib/gazetteer.mjs` | Keyword lists, place resolution, and the sound-key matcher (`suggestPlaces`) across Latin and Devanagari |
+| `lib/place-check.mjs` | Per-call place confirmation: what to tell the agent, at most one question, when a place counts as confirmed |
 | `lib/store.mjs` | Case store and priority |
 | `lib/photo.mjs` | SAM 3.1 person segmentation and scene assessment |
 | `lib/surge.mjs` | Flood-night replay |
@@ -148,5 +164,7 @@ caller photo ──▶ SAM 3.1 + Muse Spark ──────▶ photo evidence
 - Muse Voice Transcribe covers Hindi, Bengali, Marathi, Tamil, Telugu, Kannada and English among Indian languages; not Malayalam, Assamese or Odia yet.
 - Spoken replies use the browser's speech synthesis; Meta's API has no text-to-speech model.
 - The browser phone is half-duplex: while the agent speaks it sends silence (so it never transcribes itself), so a caller who talks over the agent is not heard and the agent asks again. Tested end to end through a real microphone (speech played from laptop speakers); no human caller has been tested yet.
+- The gazetteer covers 7 districts (41 places) for the demo. A real district has hundreds of villages, so more names will sound alike: the confirmation question matters more there, and false matches have not been measured at that scale.
+- Sound matching handles Latin and Devanagari; Tamil and Telugu place names are matched by spelling only.
 - The gazetteer covers 7 districts for the demo; three places resolve only to their district centre and are marked approximate.
 - Evaluations use synthetic voices; accuracy on real distress calls is not yet measured.

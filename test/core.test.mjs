@@ -2,8 +2,9 @@
 //   npm test
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { keywordsFor, resolveLocation } from '../lib/gazetteer.mjs';
+import { keywordsFor, resolveLocation, suggestPlaces } from '../lib/gazetteer.mjs';
 import { applyPhotoEvidence, caseFieldsFrom } from '../lib/intake.mjs';
+import { PlaceCheck } from '../lib/place-check.mjs';
 import { CaseStore, priorityScore } from '../lib/store.mjs';
 
 test('resolves exact, transliterated and ASR-garbled place names', () => {
@@ -21,6 +22,50 @@ test('prefers the most specific place and never matches a truncated fragment', (
   assert.equal(truncated.place, null);
   assert.equal(truncated.districtKey, 'darbhanga');
   assert.equal(truncated.approximate, true);
+});
+
+test('suggests misheard places for confirmation, by sound and across scripts', () => {
+  const top = (text, d) => {
+    const s = suggestPlaces(text, d && [d]);
+    return `${s.level} ${s.candidates[0]?.place ?? '-'}`;
+  };
+  assert.equal(top('हम बहेड़ा गांव में फंसे हैं', 'darbhanga'), 'exact Bahera');
+  assert.equal(top('मैं बहड से बोल रहा हूँ', 'darbhanga'), 'likely Bahera'); // real ASR output for बहेड़ा
+  assert.equal(top('Bahad', 'darbhanga'), 'likely Bahera'); // and never Bahadurpur
+  assert.equal(top('Tankarbagh sector three', 'patna'), 'likely Kankarbagh');
+  assert.equal(top('मुजफ्फरपुर, औरई से बोल रहे हैं', 'muzaffarpur'), 'likely Aurai');
+  assert.equal(top('गायघाटी नहीं, कटरिया गांव', 'muzaffarpur').startsWith('exact'), false); // a longer word is not an exact hit
+  assert.equal(top('हम सकरी गांव में फंसे हैं', 'darbhanga'), 'none -');
+  assert.equal(top('पानी बहुत ऊपर है, हम छत पर हैं', 'darbhanga'), 'none -');
+});
+
+test('a misheard place is put to the caller once and confirmed by what the agent records', () => {
+  const rec = (area, location_confirmed = false) => ({ location: { area }, location_confirmed });
+
+  const yes = new PlaceCheck(['darbhanga']);
+  yes.heard('मैं बहड से बोल रहा हूँ');
+  assert.match(yes.note(), /Bahera/);
+  yes.recorded(rec('Bahera'), { askedThisTurn: true }); // recorded while asking: not yet confirmed
+  assert.equal(yes.confirmed, false);
+  yes.heard('हां, सही है');
+  assert.equal(yes.note(), undefined);
+  yes.recorded(rec('Bahera'), { askedThisTurn: false });
+  assert.equal(yes.confirmed, true);
+
+  const no = new PlaceCheck(['muzaffarpur']);
+  no.heard('औरई से बोल रहे हैं');
+  assert.match(no.note(), /Aurai/);
+  no.recorded(rec('Aurai'), { askedThisTurn: true });
+  no.heard('नहीं, हम कटरिया गांव में हैं'); // sounds like Katra, but the one question is used up
+  assert.equal(no.note(), undefined);
+  no.recorded(rec('Katariya'), { askedThisTurn: false });
+  assert.equal(no.confirmed, false);
+
+  const exact = new PlaceCheck(['darbhanga']);
+  exact.heard('हम बहेड़ा गांव में हैं');
+  assert.match(exact.note(), /no need to confirm/);
+  exact.recorded(rec('Bahera'), { askedThisTurn: true });
+  assert.equal(exact.confirmed, true);
 });
 
 test('keyword lists include native-script aliases and landmarks', () => {

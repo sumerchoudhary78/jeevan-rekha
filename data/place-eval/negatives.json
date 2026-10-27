@@ -1,0 +1,125 @@
+{
+  "_comment": "Lines naming real places that are NOT in the gazetteer, or no place at all. A resolver must not confidently map these onto a gazetteer place.",
+  "lines": [
+    {
+      "district": "darbhanga",
+      "text": "हम सकरी गांव में फंसे हैं, पानी बढ़ रहा है"
+    },
+    {
+      "district": "darbhanga",
+      "text": "केवटी ब्लॉक के पास वाले टोला में हम लोग हैं"
+    },
+    {
+      "district": "darbhanga",
+      "text": "सिंहवाड़ा बाजार के पीछे पानी भर गया है"
+    },
+    {
+      "district": "darbhanga",
+      "text": "Jale block, near the high school, please send a boat"
+    },
+    {
+      "district": "darbhanga",
+      "text": "घनश्यामपुर में हमारा घर डूब गया है"
+    },
+    {
+      "district": "darbhanga",
+      "text": "मनीगाछी स्टेशन के पास हम पांच लोग हैं"
+    },
+    {
+      "district": "patna",
+      "text": "Phulwari Sharif, near the AIIMS gate, water is entering the house"
+    },
+    {
+      "district": "patna",
+      "text": "हम मसौढ़ी में हैं, सड़क पूरी डूब गई है"
+    },
+    {
+      "district": "patna",
+      "text": "Bakhtiyarpur station road, two families on the roof"
+    },
+    {
+      "district": "patna",
+      "text": "बिहटा के पास गांव में पानी घुस गया"
+    },
+    {
+      "district": "supaul",
+      "text": "त्रिवेणीगंज के पास हम लोग फंसे हैं"
+    },
+    {
+      "district": "supaul",
+      "text": "मरौना प्रखंड में बांध टूट गया है"
+    },
+    {
+      "district": "muzaffarpur",
+      "text": "कांटी थाना के पास पानी आ गया है"
+    },
+    {
+      "district": "muzaffarpur",
+      "text": "Minapur block, the school roof, around twenty people"
+    },
+    {
+      "district": "sitamarhi",
+      "text": "पुपरी बाजार में पानी घुटने तक है"
+    },
+    {
+      "district": "chennai",
+      "text": "Saidapet near the bridge, the ground floor is under water"
+    },
+    {
+      "district": "vijayawada",
+      "text": "Gunadala, near the church, we are on the terrace"
+    },
+    {
+      "district": "darbhanga",
+      "text": "हेलो हेलो, कोई सुन रहा है? जल्दी नाव भेजिए, बच्चे रो रहे हैं"
+    },
+    {
+      "district": "patna",
+      "text": "Please help, the water is rising very fast, my father is eighty years old"
+    },
+    {
+      "district": "darbhanga",
+      "text": "पानी बहुत ऊपर है, हम छत पर हैं, खाना खत्म हो गया है"
+    },
+    {
+      "district": "darbhanga",
+      "text": "बेनीपट्टी के पास हमारा गांव डूब गया है"
+    },
+    {
+      "district": "darbhanga",
+      "text": "Bahadurganj side se bol rahe hain, paani ghar mein hai"
+    },
+    {
+      "district": "darbhanga",
+      "text": "बहेलिया टोला में हम लोग फंसे हैं"
+    },
+    {
+      "district": "supaul",
+      "text": "किशनगंज के रास्ते में हम फंसे हैं"
+    },
+    {
+      "district": "supaul",
+      "text": "Basantpatti village, near the canal, please help"
+    },
+    {
+      "district": "muzaffarpur",
+      "text": "गायघाटी नहीं, हम कटरिया गांव से बोल रहे हैं"
+    },
+    {
+      "district": "patna",
+      "text": "Rajnagar colony, behind the bus stand, water is knee deep"
+    },
+    {
+      "district": "patna",
+      "text": "Maner se bol rahe hain, Sone nadi ke kinare"
+    },
+    {
+      "district": "chennai",
+      "text": "Tirumangalam near the market, we need food"
+    },
+    {
+      "district": "vijayawada",
+      "text": "Bhavanipuram near the ghat, two families stuck"
+    }
+  ]
+}

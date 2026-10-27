@@ -11,6 +11,8 @@
     "start": "node --env-file=.env server/index.mjs",
     "surge:audio": "node scripts/gen-surge-audio.mjs",
     "surge:eval": "node --env-file=.env scripts/surge-cli.mjs",
+    "place:eval": "node scripts/place-eval.mjs",
+    "place:dialog": "node --env-file=.env scripts/place-dialog.mjs",
     "call:fake": "node scripts/fake-caller.mjs",
     "day1:audio": "node day1/gen-audio.mjs",
     "day1:test": "node --env-file=.env day1/run.mjs",

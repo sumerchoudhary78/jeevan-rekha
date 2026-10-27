@@ -18,7 +18,7 @@ Jeevan Rekha takes the overflow. A caller who would have got a busy tone reaches
 
 - listens in their language through **Muse Voice Transcribe**, biased with the district's village and landmark names
 - asks one question at a time through **Muse Spark**, giving safety instructions first when the water is chest-high
-- confirms garbled place names against the gazetteer
+- matches garbled place names by sound across scripts (*बहड* → Bahera, *Tankarbagh* → Kankarbagh) and confirms them once by their known spelling
 - reads headcounts back digit by digit, because "thirty" and "three" are the most dangerous mishearing on a bad line
 
 Each report becomes a geocoded case. Muse Spark decides whether a new report is the same group, the same pickup point, a possible duplicate (flagged for a human) or a new incident. Merges only ever raise urgency and headcount. Callers can send a photo: **SAM 3.1** counts the people on the roof and Muse Spark reads the water level and writes approach notes for the boat crew. Dispatchers get a live control room with the ranked queue on a map. The AI never refuses or deprioritises anyone; humans dispatch.
@@ -33,6 +33,7 @@ Each report becomes a geocoded case. Muse Spark decides whether a new report is 
 
 ## Results (synthetic voices, live Meta API)
 
+- Replayed over 233 real transcripts, the sound-key place matcher finds the place in **217** (up from 200) with **0 wrong places**. In scripted calls the agent confirmed garbled names correctly in 15/15 runs.
 - On noisy phone-band audio, gazetteer keyword biasing gave **20/20 correct locations** over two runs, against 16/20 without it.
 - **Urgency correct on every call** across all test runs.
 - Flood night of 24 overlapping calls: **0 wrong merges**; 4 of 5 duplicate groups merged automatically and the 5th flagged for human review.
