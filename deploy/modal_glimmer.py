@@ -1,8 +1,10 @@
 """Serve the open-weight Muse Glimmer 30B on Modal with vLLM's OpenAI-compatible server.
 
-Untested until Modal hackathon credits land (one H100 is needed for BF16 weights, ~60 GB).
+One H100 holds the BF16 weights (~60 GB). Fetch them on CPU first so GPU time is not spent downloading:
 
     pip install modal && modal token new
+    modal secret create jeevan-rekha-llm-key LLM_API_KEY=<random string>
+    modal run deploy/modal_glimmer_download.py
     modal deploy deploy/modal_glimmer.py
 
 Then point Jeevan Rekha at it (.env):
@@ -25,11 +27,10 @@ vllm_cache = modal.Volume.from_name("jeevan-rekha-vllm-cache", create_if_missing
 
 app = modal.App("jeevan-rekha-glimmer")
 
-
 @app.function(
     image=image,
     gpu="H100",
-    scaledown_window=10 * 60,
+    scaledown_window=5 * 60,  # an idle H100 is the main cost
     timeout=30 * 60,
     volumes={"/root/.cache/huggingface": hf_cache, "/root/.cache/vllm": vllm_cache},
     secrets=[modal.Secret.from_name("jeevan-rekha-llm-key")],  # defines LLM_API_KEY
