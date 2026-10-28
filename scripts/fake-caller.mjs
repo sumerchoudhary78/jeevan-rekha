@@ -1,7 +1,9 @@
 // End-to-end test of the live call path without a microphone: synthesizes each caller
 // line with macOS `say`, streams it to /ws/call at real-time pace (silence in between,
 // as a phone line would), and waits for the agent's reply before speaking again.
-//   node scripts/fake-caller.mjs [ws://localhost:8787] [district|any]
+//   node scripts/fake-caller.mjs [ws://localhost:8787] [district|any] [board]
+// "board" plays a caller from a group already reported on the flood night (run the
+// simulation first): the agent should ask whether they are that group and join the case.
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -12,7 +14,12 @@ import WebSocket from 'ws';
 const base = process.argv[2] ?? 'ws://localhost:8787';
 const district = process.argv[3] === 'any' ? '' : (process.argv[3] ?? 'darbhanga');
 const code = process.env.DEMO_PASSCODE ? `&code=${encodeURIComponent(process.env.DEMO_PASSCODE)}` : '';
-const lines = [
+const lines = process.argv[4] === 'board' ? [
+  'हैलो, हम बहेड़ा गांव में फंसे हैं, शिव मंदिर के पीछे वाले घर में',
+  'हां, मेरे भाई ने पहले फोन किया था, हम वही लोग हैं',
+  'अब पानी छत तक आ गया है, बाकी सब वैसा ही है',
+  'ठीक है, धन्यवाद',
+] : [
   'हैलो, हम दरभंगा के बहेड़ा गांव में फंसे हैं, पानी बहुत बढ़ गया है',
   'शिव मंदिर के पीछे वाला घर है',
   'हम तीस लोग हैं छत पर',
@@ -47,6 +54,7 @@ ws.on('message', (data) => {
     else queue = Buffer.concat([queue, next, Buffer.alloc(FRAME * 12)]);
   } else if (msg.type === 'caller') console.log(`${stamp()} HEARD : ${msg.text}`);
   else if (msg.type === 'merged') console.log(`${stamp()} MERGED into ${msg.caseId}: ${msg.reason}`);
+  else if (msg.type === 'opened') console.log(`${stamp()} OPENED ${msg.caseId}${msg.possibleDuplicateOf ? ` (possible duplicate of ${msg.possibleDuplicateOf})` : ''}`);
   else if (msg.type === 'error') console.log(`${stamp()} ERROR : ${msg.message}`);
 });
 

@@ -21,7 +21,7 @@ image = (
         ROOT,
         "/app",
         copy=True,
-        ignore=[".env", ".git", "node_modules", "day1/audio", "day1/results", "data/photos/*.png", "**/__pycache__", ".claude"],
+        ignore=[".env", ".git", "node_modules", "day1/audio", "day1/results", "data/place-scale/audio", "data/photos/*.png", "**/__pycache__", ".claude"],
     )
     .run_commands("cd /app && npm ci --omit=dev")
 )

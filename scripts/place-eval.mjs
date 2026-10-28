@@ -1,10 +1,11 @@
 // Scores place-name resolution on real ASR output (every transcript saved by the day-1 runs,
 // clean and noisy, biased and unbiased) plus lines naming places that are not in the gazetteer.
-//   node scripts/place-eval.mjs
-// No API calls: it replays saved transcripts.
-import { readdirSync, readFileSync } from 'node:fs';
+//   node scripts/place-eval.mjs [--misses] [--refresh]
+// No API calls: it replays the transcripts kept in data/place-eval/transcripts.json
+// (--refresh rebuilds that file from day1/results after new day-1 runs).
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { resolveLocation, suggestPlaces } from '../lib/gazetteer.mjs';
+import { classifyPlaces, MIN_LIKELY, resolveLocation, scorePlaces, suggestPlaces } from '../lib/gazetteer.mjs';
 
 const root = join(import.meta.dirname, '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -22,18 +23,24 @@ const EXPECTED = {
   '09-ta-velachery': ['Velachery', 'Vijayanagar'],
   '10-te-singhnagar': ['Singh Nagar', 'Dabha Gardens'],
 };
-const districtOf = Object.fromEntries(read('day1/cases.json').cases.map((c) => [c.id, c.gazetteer]));
+const TRANSCRIPTS = 'data/place-eval/transcripts.json';
 
-// Unique (call, transcript) pairs across all saved runs.
-const seen = new Set();
-const positives = [];
-for (const f of readdirSync(join(root, 'day1/results')).filter((f) => f.endsWith('.json'))) {
-  for (const r of read(`day1/results/${f}`).results) {
-    if (!EXPECTED[r.id] || !/\p{L}/u.test(r.transcript ?? "") || seen.has(r.transcript)) continue;
-    seen.add(r.transcript);
-    positives.push({ id: r.id, district: districtOf[r.id], text: r.transcript, area: r.extracted?.location?.area ?? '' });
+// Unique (call, transcript) pairs across all saved day-1 runs.
+if (process.argv.includes('--refresh') || !existsSync(join(root, TRANSCRIPTS))) {
+  const districtOf = Object.fromEntries(read('day1/cases.json').cases.map((c) => [c.id, c.gazetteer]));
+  const seen = new Set();
+  const transcripts = [];
+  for (const f of readdirSync(join(root, 'day1/results')).filter((f) => f.endsWith('.json')).sort()) {
+    for (const r of read(`day1/results/${f}`).results) {
+      if (!EXPECTED[r.id] || !/\p{L}/u.test(r.transcript ?? '') || seen.has(r.transcript)) continue;
+      seen.add(r.transcript);
+      transcripts.push({ id: r.id, district: districtOf[r.id], text: r.transcript, area: r.extracted?.location?.area ?? '' });
+    }
   }
+  const body = transcripts.map((t) => `  ${JSON.stringify(t)}`).join(',\n');
+  writeFileSync(join(root, TRANSCRIPTS), `{\n "_comment": "Unique transcripts from every day-1 run (clean and noisy audio, with and without keyword biasing), with the area the extractor read from each.",\n "transcripts": [\n${body}\n ]\n}\n`);
 }
+const positives = read(TRANSCRIPTS).transcripts;
 const negatives = read('data/place-eval/negatives.json').lines;
 
 // Old behaviour: whatever resolveLocation finds in the text is taken as the place, no confidence level.
@@ -88,3 +95,56 @@ for (const [name, fn] of [['before (resolveLocation)', legacy], ['after (suggest
   }
   console.log();
 }
+
+// Held-out check of the threshold, since MIN_LIKELY was chosen on this same data: leave one
+// call out. For each of the 10 calls, pick the threshold on the other nine calls' transcripts
+// (and the negatives outside its fold) with a rule fixed before running, then score the
+// held-out call and its fold of negatives at that threshold.
+//   rule: maximise found - 10 x wrong place - 10 x negatives placed exactly - 1 x negatives asked
+//         about; ties go to the higher (more cautious) threshold
+const THRESHOLDS = Array.from({ length: 29 }, (_, i) => +(0.7 + i * 0.01).toFixed(2));
+const pos = positives.map((p) => ({ ...p, scored: scorePlaces(p.text, [p.district], { floor: 0.5 }) }));
+const neg = negatives.map((n, i) => ({ ...n, fold: i % 10, scored: scorePlaces(n.text, [n.district], { floor: 0.5 }) }));
+const calls = Object.keys(EXPECTED);
+
+function tally(posSet, negSet, minLikely) {
+  const t = { found: 0, wrong: 0, missed: 0, negNone: 0, negAsked: 0, negExact: 0 };
+  for (const p of posSet) {
+    const r = classifyPlaces(p.scored, { minLikely });
+    if (r.level === 'none') t.missed++;
+    else if (EXPECTED[p.id].includes(r.candidates[0].place)) t.found++;
+    else t.wrong++;
+  }
+  for (const n of negSet) {
+    const r = classifyPlaces(n.scored, { minLikely });
+    t[r.level === 'none' ? 'negNone' : r.level === 'exact' ? 'negExact' : 'negAsked']++;
+  }
+  return t;
+}
+const objective = (t) => t.found - 10 * t.wrong - 10 * t.negExact - t.negAsked;
+
+const held = { found: 0, wrong: 0, missed: 0, negNone: 0, negAsked: 0, negExact: 0 };
+const picked = [];
+for (const [k, call] of calls.entries()) {
+  const tunePos = pos.filter((p) => p.id !== call);
+  const tuneNeg = neg.filter((n) => n.fold !== k);
+  let best = null;
+  for (const th of THRESHOLDS) {
+    const value = objective(tally(tunePos, tuneNeg, th));
+    if (!best || value >= best.value) best = { th, value };
+  }
+  picked.push(best.th);
+  const t = tally(pos.filter((p) => p.id === call), neg.filter((n) => n.fold === k), best.th);
+  for (const key of Object.keys(held)) held[key] += t[key];
+}
+const inSample = tally(pos, neg, MIN_LIKELY);
+console.log('Threshold, leave one call out (transcript, district known):');
+console.log(`  thresholds picked per fold: ${picked.join(' ')} (shipped: ${MIN_LIKELY})`);
+console.log(
+  `  held out: found ${held.found}/${pos.length}, wrong ${held.wrong}, missed ${held.missed} | negatives rejected ${held.negNone}/${neg.length}, ` +
+    `asked ${held.negAsked}, wrong-exact ${held.negExact}`,
+);
+console.log(
+  `  in sample at ${MIN_LIKELY}: found ${inSample.found}/${pos.length}, wrong ${inSample.wrong}, missed ${inSample.missed} | ` +
+    `negatives rejected ${inSample.negNone}/${neg.length}, asked ${inSample.negAsked}, wrong-exact ${inSample.negExact}`,
+);

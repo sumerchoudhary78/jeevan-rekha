@@ -1,6 +1,6 @@
-// Checks how the call-taker handles misheard place names, with the same gazetteer check the
-// live call uses (CallSession): it should confirm a garbled name once by its known spelling,
-// not ask about exact names, and never swap an unknown village for a known one.
+// Checks how the call-taker handles place names, with the same gazetteer check the live call
+// uses (CallSession): it should read every known place back once by its known spelling
+// (including a garbled one), and never swap an unknown village for a known one.
 //   node --env-file=.env scripts/place-dialog.mjs [runs]
 import { agentTurn, GREETINGS } from '../lib/agent.mjs';
 import { gazetteer, norm } from '../lib/gazetteer.mjs';
@@ -36,10 +36,10 @@ const SCENARIOS = [
     expect: { area: 'sakri', confirmed: false },
   },
   {
-    name: 'exact known name, no extra question',
+    name: 'exact known name, read back once',
     district: 'darbhanga',
-    lines: ['हम बहेड़ा गांव में फंसे हैं, शिव मंदिर के पीछे'],
-    asks: null,
+    lines: ['हम बहेड़ा गांव में फंसे हैं, शिव मंदिर के पीछे', 'हां, सही है'],
+    asks: 'bahera',
     expect: { area: 'bahera', confirmed: true },
   },
 ];
@@ -62,7 +62,7 @@ async function run(s) {
     history.push({ role: 'caller', text: line });
     place.heard(line);
     const placeCheck = place.note();
-    const turn = await agentTurn(history, { placeCheck });
+    const turn = await agentTurn(history, { placeCheck, district: gazetteer[s.district].places.find((p) => p.kind === 'district').name });
     place.recorded(turn.record, { askedThisTurn: !!placeCheck });
     if (s.asks && asked(turn.say, s.asks)) askedPlace = true;
     history.push({ role: 'agent', text: turn.say });
@@ -82,7 +82,8 @@ const runs = Number(process.argv[2]) || 1;
 let passed = 0;
 for (let r = 0; r < runs; r++) {
   for (const s of SCENARIOS) {
-    const res = await run(s);
+    // An agent error (e.g. a malformed reply) fails the scenario instead of stopping the run.
+    const res = await run(s).catch((err) => ({ ok: false, checks: { error: false }, says: [err.message], record: '-', confirmed: null }));
     if (res.ok) passed++;
     const marks = Object.entries(res.checks).map(([k, v]) => `${k} ${v ? 'ok' : 'XX'}`).join('  ');
     console.log(`${res.ok ? 'PASS' : 'FAIL'}  ${s.name.padEnd(38)} ${marks}  -> ${res.record} confirmed=${res.confirmed}`);

@@ -1,125 +1,211 @@
 {
-  "_comment": "Lines naming real places that are NOT in the gazetteer, or no place at all. A resolver must not confidently map these onto a gazetteer place.",
+  "_comment": "Lines naming real places that are NOT in the demo gazetteer, or no place at all. A resolver must not confidently map these onto a gazetteer place. `names` is the place the line names (empty if none); some of them are in the district-scale gazetteer (scripts/place-scale.mjs).",
   "lines": [
     {
       "district": "darbhanga",
-      "text": "हम सकरी गांव में फंसे हैं, पानी बढ़ रहा है"
+      "text": "हम सकरी गांव में फंसे हैं, पानी बढ़ रहा है",
+      "names": [
+        "Sakri"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "केवटी ब्लॉक के पास वाले टोला में हम लोग हैं"
+      "text": "केवटी ब्लॉक के पास वाले टोला में हम लोग हैं",
+      "names": [
+        "Keoti",
+        "Keotiranway",
+        "Keoti Ranwe"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "सिंहवाड़ा बाजार के पीछे पानी भर गया है"
+      "text": "सिंहवाड़ा बाजार के पीछे पानी भर गया है",
+      "names": [
+        "Singhwara"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "Jale block, near the high school, please send a boat"
+      "text": "Jale block, near the high school, please send a boat",
+      "names": [
+        "Jale"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "घनश्यामपुर में हमारा घर डूब गया है"
+      "text": "घनश्यामपुर में हमारा घर डूब गया है",
+      "names": [
+        "Ghanshyampur"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "मनीगाछी स्टेशन के पास हम पांच लोग हैं"
+      "text": "मनीगाछी स्टेशन के पास हम पांच लोग हैं",
+      "names": [
+        "Manigachhi"
+      ]
     },
     {
       "district": "patna",
-      "text": "Phulwari Sharif, near the AIIMS gate, water is entering the house"
+      "text": "Phulwari Sharif, near the AIIMS gate, water is entering the house",
+      "names": [
+        "Phulwari Sharif"
+      ]
     },
     {
       "district": "patna",
-      "text": "हम मसौढ़ी में हैं, सड़क पूरी डूब गई है"
+      "text": "हम मसौढ़ी में हैं, सड़क पूरी डूब गई है",
+      "names": [
+        "Masaurhi"
+      ]
     },
     {
       "district": "patna",
-      "text": "Bakhtiyarpur station road, two families on the roof"
+      "text": "Bakhtiyarpur station road, two families on the roof",
+      "names": [
+        "Bakhtiyarpur"
+      ]
     },
     {
       "district": "patna",
-      "text": "बिहटा के पास गांव में पानी घुस गया"
+      "text": "बिहटा के पास गांव में पानी घुस गया",
+      "names": [
+        "Bihta"
+      ]
     },
     {
       "district": "supaul",
-      "text": "त्रिवेणीगंज के पास हम लोग फंसे हैं"
+      "text": "त्रिवेणीगंज के पास हम लोग फंसे हैं",
+      "names": [
+        "Triveniganj"
+      ]
     },
     {
       "district": "supaul",
-      "text": "मरौना प्रखंड में बांध टूट गया है"
+      "text": "मरौना प्रखंड में बांध टूट गया है",
+      "names": [
+        "Marauna"
+      ]
     },
     {
       "district": "muzaffarpur",
-      "text": "कांटी थाना के पास पानी आ गया है"
+      "text": "कांटी थाना के पास पानी आ गया है",
+      "names": [
+        "Kanti"
+      ]
     },
     {
       "district": "muzaffarpur",
-      "text": "Minapur block, the school roof, around twenty people"
+      "text": "Minapur block, the school roof, around twenty people",
+      "names": [
+        "Minapur"
+      ]
     },
     {
       "district": "sitamarhi",
-      "text": "पुपरी बाजार में पानी घुटने तक है"
+      "text": "पुपरी बाजार में पानी घुटने तक है",
+      "names": [
+        "Pupri"
+      ]
     },
     {
       "district": "chennai",
-      "text": "Saidapet near the bridge, the ground floor is under water"
+      "text": "Saidapet near the bridge, the ground floor is under water",
+      "names": [
+        "Saidapet"
+      ]
     },
     {
       "district": "vijayawada",
-      "text": "Gunadala, near the church, we are on the terrace"
+      "text": "Gunadala, near the church, we are on the terrace",
+      "names": [
+        "Gunadala"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "हेलो हेलो, कोई सुन रहा है? जल्दी नाव भेजिए, बच्चे रो रहे हैं"
+      "text": "हेलो हेलो, कोई सुन रहा है? जल्दी नाव भेजिए, बच्चे रो रहे हैं",
+      "names": []
     },
     {
       "district": "patna",
-      "text": "Please help, the water is rising very fast, my father is eighty years old"
+      "text": "Please help, the water is rising very fast, my father is eighty years old",
+      "names": []
     },
     {
       "district": "darbhanga",
-      "text": "पानी बहुत ऊपर है, हम छत पर हैं, खाना खत्म हो गया है"
+      "text": "पानी बहुत ऊपर है, हम छत पर हैं, खाना खत्म हो गया है",
+      "names": []
     },
     {
       "district": "darbhanga",
-      "text": "बेनीपट्टी के पास हमारा गांव डूब गया है"
+      "text": "बेनीपट्टी के पास हमारा गांव डूब गया है",
+      "names": [
+        "Benipatti"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "Bahadurganj side se bol rahe hain, paani ghar mein hai"
+      "text": "Bahadurganj side se bol rahe hain, paani ghar mein hai",
+      "names": [
+        "Bahadurganj"
+      ]
     },
     {
       "district": "darbhanga",
-      "text": "बहेलिया टोला में हम लोग फंसे हैं"
+      "text": "बहेलिया टोला में हम लोग फंसे हैं",
+      "names": [
+        "Baheliya Tola"
+      ]
     },
     {
       "district": "supaul",
-      "text": "किशनगंज के रास्ते में हम फंसे हैं"
+      "text": "किशनगंज के रास्ते में हम फंसे हैं",
+      "names": [
+        "Kishanganj"
+      ]
     },
     {
       "district": "supaul",
-      "text": "Basantpatti village, near the canal, please help"
+      "text": "Basantpatti village, near the canal, please help",
+      "names": [
+        "Basantpatti"
+      ]
     },
     {
       "district": "muzaffarpur",
-      "text": "गायघाटी नहीं, हम कटरिया गांव से बोल रहे हैं"
+      "text": "गायघाटी नहीं, हम कटरिया गांव से बोल रहे हैं",
+      "names": [
+        "Katariya"
+      ]
     },
     {
       "district": "patna",
-      "text": "Rajnagar colony, behind the bus stand, water is knee deep"
+      "text": "Rajnagar colony, behind the bus stand, water is knee deep",
+      "names": [
+        "Rajnagar"
+      ]
     },
     {
       "district": "patna",
-      "text": "Maner se bol rahe hain, Sone nadi ke kinare"
+      "text": "Maner se bol rahe hain, Sone nadi ke kinare",
+      "names": [
+        "Maner"
+      ]
     },
     {
       "district": "chennai",
-      "text": "Tirumangalam near the market, we need food"
+      "text": "Tirumangalam near the market, we need food",
+      "names": [
+        "Tirumangalam"
+      ]
     },
     {
       "district": "vijayawada",
-      "text": "Bhavanipuram near the ghat, two families stuck"
+      "text": "Bhavanipuram near the ghat, two families stuck",
+      "names": [
+        "Bhavanipuram"
+      ]
     }
   ]
 }

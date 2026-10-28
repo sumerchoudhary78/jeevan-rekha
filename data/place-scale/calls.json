@@ -1,0 +1,729 @@
+{
+ "_comment": "Held-out place test (scripts/place-scale-audio.mjs): census villages unknown to the demo gazetteer, synthetic phone-band calls, Muse Voice Transcribe with the demo keyword list (32) and a district-scale list (500).",
+ "keywords": {
+  "demo": 32,
+  "scale": 500
+ },
+ "calls": [
+  {
+   "id": "01-hi-madhpur",
+   "village": "Madhpur",
+   "block": "Darbhanga",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के माधपुर गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के माधपुर गाँव में फंसे हैं। पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के Madhopur गाँव में फंसे हैं। पानी तेजी से बढ़ रहा है।"
+   }
+  },
+  {
+   "id": "01-en-madhpur",
+   "village": "Madhpur",
+   "block": "Darbhanga",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Madhpur village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "Hello, we are trapped in Madhpur village in Darbhanga district. The water is rising fast.",
+    "scale": "hello, we are trapped in Madpa village in Darbhanga district. district. The water is rising fast."
+   }
+  },
+  {
+   "id": "02-hi-bishunpur",
+   "village": "Bishunpur",
+   "block": "Hayaghat",
+   "lang": "hi",
+   "spoken": "बिशुनपुर गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "बिशुनपुर गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+    "scale": "Bishunpur गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए."
+   }
+  },
+  {
+   "id": "02-en-bishunpur",
+   "village": "Bishunpur",
+   "block": "Hayaghat",
+   "lang": "en",
+   "spoken": "I am calling from Bishunpur village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "I am calling from Benipur Village. Darbhanga. Water has entered the house. Please send a boat.",
+    "scale": "I am calling from Bishunpur village, Darbhanga. Water has has entered the house. please send a a boat."
+   }
+  },
+  {
+   "id": "03-hi-katai",
+   "village": "Katai",
+   "block": "Jale",
+   "lang": "hi",
+   "spoken": "हैलो, मैं कटई से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो, मैं ककई से बोल रहा हूँ। हम छत पर हैं, पानी बहुत ऊपर है।",
+    "scale": "हेलो, मैं कटकई से बोल रहा हूँ। हम छत पर हैं, पानी बहुत ऊपर है।."
+   }
+  },
+  {
+   "id": "03-en-katai",
+   "village": "Katai",
+   "block": "Jale",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Katai, the water is very high.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "pleaseplease help. we are on the roof in Katai. the water is very high.",
+    "scale": "please help, we are on the roof in Kataya. The water is very high."
+   }
+  },
+  {
+   "id": "04-hi-kabirchak",
+   "village": "Kabir Chak",
+   "block": "Darbhanga",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के कबीर चक गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के कबीरचक गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के Kabir Chak गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।"
+   }
+  },
+  {
+   "id": "04-en-kabirchak",
+   "village": "Kabir Chak",
+   "block": "Darbhanga",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Kabir Chak village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Hello, we are trapped in Kabir Chak Chak village in Darbhanga district. The water is rising fast..",
+    "scale": "hello, we are trapped in Kabir Kabir Chak village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "05-hi-parhat",
+   "village": "Parhat",
+   "block": "Biraul",
+   "lang": "hi",
+   "spoken": "परहट गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "बहड गांव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+    "scale": "बहड गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए.."
+   }
+  },
+  {
+   "id": "05-en-parhat",
+   "village": "Parhat",
+   "block": "Biraul",
+   "lang": "en",
+   "spoken": "I am calling from Parhat village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "I am calling from Parh village, दरभग, water has entered the house, please send a boat.",
+    "scale": "I am calling from Parh village, Darbhanga. Water has entered entered the house. Please send a boat."
+   }
+  },
+  {
+   "id": "06-hi-rambhadarpur",
+   "village": "Rambhadarpur",
+   "block": "Bahadurpur",
+   "lang": "hi",
+   "spoken": "हैलो, मैं रामभद्रपुर से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो,हेलो, मैं राम बहदरपुर से बोल से बोल रहा हूँ हम छत पर हैं पानी बहुत ऊपर है।",
+    "scale": "हेलो, मैं रामभद्रपुर से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।"
+   }
+  },
+  {
+   "id": "06-en-rambhadarpur",
+   "village": "Rambhadarpur",
+   "block": "Bahadurpur",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Rambhadarpur, the water is very high.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Please help, we are on the roof in Rambhadapur. The water is very high..",
+    "scale": "please help, we are on the roof in in Rambhadarpur, the water is very high."
+   }
+  },
+  {
+   "id": "07-hi-mohimbuzurg",
+   "village": "Mohim Buzurg",
+   "block": "Kusheshwar Asthan",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के मोहिम बुजुर्ग गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के मोहिम बुजुर्ग गाँव में फंसे हैं। पानी तेजी से बढ़ रहा है।।",
+    "scale": "हेलो, हम दरभग के मोहिम बुजुर्ग गाँव में बसे हैं। पानी तेजी से बढ़ रहा है।."
+   }
+  },
+  {
+   "id": "07-en-mohimbuzurg",
+   "village": "Mohim Buzurg",
+   "block": "Kusheshwar Asthan",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Mohim Buzurg village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "Hello, we are trapped in Mohim Buzurg village in Darbhanga district. The water is rising fast.",
+    "scale": "Hello, we are craft in Mohim Buzurg village in Darbhanga district, the water is rising fast."
+   }
+  },
+  {
+   "id": "08-hi-ratauli",
+   "village": "Ratauli",
+   "block": "Keotiranway",
+   "lang": "hi",
+   "spoken": "रतौली गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "रटौली गांव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+    "scale": "रटौली गाँव से बोल रहे हैं, दरभग जिला, घर में पानी पानी घुस गया है, जल्दी नाव भेजिए."
+   }
+  },
+  {
+   "id": "08-en-ratauli",
+   "village": "Ratauli",
+   "block": "Keotiranway",
+   "lang": "en",
+   "spoken": "I am calling from Ratauli village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "I am calling from Ratoli village. Darbhanga. Water has entered the house. Please send a boat.",
+    "scale": "I am calling from Ratauli village, Darbhanga. Water has entered the house, please send a boat."
+   }
+  },
+  {
+   "id": "09-hi-rampur",
+   "village": "Rampur",
+   "block": "Hanumannagar",
+   "lang": "hi",
+   "spoken": "हैलो, मैं रामपुर से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो,हेलो, मैं रामपुर से बोल रहा हूँ, हम छत पर हैं, पानी पानी बहुत ऊपर है,",
+    "scale": "हेलो, मैं रामपुर से बोल रहा हूँ, हम छत पर हैं, पानी पानी बहुत ऊपर है."
+   }
+  },
+  {
+   "id": "09-en-rampur",
+   "village": "Rampur",
+   "block": "Hanumannagar",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Rampur, the water is very high.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "please help, we are on the roof in Ramapur, the water is very high.",
+    "scale": "please help we are on the route in in Rampur the water is very high.."
+   }
+  },
+  {
+   "id": "10-hi-parkhotimpur",
+   "village": "Parkhotimpur",
+   "block": "Benipur",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के परखौतीमपुर गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो,हेलो, हम दरभग के परको गांव में फंसे हैं, पानी पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के परको तिमपुर गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।"
+   }
+  },
+  {
+   "id": "10-en-parkhotimpur",
+   "village": "Parkhotimpur",
+   "block": "Benipur",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Parkhotimpur village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "hello, we are trapped in Pathhatimpa village in Darbhanga district the water is rising fast",
+    "scale": "Hello, we are trapped in Pathahimpa village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "11-hi-mankauli",
+   "village": "Mankauli",
+   "block": "Singhwara",
+   "lang": "hi",
+   "spoken": "मनकौली गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "मनकौली गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजे।.",
+    "scale": "Mankauli गाँव से बोल रहे हैं, हैं। दरभग जिला घर में पानी घुस गया है। जल्दी नाव भेजिए।."
+   }
+  },
+  {
+   "id": "11-en-mankauli",
+   "village": "Mankauli",
+   "block": "Singhwara",
+   "lang": "en",
+   "spoken": "I am calling from Mankauli village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "I am am calling from Mankoli village, Darbhanga, water has entered the house. Please send a boat.",
+    "scale": "I am calling from Mankauli village, Darbhanga. Water has entered the house. Please send a boat."
+   }
+  },
+  {
+   "id": "12-hi-nista",
+   "village": "Nista",
+   "block": "Singhwara",
+   "lang": "hi",
+   "spoken": "हैलो, मैं निस्ता से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, मैं निस्ता से बोल रहा हूँ। हम छत पर हैं पानी बहुत ऊपर है।",
+    "scale": "हेलो, मैं नista से बोल रहा हूँ। हम छत पर हैं, पानी बहुत ऊपर है"
+   }
+  },
+  {
+   "id": "12-en-nista",
+   "village": "Nista",
+   "block": "Singhwara",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Nista, the water is very high.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "pleaseplease help we are on the roof in in Nista the water is very high..",
+    "scale": "please help we are on the roof roof in Nista the water is very high.."
+   }
+  },
+  {
+   "id": "13-hi-kalwara",
+   "village": "Kalwara",
+   "block": "Singhwara",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के कलवारा गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के कलवारा गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के Kalwara गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।"
+   }
+  },
+  {
+   "id": "13-en-kalwara",
+   "village": "Kalwara",
+   "block": "Singhwara",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Kalwara village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "hello. we are trapped in Kalwar village in Darbhanga district. the water is rising fast.",
+    "scale": "hello, we are trapped in Karwa village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "14-hi-bairo",
+   "village": "Bairo",
+   "block": "Kusheshwar Asthan",
+   "lang": "hi",
+   "spoken": "बैरो गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "बैहरो गाँव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है जल्दी नाव भेजिए.",
+    "scale": "बैरो गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।!"
+   }
+  },
+  {
+   "id": "14-en-bairo",
+   "village": "Bairo",
+   "block": "Kusheshwar Asthan",
+   "lang": "en",
+   "spoken": "I am calling from Bairo village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "Ii am calling from Bahera village, Darbhanga. water has entered the house. please send a boat.",
+    "scale": "I am calling from Ber village, दरभग, water has entered the house, please send a boat."
+   }
+  },
+  {
+   "id": "15-hi-turki",
+   "village": "Turki",
+   "block": "Baheri",
+   "lang": "hi",
+   "spoken": "हैलो, मैं तुरकी से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Hello, मैं तुर्की से बोल रहा हूँ, हम छत पर हैं पानी बहुत ऊपर है",
+    "scale": "हेलो, मैं तुर्की से बोल बोल रहा हूँ। हम छत पर हैं, पानी बहुत ऊपर है।"
+   }
+  },
+  {
+   "id": "15-en-turki",
+   "village": "Turki",
+   "block": "Baheri",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Turki, the water is very high.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Please help, we are on the roof in Turkey, the water is very high.",
+    "scale": "please help we are on the roof in in Turki. The water is very high."
+   }
+  },
+  {
+   "id": "16-hi-dighopatti",
+   "village": "Dighopatti",
+   "block": "Jale",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के दिघोपट्टी गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो,हेलो, हम दरभग के दिघोपती गाँव में फंसे हैं पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के दिघोपति गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है,"
+   }
+  },
+  {
+   "id": "16-en-dighopatti",
+   "village": "Dighopatti",
+   "block": "Jale",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Dighopatti village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "hello we are trapped in Diabati Baheda village in Darbhanga district the the water is rising fast",
+    "scale": "hello, we are trapped in Diyapati village in Darbhanga district. district. The water is rising fast."
+   }
+  },
+  {
+   "id": "17-hi-ughra",
+   "village": "Ughra",
+   "block": "Hanumannagar",
+   "lang": "hi",
+   "spoken": "उघरा गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "उदग्रा गाँव से बोल रहे हैं दरभग दरभग जिला घर में पानी घुस गया है जल्दी नाव भेजिए।]",
+    "scale": "उghरा गाँव से बोल रहे हैं दरभग जिला घर में पानी घुस गया है जल्दी नाव भेजिए।."
+   }
+  },
+  {
+   "id": "17-en-ughra",
+   "village": "Ughra",
+   "block": "Hanumannagar",
+   "lang": "en",
+   "spoken": "I am calling from Ughra village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "i am calling from Ugra village. Darभग, water has entered the house. please send a boat.",
+    "scale": "i am calling from Ughra village. Darभग. water has entered the house. please send a boat."
+   }
+  },
+  {
+   "id": "18-hi-bharathi",
+   "village": "Bharathi",
+   "block": "Singhwara",
+   "lang": "hi",
+   "spoken": "हैलो, मैं भरथी से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, मैं भर्ती से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है,",
+    "scale": "हेलो, मैं Bharathi से बोल रहा हूँ। हम छत पर हैं, पानी पानी बहुत ऊपर है।"
+   }
+  },
+  {
+   "id": "18-en-bharathi",
+   "village": "Bharathi",
+   "block": "Singhwara",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Bharathi, the water is very high.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "please help we are on the roof in Bharathi the water is very high",
+    "scale": "please help we are on the roof in Bharathi the water is very high"
+   }
+  },
+  {
+   "id": "19-hi-dhankaul",
+   "village": "Dhankaul",
+   "block": "Tardih",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के धनकौल गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के धनकौल गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।.",
+    "scale": "hello, हम दरभग के धनकौल गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है."
+   }
+  },
+  {
+   "id": "19-en-dhankaul",
+   "village": "Dhankaul",
+   "block": "Tardih",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Dhankaul village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "Hello, we are trapped in Dhankol village in Darbhanga district. The water is rising fast.",
+    "scale": "hello, we are trapped in Dhankol village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "20-hi-kaunia",
+   "village": "Kaunia",
+   "block": "Kusheshwar Asthan Purbi",
+   "lang": "hi",
+   "spoken": "कौनिया गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "कोनिया गाँव से बोल रहे हैं दरभग जिला घर में पानी घुस गया है जल्दी नाव भेजिए।",
+    "scale": "Kaunia गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस घुस गया है, जल्दी नाव भेजिए।"
+   }
+  },
+  {
+   "id": "20-en-kaunia",
+   "village": "Kaunia",
+   "block": "Kusheshwar Asthan Purbi",
+   "lang": "en",
+   "spoken": "I am calling from Kaunia village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "i am calling from Konia village, दरभग, water has entered the house, please send a boat.",
+    "scale": "I am calling from Kaunia village, Darbhanga, water has entered the house, please send a boat."
+   }
+  },
+  {
+   "id": "21-hi-bhandaria",
+   "village": "Bhandaria",
+   "block": "Kiratpur",
+   "lang": "hi",
+   "spoken": "हैलो, मैं भंडरिया से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो,हेलो, मैं बहदरया से बोल रहा हूँ। हम छत पर हैं, पानी बहुत ऊपर है।।",
+    "scale": "हेलो, मैं भंदरया से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।"
+   }
+  },
+  {
+   "id": "21-en-bhandaria",
+   "village": "Bhandaria",
+   "block": "Kiratpur",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Bhandaria, the water is very high.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "please help we are on the roof in भंडारिया the water is very high",
+    "scale": "please help, we are on the roof in Bhandarso, the water is very high."
+   }
+  },
+  {
+   "id": "22-hi-katka",
+   "village": "Katka",
+   "block": "Singhwara",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के कटका गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो,lो, हम दरभग के कटका गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है,",
+    "scale": "हेलो, हम दरभग के कटका गाँव में फंसे हैं, पानी पानी तेजी से बढ़ रहा है."
+   }
+  },
+  {
+   "id": "22-en-katka",
+   "village": "Katka",
+   "block": "Singhwara",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Katka village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Hello, we are trapped in Katka village in Darbhanga district the water is rising fast.",
+    "scale": "hello, we are trapped in Katka village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "23-hi-manamkhedu",
+   "village": "Manamkhedu",
+   "block": "Jale",
+   "lang": "hi",
+   "spoken": "मनमखेदु गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "बनमतिया गाँव से बोल रहे हैं। दरभग जिला घर में पानी घुस गया है जल्दी नाव भेजिए।",
+    "scale": "मनमत्यु गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए."
+   }
+  },
+  {
+   "id": "23-en-manamkhedu",
+   "village": "Manamkhedu",
+   "block": "Jale",
+   "lang": "en",
+   "spoken": "I am calling from Manamkhedu village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "i am calling from Manamthidu village, दरभग, water has entered the house, please send a boat.",
+    "scale": "I am calling from Manam Tidu Village, Darभग, Water has entered the house. Please send a boat."
+   }
+  },
+  {
+   "id": "24-hi-dhoi",
+   "village": "Dhoi",
+   "block": "Darbhanga",
+   "lang": "hi",
+   "spoken": "हैलो, मैं धोई से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, मैं धोई से बोल रहा हूँ। हम छत पर हैं, पानी बहुत ऊपर है।",
+    "scale": "हेलो, मैं धोई से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है."
+   }
+  },
+  {
+   "id": "24-en-dhoi",
+   "village": "Dhoi",
+   "block": "Darbhanga",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Dhoi, the water is very high.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Please help, we are on the roof in boy, boy, the water is very high..",
+    "scale": "please help, we are on the roof in boy, the water is very high."
+   }
+  },
+  {
+   "id": "25-hi-jafra",
+   "village": "Jafra",
+   "block": "Darbhanga",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के जफरा गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के जफरा गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के जफra गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।"
+   }
+  },
+  {
+   "id": "25-en-jafra",
+   "village": "Jafra",
+   "block": "Darbhanga",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Jafra village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "Hello,Hello, we are trapped in Jatra village in Darbhanga district. The water is rising fast.",
+    "scale": "Hello, we are craft in Jafra village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "26-hi-chhatwan",
+   "village": "Chhatwan",
+   "block": "Keotiranway",
+   "lang": "hi",
+   "spoken": "छतवन गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "छठबन गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस घुस गया है, जल्दी नाव भेजिए.]",
+    "scale": "छटवन गाँव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।"
+   }
+  },
+  {
+   "id": "26-en-chhatwan",
+   "village": "Chhatwan",
+   "block": "Keotiranway",
+   "lang": "en",
+   "spoken": "I am calling from Chhatwan village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "I am calling from Chatwan village, दरभग, water has entered the the house, please send a boat.",
+    "scale": "I am calling from Chhatwan village Darbhanga. Water has entered the house. Please send a boat."
+   }
+  },
+  {
+   "id": "27-hi-malikpur",
+   "village": "Malikpur",
+   "block": "Jale",
+   "lang": "hi",
+   "spoken": "हैलो, मैं मलिकपुर से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "हेलो, मैं मलिकपुर से बोल रहा हूँ, हम छत पर हैं पानी बहुत ऊपर है।",
+    "scale": "हेलो, मैं Malikpur से बोल रहा हूँ, हम छत पर हैं पानी पानी बहुत ऊपर है"
+   }
+  },
+  {
+   "id": "27-en-malikpur",
+   "village": "Malikpur",
+   "block": "Jale",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Malikpur, the water is very high.",
+   "inScaleKeywords": true,
+   "transcripts": {
+    "demo": "please help, we are on the roof in Malikpur, the water is very high.",
+    "scale": "please help, we are on the roof in Malikpur. The water is very high.."
+   }
+  },
+  {
+   "id": "28-hi-belahi",
+   "village": "Belahi",
+   "block": "Manigachhi",
+   "lang": "hi",
+   "spoken": "हैलो, हम दरभंगा के बेलाही गांव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो, हम दरभग के बेलाही गाँव में फंसे हैं, पानी तेजी से बढ़ रहा है।",
+    "scale": "हेलो, हम दरभग के Dih lahi गाँव में फंसे हैं। पानी तेजी से बढ़ रहा है।"
+   }
+  },
+  {
+   "id": "28-en-belahi",
+   "village": "Belahi",
+   "block": "Manigachhi",
+   "lang": "en",
+   "spoken": "Hello, we are trapped in Belahi village in Darbhanga district, the water is rising fast.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "Hello. We are trapped in Belahi village in Darbhanga district. The water is rising fast.",
+    "scale": "hello, we are trapped in Dih Belahi village in Darbhanga district. The water is rising fast."
+   }
+  },
+  {
+   "id": "29-hi-dohatha",
+   "village": "Dohatha",
+   "block": "Ghanshyampur",
+   "lang": "hi",
+   "spoken": "दोहथा गांव से बोल रहे हैं, दरभंगा जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "दोनथा गांव से बोल रहे हैं, दरभग जिला, घर में पानी घुस गया है, जल्दी नाव भेजिए।",
+    "scale": "दोथा गाँव से बोल रहे हैं, दरभग जिला घर में पानी घुस गया है जल्दी नाव भेजिए।"
+   }
+  },
+  {
+   "id": "29-en-dohatha",
+   "village": "Dohatha",
+   "block": "Ghanshyampur",
+   "lang": "en",
+   "spoken": "I am calling from Dohatha village, Darbhanga. Water has entered the house, please send a boat.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "I am calling from Darbhanga village, Darभग, water has entered the house, please send a boat.",
+    "scale": "I am calling from Dhoi village, Darbhanga. Water has entered the house. Please send a boat."
+   }
+  },
+  {
+   "id": "30-hi-dherichak",
+   "village": "Dheri Chak",
+   "block": "Keotiranway",
+   "lang": "hi",
+   "spoken": "हैलो, मैं ढेरी चक से बोल रहा हूँ, हम छत पर हैं, पानी बहुत ऊपर है।",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "हेलो,हेलो, मैं हेरी चक से बोल रहा हूँ हम छत पर हैं पानी बहुत ऊपर है।.",
+    "scale": "हेलो, मैं धेरी चक से बोल रहा हूँ। हम छत पर हैं, हैं। पानी बहुत ऊपर है।"
+   }
+  },
+  {
+   "id": "30-en-dherichak",
+   "village": "Dheri Chak",
+   "block": "Keotiranway",
+   "lang": "en",
+   "spoken": "Please help, we are on the roof in Dheri Chak, the water is very high.",
+   "inScaleKeywords": false,
+   "transcripts": {
+    "demo": "please help we are on the roof in Derichak the water is very high..",
+    "scale": "please help. We are on the roof roof in Deri Chaka. The water is very high.."
+   }
+  }
+ ]
+}

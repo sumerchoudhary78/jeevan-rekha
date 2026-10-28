@@ -1,0 +1,9110 @@
+{
+ "_source": "Census of India 2011 village directory (via census2011.co.in), OpenStreetMap contributors (ODbL), and the curated demo gazetteer. Built by scripts/build-full-gazetteer.mjs for the district-scale place-matching test; not used by the live demo.",
+ "district": "darbhanga",
+ "places": [
+  {
+   "name": "Bahera",
+   "aliases": [
+    "बहेड़ा",
+    "बहेरा",
+    "Baheda",
+    "Behera"
+   ],
+   "kind": "village",
+   "lat": 26.0677516,
+   "lon": 86.1220308,
+   "approximate": false,
+   "source": "curated"
+  },
+  {
+   "name": "Laheriasarai",
+   "aliases": [
+    "लहेरियासराय",
+    "लहरिया सराय",
+    "Lahariya Sarai",
+    "Laheria Sarai",
+    "Lehriasarai"
+   ],
+   "kind": "locality",
+   "lat": 26.1120951,
+   "lon": 85.9048205,
+   "approximate": false,
+   "source": "curated"
+  },
+  {
+   "name": "Benipur",
+   "aliases": [
+    "बेनीपुर"
+   ],
+   "kind": "block",
+   "lat": 26.0753546,
+   "lon": 86.1244902,
+   "approximate": false,
+   "source": "curated"
+  },
+  {
+   "name": "Kusheshwar Asthan",
+   "aliases": [
+    "कुशेश्वर स्थान",
+    "Kusheshwarsthan"
+   ],
+   "kind": "block",
+   "lat": 25.8301358,
+   "lon": 86.2663573,
+   "approximate": false,
+   "source": "curated"
+  },
+  {
+   "name": "Hayaghat",
+   "aliases": [
+    "हायाघाट"
+   ],
+   "kind": "block",
+   "lat": 26.0369841,
+   "lon": 85.911681,
+   "approximate": false,
+   "source": "curated"
+  },
+  {
+   "name": "Bahadurpur",
+   "aliases": [
+    "बहादुरपुर"
+   ],
+   "kind": "block",
+   "lat": 26.0908399,
+   "lon": 85.9942704,
+   "approximate": false,
+   "source": "curated"
+  },
+  {
+   "name": "Keotiranway",
+   "aliases": [],
+   "kind": "block",
+   "block": "Keotiranway",
+   "source": "census"
+  },
+  {
+   "name": "Manigachhi",
+   "aliases": [],
+   "kind": "block",
+   "block": "Manigachhi",
+   "source": "census"
+  },
+  {
+   "name": "Tardih",
+   "aliases": [],
+   "kind": "block",
+   "block": "Tardih",
+   "source": "census"
+  },
+  {
+   "name": "Hanumannagar",
+   "aliases": [],
+   "kind": "block",
+   "block": "Hanumannagar",
+   "source": "census"
+  },
+  {
+   "name": "Biraul",
+   "aliases": [],
+   "kind": "block",
+   "block": "Biraul",
+   "source": "census"
+  },
+  {
+   "name": "Kiratpur",
+   "aliases": [],
+   "kind": "block",
+   "block": "Kiratpur",
+   "source": "census"
+  },
+  {
+   "name": "Gora Bauram",
+   "aliases": [],
+   "kind": "block",
+   "block": "Gora Bauram",
+   "source": "census"
+  },
+  {
+   "name": "Kusheshwar Asthan Purbi",
+   "aliases": [],
+   "kind": "block",
+   "block": "Kusheshwar Asthan Purbi",
+   "source": "census"
+  },
+  {
+   "name": "Ahiari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 16018,
+   "source": "census"
+  },
+  {
+   "name": "Badri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 409,
+   "source": "census"
+  },
+  {
+   "name": "Baghaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1671,
+   "lat": 26.0557612,
+   "lon": 86.0403085,
+   "source": "census"
+  },
+  {
+   "name": "Bandhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 5402,
+   "source": "census"
+  },
+  {
+   "name": "Barhampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 13146,
+   "source": "census"
+  },
+  {
+   "name": "Chak Milki",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 621,
+   "source": "census"
+  },
+  {
+   "name": "Chak Talaila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 334,
+   "source": "census"
+  },
+  {
+   "name": "Chandar Dipa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2825,
+   "source": "census"
+  },
+  {
+   "name": "Chandauna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2827,
+   "lat": 26.4410752,
+   "lon": 85.7199025,
+   "source": "census"
+  },
+  {
+   "name": "Darhia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 6118,
+   "source": "census"
+  },
+  {
+   "name": "Deora",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 3446,
+   "source": "census"
+  },
+  {
+   "name": "Dighopatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2005,
+   "source": "census"
+  },
+  {
+   "name": "Dighra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 8072,
+   "source": "census"
+  },
+  {
+   "name": "Gadari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1250,
+   "source": "census"
+  },
+  {
+   "name": "Gaisri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 243,
+   "source": "census"
+  },
+  {
+   "name": "Ghograha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2630,
+   "lat": 26.4371749,
+   "lon": 85.7345903,
+   "source": "census"
+  },
+  {
+   "name": "Harauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 595,
+   "source": "census"
+  },
+  {
+   "name": "Jale",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 37256,
+   "lat": 26.3860288,
+   "lon": 85.7268789,
+   "source": "census"
+  },
+  {
+   "name": "Jogiara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 6717,
+   "source": "census"
+  },
+  {
+   "name": "Kachhua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 4897,
+   "source": "census"
+  },
+  {
+   "name": "Kaji Bahera",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 3568,
+   "source": "census"
+  },
+  {
+   "name": "Kalwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 568,
+   "source": "census"
+  },
+  {
+   "name": "Kamtaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 9951,
+   "source": "census"
+  },
+  {
+   "name": "Kangni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 39,
+   "source": "census"
+  },
+  {
+   "name": "Kardahuli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1839,
+   "source": "census"
+  },
+  {
+   "name": "Karhans Ratanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 273,
+   "source": "census"
+  },
+  {
+   "name": "Karwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 3059,
+   "source": "census"
+  },
+  {
+   "name": "Katai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1533,
+   "source": "census"
+  },
+  {
+   "name": "Kataia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2925,
+   "source": "census"
+  },
+  {
+   "name": "Katraul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 5737,
+   "source": "census"
+  },
+  {
+   "name": "Katraul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2193,
+   "source": "census"
+  },
+  {
+   "name": "Khajurwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2810,
+   "source": "census"
+  },
+  {
+   "name": "Kheraj",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 406,
+   "source": "census"
+  },
+  {
+   "name": "Lalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 623,
+   "source": "census"
+  },
+  {
+   "name": "Mahuli Nankar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 3149,
+   "source": "census"
+  },
+  {
+   "name": "Majhaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 121,
+   "source": "census"
+  },
+  {
+   "name": "Malikpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 5078,
+   "source": "census"
+  },
+  {
+   "name": "Manam Deb",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1352,
+   "source": "census"
+  },
+  {
+   "name": "Manamkhedu",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2001,
+   "source": "census"
+  },
+  {
+   "name": "Massa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 11536,
+   "source": "census"
+  },
+  {
+   "name": "Milk Pauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 167,
+   "source": "census"
+  },
+  {
+   "name": "Muraitha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 11442,
+   "source": "census"
+  },
+  {
+   "name": "Nagar Diha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 4014,
+   "source": "census"
+  },
+  {
+   "name": "Nawada",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1622,
+   "source": "census"
+  },
+  {
+   "name": "Nimrauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1029,
+   "source": "census"
+  },
+  {
+   "name": "Pakhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 2215,
+   "source": "census"
+  },
+  {
+   "name": "Pauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1899,
+   "source": "census"
+  },
+  {
+   "name": "Rajaun",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 426,
+   "source": "census"
+  },
+  {
+   "name": "Rajaun Asli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1309,
+   "source": "census"
+  },
+  {
+   "name": "Rarhi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 36569,
+   "source": "census"
+  },
+  {
+   "name": "Ratanpur Abhiman",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 8360,
+   "source": "census"
+  },
+  {
+   "name": "Ratanpur Mokari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 102,
+   "source": "census"
+  },
+  {
+   "name": "Reorha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 9658,
+   "lat": 26.3996732,
+   "lon": 85.7032943,
+   "source": "census"
+  },
+  {
+   "name": "Rumaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 3436,
+   "source": "census"
+  },
+  {
+   "name": "Sadrabad",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 356,
+   "source": "census"
+  },
+  {
+   "name": "Sahaspur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 4094,
+   "source": "census"
+  },
+  {
+   "name": "Sisauni Rajaun",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 463,
+   "source": "census"
+  },
+  {
+   "name": "Tariani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Jale",
+   "population": 1844,
+   "source": "census"
+  },
+  {
+   "name": "Arai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 9677,
+   "source": "census"
+  },
+  {
+   "name": "Asthua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3623,
+   "source": "census"
+  },
+  {
+   "name": "Atarbel",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 642,
+   "source": "census"
+  },
+  {
+   "name": "Atarbel Ramchaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 998,
+   "source": "census"
+  },
+  {
+   "name": "Baheri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 622,
+   "source": "census"
+  },
+  {
+   "name": "Bahuara Buzurg",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4789,
+   "source": "census"
+  },
+  {
+   "name": "Balaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 912,
+   "source": "census"
+  },
+  {
+   "name": "Banauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 8498,
+   "source": "census"
+  },
+  {
+   "name": "Barhaulia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2484,
+   "source": "census"
+  },
+  {
+   "name": "Basauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 204,
+   "source": "census"
+  },
+  {
+   "name": "Bastwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 5070,
+   "source": "census"
+  },
+  {
+   "name": "Bataul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 611,
+   "source": "census"
+  },
+  {
+   "name": "Bedauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 512,
+   "source": "census"
+  },
+  {
+   "name": "Bhagwatipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3603,
+   "source": "census"
+  },
+  {
+   "name": "Bhajaura Nankar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1688,
+   "source": "census"
+  },
+  {
+   "name": "Bharathi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4741,
+   "source": "census"
+  },
+  {
+   "name": "Bharauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4238,
+   "source": "census"
+  },
+  {
+   "name": "Bharwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 12619,
+   "source": "census"
+  },
+  {
+   "name": "Bhawanipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 11774,
+   "source": "census"
+  },
+  {
+   "name": "Birdipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3766,
+   "source": "census"
+  },
+  {
+   "name": "Bisambharpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1552,
+   "source": "census"
+  },
+  {
+   "name": "Bisaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 505,
+   "source": "census"
+  },
+  {
+   "name": "Bishunathpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1197,
+   "source": "census"
+  },
+  {
+   "name": "Bithauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 650,
+   "source": "census"
+  },
+  {
+   "name": "Brahampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2434,
+   "source": "census"
+  },
+  {
+   "name": "Chak Dargah",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1600,
+   "source": "census"
+  },
+  {
+   "name": "Chak Kazi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 33,
+   "source": "census"
+  },
+  {
+   "name": "Chaphan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 498,
+   "source": "census"
+  },
+  {
+   "name": "Dahsil",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2498,
+   "source": "census"
+  },
+  {
+   "name": "Fatehpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1291,
+   "source": "census"
+  },
+  {
+   "name": "Gaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2759,
+   "source": "census"
+  },
+  {
+   "name": "Gobindpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 554,
+   "source": "census"
+  },
+  {
+   "name": "Gobindpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1107,
+   "source": "census"
+  },
+  {
+   "name": "Gogaul urf Gangauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 813,
+   "source": "census"
+  },
+  {
+   "name": "Hajipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 77,
+   "source": "census"
+  },
+  {
+   "name": "Hanuman Nagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 630,
+   "source": "census"
+  },
+  {
+   "name": "Harakh",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 635,
+   "source": "census"
+  },
+  {
+   "name": "Hariharpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 13990,
+   "lat": 26.2546015,
+   "lon": 85.8315951,
+   "source": "census"
+  },
+  {
+   "name": "Harpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2290,
+   "source": "census"
+  },
+  {
+   "name": "Hasan Chak",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 261,
+   "source": "census"
+  },
+  {
+   "name": "Hayatpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1358,
+   "source": "census"
+  },
+  {
+   "name": "Hayatpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 803,
+   "source": "census"
+  },
+  {
+   "name": "Inamat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 275,
+   "source": "census"
+  },
+  {
+   "name": "Kalwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2858,
+   "source": "census"
+  },
+  {
+   "name": "Kanigaon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 7385,
+   "source": "census"
+  },
+  {
+   "name": "Kathalia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2764,
+   "source": "census"
+  },
+  {
+   "name": "Katka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4200,
+   "source": "census"
+  },
+  {
+   "name": "Kauar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 980,
+   "source": "census"
+  },
+  {
+   "name": "Kawai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 219,
+   "source": "census"
+  },
+  {
+   "name": "Kewatsa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3339,
+   "source": "census"
+  },
+  {
+   "name": "Kheraj Phulthua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 43,
+   "source": "census"
+  },
+  {
+   "name": "Kora",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3640,
+   "source": "census"
+  },
+  {
+   "name": "Korauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 5064,
+   "source": "census"
+  },
+  {
+   "name": "Kuarpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2159,
+   "source": "census"
+  },
+  {
+   "name": "Kusumpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1533,
+   "source": "census"
+  },
+  {
+   "name": "Kusumpatti Kanaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2014,
+   "source": "census"
+  },
+  {
+   "name": "Lorika",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 840,
+   "source": "census"
+  },
+  {
+   "name": "Madhopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 5805,
+   "source": "census"
+  },
+  {
+   "name": "Madhupur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4104,
+   "source": "census"
+  },
+  {
+   "name": "Maheshpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1297,
+   "source": "census"
+  },
+  {
+   "name": "Maheshpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 313,
+   "source": "census"
+  },
+  {
+   "name": "Makanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1330,
+   "source": "census"
+  },
+  {
+   "name": "Manihas",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 432,
+   "source": "census"
+  },
+  {
+   "name": "Mankauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 13176,
+   "source": "census"
+  },
+  {
+   "name": "Mirzapur Jagni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4000,
+   "source": "census"
+  },
+  {
+   "name": "Mirzapur Jitwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 449,
+   "source": "census"
+  },
+  {
+   "name": "Misrauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2894,
+   "source": "census"
+  },
+  {
+   "name": "Mohanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2620,
+   "source": "census"
+  },
+  {
+   "name": "Nista",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4781,
+   "source": "census"
+  },
+  {
+   "name": "Paigambarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2160,
+   "source": "census"
+  },
+  {
+   "name": "Paira",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1508,
+   "source": "census"
+  },
+  {
+   "name": "Phulthua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2134,
+   "source": "census"
+  },
+  {
+   "name": "Pipra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 881,
+   "source": "census"
+  },
+  {
+   "name": "Rajo",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 4686,
+   "source": "census"
+  },
+  {
+   "name": "Rampatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1796,
+   "source": "census"
+  },
+  {
+   "name": "Rampura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3407,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 2279,
+   "source": "census"
+  },
+  {
+   "name": "Sabaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1250,
+   "source": "census"
+  },
+  {
+   "name": "Sanahpur Buzurg",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 8064,
+   "source": "census"
+  },
+  {
+   "name": "Sanahpur Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1034,
+   "source": "census"
+  },
+  {
+   "name": "Saraia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1644,
+   "source": "census"
+  },
+  {
+   "name": "Sarwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 5430,
+   "source": "census"
+  },
+  {
+   "name": "Shakarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 3760,
+   "source": "census"
+  },
+  {
+   "name": "Simri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 11947,
+   "lat": 26.1642204,
+   "lon": 85.761407,
+   "source": "census"
+  },
+  {
+   "name": "Singhwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 12059,
+   "lat": 26.1931438,
+   "lon": 85.734601,
+   "source": "census"
+  },
+  {
+   "name": "Sirhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 1131,
+   "source": "census"
+  },
+  {
+   "name": "Tekatar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Singhwara",
+   "population": 5311,
+   "source": "census"
+  },
+  {
+   "name": "Andama",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2714,
+   "source": "census"
+  },
+  {
+   "name": "Asrafpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1530,
+   "source": "census"
+  },
+  {
+   "name": "Asraha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 8499,
+   "source": "census"
+  },
+  {
+   "name": "Bansara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2103,
+   "source": "census"
+  },
+  {
+   "name": "Banwari Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2004,
+   "source": "census"
+  },
+  {
+   "name": "Barahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 9343,
+   "source": "census"
+  },
+  {
+   "name": "Barahi Abuara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 845,
+   "source": "census"
+  },
+  {
+   "name": "Bariaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4503,
+   "lat": 26.210635,
+   "lon": 85.8331561,
+   "source": "census"
+  },
+  {
+   "name": "Bazidpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3363,
+   "source": "census"
+  },
+  {
+   "name": "Bazidpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 275,
+   "source": "census"
+  },
+  {
+   "name": "Behta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1372,
+   "source": "census"
+  },
+  {
+   "name": "Bhagwatpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 126,
+   "source": "census"
+  },
+  {
+   "name": "Bharathpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1717,
+   "source": "census"
+  },
+  {
+   "name": "Bheriahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1103,
+   "source": "census"
+  },
+  {
+   "name": "Bhojpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1468,
+   "source": "census"
+  },
+  {
+   "name": "Bhojpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 504,
+   "source": "census"
+  },
+  {
+   "name": "Bihatwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1583,
+   "source": "census"
+  },
+  {
+   "name": "Binwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1380,
+   "source": "census"
+  },
+  {
+   "name": "Birkha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 836,
+   "source": "census"
+  },
+  {
+   "name": "Birkhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1562,
+   "source": "census"
+  },
+  {
+   "name": "Birkhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1196,
+   "source": "census"
+  },
+  {
+   "name": "Birna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 485,
+   "source": "census"
+  },
+  {
+   "name": "Birna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 967,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1467,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2771,
+   "source": "census"
+  },
+  {
+   "name": "Chak Ajam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 244,
+   "source": "census"
+  },
+  {
+   "name": "Chak Bhawani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1341,
+   "source": "census"
+  },
+  {
+   "name": "Chakka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1163,
+   "source": "census"
+  },
+  {
+   "name": "Chakka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2283,
+   "source": "census"
+  },
+  {
+   "name": "Chamarjana urf Dudhia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1814,
+   "source": "census"
+  },
+  {
+   "name": "Chatra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 856,
+   "source": "census"
+  },
+  {
+   "name": "Chhachha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3089,
+   "source": "census"
+  },
+  {
+   "name": "Chhatwan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 11054,
+   "lat": 26.2476696,
+   "lon": 85.9927068,
+   "source": "census"
+  },
+  {
+   "name": "Dalwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 837,
+   "source": "census"
+  },
+  {
+   "name": "Darma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 5110,
+   "source": "census"
+  },
+  {
+   "name": "Dheri Chak",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 390,
+   "source": "census"
+  },
+  {
+   "name": "Dhobgawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2160,
+   "source": "census"
+  },
+  {
+   "name": "Dhuria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 455,
+   "source": "census"
+  },
+  {
+   "name": "Dhuria Daharia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1125,
+   "source": "census"
+  },
+  {
+   "name": "Dighiar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 5062,
+   "source": "census"
+  },
+  {
+   "name": "Dome",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2187,
+   "source": "census"
+  },
+  {
+   "name": "Gobindpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1399,
+   "source": "census"
+  },
+  {
+   "name": "Gokhul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2054,
+   "lat": 26.2471579,
+   "lon": 86.002095,
+   "source": "census"
+  },
+  {
+   "name": "Hajipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 952,
+   "source": "census"
+  },
+  {
+   "name": "Hanuman Nagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1149,
+   "source": "census"
+  },
+  {
+   "name": "Hanuman Nagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1116,
+   "source": "census"
+  },
+  {
+   "name": "Harpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 287,
+   "source": "census"
+  },
+  {
+   "name": "Jalwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 7571,
+   "source": "census"
+  },
+  {
+   "name": "Jethiahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2012,
+   "source": "census"
+  },
+  {
+   "name": "Jiwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1041,
+   "source": "census"
+  },
+  {
+   "name": "Kaem Chak",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2646,
+   "source": "census"
+  },
+  {
+   "name": "Kaharia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1266,
+   "source": "census"
+  },
+  {
+   "name": "Kamaldah",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1106,
+   "source": "census"
+  },
+  {
+   "name": "Karjapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 5559,
+   "source": "census"
+  },
+  {
+   "name": "Kasma Balbhadar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 309,
+   "source": "census"
+  },
+  {
+   "name": "Keoti Ranwe",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 8273,
+   "source": "census"
+  },
+  {
+   "name": "Kheraj Dhuria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1564,
+   "source": "census"
+  },
+  {
+   "name": "Kheraj Mardan Singh",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3847,
+   "source": "census"
+  },
+  {
+   "name": "Khirma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 5029,
+   "lat": 26.2498625,
+   "lon": 85.9140515,
+   "source": "census"
+  },
+  {
+   "name": "Kishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 137,
+   "source": "census"
+  },
+  {
+   "name": "Koilathan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2336,
+   "source": "census"
+  },
+  {
+   "name": "Kopgarh",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 578,
+   "source": "census"
+  },
+  {
+   "name": "Kothia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 10199,
+   "source": "census"
+  },
+  {
+   "name": "Kothli Majhiama",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3499,
+   "source": "census"
+  },
+  {
+   "name": "Ladari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4100,
+   "source": "census"
+  },
+  {
+   "name": "Lahuar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3439,
+   "source": "census"
+  },
+  {
+   "name": "Lalganj urf Badh",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 14370,
+   "source": "census"
+  },
+  {
+   "name": "Madhopatti Raghauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 9153,
+   "source": "census"
+  },
+  {
+   "name": "Mahamadpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4290,
+   "source": "census"
+  },
+  {
+   "name": "Maheshajan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1243,
+   "source": "census"
+  },
+  {
+   "name": "Megha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1033,
+   "source": "census"
+  },
+  {
+   "name": "Milki",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 576,
+   "source": "census"
+  },
+  {
+   "name": "Mohan Math",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1390,
+   "source": "census"
+  },
+  {
+   "name": "Mohan Math",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 987,
+   "source": "census"
+  },
+  {
+   "name": "Mohanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1986,
+   "source": "census"
+  },
+  {
+   "name": "Naya Gaon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 16690,
+   "source": "census"
+  },
+  {
+   "name": "Nonaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4155,
+   "source": "census"
+  },
+  {
+   "name": "Pacharhi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3652,
+   "source": "census"
+  },
+  {
+   "name": "Pachma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 509,
+   "source": "census"
+  },
+  {
+   "name": "Paigambarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 7423,
+   "source": "census"
+  },
+  {
+   "name": "Para",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2194,
+   "source": "census"
+  },
+  {
+   "name": "Pathra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4897,
+   "source": "census"
+  },
+  {
+   "name": "Pilakhwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1501,
+   "source": "census"
+  },
+  {
+   "name": "Pindaruch",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4586,
+   "source": "census"
+  },
+  {
+   "name": "Radha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3906,
+   "source": "census"
+  },
+  {
+   "name": "Raiam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3879,
+   "source": "census"
+  },
+  {
+   "name": "Rajaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 4936,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 382,
+   "source": "census"
+  },
+  {
+   "name": "Ratauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 243,
+   "source": "census"
+  },
+  {
+   "name": "Sahpur Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 762,
+   "source": "census"
+  },
+  {
+   "name": "Samaila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2144,
+   "source": "census"
+  },
+  {
+   "name": "Sarhwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1714,
+   "source": "census"
+  },
+  {
+   "name": "Sarjapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 2060,
+   "source": "census"
+  },
+  {
+   "name": "Shekhpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 1231,
+   "source": "census"
+  },
+  {
+   "name": "Shekhpura urf Dagarwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 3887,
+   "source": "census"
+  },
+  {
+   "name": "Tektar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Keotiranway",
+   "population": 589,
+   "source": "census"
+  },
+  {
+   "name": "Adalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 9496,
+   "source": "census"
+  },
+  {
+   "name": "Amdiha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1415,
+   "source": "census"
+  },
+  {
+   "name": "Ami",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2642,
+   "source": "census"
+  },
+  {
+   "name": "Andhri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4953,
+   "source": "census"
+  },
+  {
+   "name": "Atihar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2762,
+   "lat": 26.1640182,
+   "lon": 85.9813106,
+   "source": "census"
+  },
+  {
+   "name": "Az Rakbe Purkhotimpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 857,
+   "source": "census"
+  },
+  {
+   "name": "Badea",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 832,
+   "source": "census"
+  },
+  {
+   "name": "Balaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4187,
+   "source": "census"
+  },
+  {
+   "name": "Balia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1247,
+   "source": "census"
+  },
+  {
+   "name": "Banauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 306,
+   "source": "census"
+  },
+  {
+   "name": "Basaila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1591,
+   "source": "census"
+  },
+  {
+   "name": "Basdeopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 12141,
+   "source": "census"
+  },
+  {
+   "name": "Bedaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 884,
+   "source": "census"
+  },
+  {
+   "name": "Behat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 833,
+   "source": "census"
+  },
+  {
+   "name": "Bela",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1198,
+   "source": "census"
+  },
+  {
+   "name": "Bela Dullah",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 825,
+   "source": "census"
+  },
+  {
+   "name": "Bela Dullah",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 622,
+   "source": "census"
+  },
+  {
+   "name": "Belhar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2378,
+   "source": "census"
+  },
+  {
+   "name": "Belwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1733,
+   "source": "census"
+  },
+  {
+   "name": "Bhagwanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2313,
+   "source": "census"
+  },
+  {
+   "name": "Bhalpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 8255,
+   "source": "census"
+  },
+  {
+   "name": "Bhawanipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1123,
+   "source": "census"
+  },
+  {
+   "name": "Bhidhi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2023,
+   "source": "census"
+  },
+  {
+   "name": "Bhindi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3719,
+   "source": "census"
+  },
+  {
+   "name": "Bhuskaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3194,
+   "lat": 26.2052541,
+   "lon": 85.9602713,
+   "source": "census"
+  },
+  {
+   "name": "Bijuli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 7244,
+   "source": "census"
+  },
+  {
+   "name": "Bramotar Az Rakbe Chhatwan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 149,
+   "source": "census"
+  },
+  {
+   "name": "Chak Bhulka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 825,
+   "source": "census"
+  },
+  {
+   "name": "Chak Gadhia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 505,
+   "source": "census"
+  },
+  {
+   "name": "Chak Jamal",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1133,
+   "source": "census"
+  },
+  {
+   "name": "Chak Karima",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 21,
+   "source": "census"
+  },
+  {
+   "name": "Chak Mohiuddin",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 118,
+   "source": "census"
+  },
+  {
+   "name": "Chak Sona",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 674,
+   "source": "census"
+  },
+  {
+   "name": "Chak Wali",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 502,
+   "source": "census"
+  },
+  {
+   "name": "Chakka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 717,
+   "source": "census"
+  },
+  {
+   "name": "Chandpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1361,
+   "source": "census"
+  },
+  {
+   "name": "Chhabila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1207,
+   "source": "census"
+  },
+  {
+   "name": "Chhoataipatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 7244,
+   "source": "census"
+  },
+  {
+   "name": "Chikni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 520,
+   "source": "census"
+  },
+  {
+   "name": "Dhoi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 5675,
+   "lat": 26.1491059,
+   "lon": 85.9648633,
+   "source": "census"
+  },
+  {
+   "name": "Dih Berai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2797,
+   "lat": 26.1695647,
+   "lon": 85.980742,
+   "source": "census"
+  },
+  {
+   "name": "Diwari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 6029,
+   "source": "census"
+  },
+  {
+   "name": "Dularpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3535,
+   "source": "census"
+  },
+  {
+   "name": "Dumduma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 387,
+   "source": "census"
+  },
+  {
+   "name": "Dumri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 25,
+   "source": "census"
+  },
+  {
+   "name": "Fazla",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1991,
+   "source": "census"
+  },
+  {
+   "name": "Gairpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2194,
+   "lat": 26.2229709,
+   "lon": 85.9942849,
+   "source": "census"
+  },
+  {
+   "name": "Gangwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2288,
+   "lat": 26.1691503,
+   "lon": 85.916637,
+   "source": "census"
+  },
+  {
+   "name": "Gausa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1150,
+   "source": "census"
+  },
+  {
+   "name": "Gausa Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1104,
+   "source": "census"
+  },
+  {
+   "name": "Ghorghata",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2704,
+   "source": "census"
+  },
+  {
+   "name": "Harpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1725,
+   "source": "census"
+  },
+  {
+   "name": "Jafra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2515,
+   "source": "census"
+  },
+  {
+   "name": "Kabaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3786,
+   "source": "census"
+  },
+  {
+   "name": "Kabir Chak",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 5626,
+   "lat": 26.1462278,
+   "lon": 85.9184695,
+   "source": "census"
+  },
+  {
+   "name": "Kansi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 5099,
+   "source": "census"
+  },
+  {
+   "name": "Kanti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 813,
+   "source": "census"
+  },
+  {
+   "name": "Karhatia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1585,
+   "source": "census"
+  },
+  {
+   "name": "Ketuka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3033,
+   "source": "census"
+  },
+  {
+   "name": "Khajuri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 532,
+   "source": "census"
+  },
+  {
+   "name": "Kharthua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2629,
+   "source": "census"
+  },
+  {
+   "name": "Kharua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2852,
+   "source": "census"
+  },
+  {
+   "name": "Kheraj Bela",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 174,
+   "source": "census"
+  },
+  {
+   "name": "Khojkipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1100,
+   "source": "census"
+  },
+  {
+   "name": "Khutwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4866,
+   "lat": 26.1688064,
+   "lon": 85.9651154,
+   "source": "census"
+  },
+  {
+   "name": "Lau Tola",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1156,
+   "source": "census"
+  },
+  {
+   "name": "Leama",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 10443,
+   "source": "census"
+  },
+  {
+   "name": "Mabbi Belauna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4068,
+   "source": "census"
+  },
+  {
+   "name": "Madhopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 604,
+   "source": "census"
+  },
+  {
+   "name": "Madhpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 251,
+   "source": "census"
+  },
+  {
+   "name": "Mahua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 879,
+   "source": "census"
+  },
+  {
+   "name": "Majhiam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2968,
+   "source": "census"
+  },
+  {
+   "name": "Majlis Pokhar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 932,
+   "source": "census"
+  },
+  {
+   "name": "Makhnahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2954,
+   "source": "census"
+  },
+  {
+   "name": "Mamal",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 957,
+   "source": "census"
+  },
+  {
+   "name": "Mani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1152,
+   "source": "census"
+  },
+  {
+   "name": "Manihas Kansi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4511,
+   "source": "census"
+  },
+  {
+   "name": "Mathurapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2312,
+   "source": "census"
+  },
+  {
+   "name": "Mausimpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1413,
+   "source": "census"
+  },
+  {
+   "name": "Muria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 7459,
+   "source": "census"
+  },
+  {
+   "name": "Naina Ghat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 8086,
+   "lat": 26.1720008,
+   "lon": 86.047368,
+   "source": "census"
+  },
+  {
+   "name": "Narkatia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1200,
+   "source": "census"
+  },
+  {
+   "name": "Panta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 2402,
+   "source": "census"
+  },
+  {
+   "name": "Pathar Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 482,
+   "source": "census"
+  },
+  {
+   "name": "Pura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3099,
+   "source": "census"
+  },
+  {
+   "name": "Purkhotimpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1065,
+   "source": "census"
+  },
+  {
+   "name": "Ram Berai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1268,
+   "source": "census"
+  },
+  {
+   "name": "Rampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1486,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Kasim",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 824,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Kasim",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 31,
+   "source": "census"
+  },
+  {
+   "name": "Ramsala",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 559,
+   "source": "census"
+  },
+  {
+   "name": "Ranipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3816,
+   "source": "census"
+  },
+  {
+   "name": "Ranna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1369,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur Sahila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3809,
+   "source": "census"
+  },
+  {
+   "name": "Ruchaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3548,
+   "source": "census"
+  },
+  {
+   "name": "Sara Fazil",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1326,
+   "source": "census"
+  },
+  {
+   "name": "Sara Mahamad",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4748,
+   "source": "census"
+  },
+  {
+   "name": "Shahbazpur Bhulka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3591,
+   "source": "census"
+  },
+  {
+   "name": "Shahzadpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1435,
+   "source": "census"
+  },
+  {
+   "name": "Siso",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 13665,
+   "source": "census"
+  },
+  {
+   "name": "Sobhan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 104,
+   "source": "census"
+  },
+  {
+   "name": "Sonki",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3661,
+   "source": "census"
+  },
+  {
+   "name": "Sundarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 1176,
+   "source": "census"
+  },
+  {
+   "name": "Tektar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 190,
+   "source": "census"
+  },
+  {
+   "name": "Tethan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 3787,
+   "source": "census"
+  },
+  {
+   "name": "Thakurania",
+   "aliases": [],
+   "kind": "village",
+   "block": "Darbhanga",
+   "population": 4682,
+   "source": "census"
+  },
+  {
+   "name": "Amtahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 482,
+   "source": "census"
+  },
+  {
+   "name": "Aropur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 779,
+   "source": "census"
+  },
+  {
+   "name": "Az Rakbe Kotma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 679,
+   "source": "census"
+  },
+  {
+   "name": "Badhipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 979,
+   "source": "census"
+  },
+  {
+   "name": "Baghant",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 10553,
+   "lat": 26.1747835,
+   "lon": 86.1705458,
+   "source": "census"
+  },
+  {
+   "name": "Bahuarwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 2209,
+   "source": "census"
+  },
+  {
+   "name": "Barhampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 3730,
+   "source": "census"
+  },
+  {
+   "name": "Barhampura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 4099,
+   "source": "census"
+  },
+  {
+   "name": "Bazidpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 12651,
+   "source": "census"
+  },
+  {
+   "name": "Belahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 1793,
+   "source": "census"
+  },
+  {
+   "name": "Belaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 5576,
+   "source": "census"
+  },
+  {
+   "name": "Bhandarso",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 10557,
+   "source": "census"
+  },
+  {
+   "name": "Bhatpura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 2976,
+   "source": "census"
+  },
+  {
+   "name": "Bihta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 1859,
+   "source": "census"
+  },
+  {
+   "name": "Bisaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 2837,
+   "source": "census"
+  },
+  {
+   "name": "Chak Basawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 3511,
+   "source": "census"
+  },
+  {
+   "name": "Chak Chintamanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 1723,
+   "source": "census"
+  },
+  {
+   "name": "Chandaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 7420,
+   "source": "census"
+  },
+  {
+   "name": "Dahura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 12686,
+   "source": "census"
+  },
+  {
+   "name": "Dubhaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 986,
+   "source": "census"
+  },
+  {
+   "name": "Gangauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 5818,
+   "source": "census"
+  },
+  {
+   "name": "Jagdishpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 11595,
+   "source": "census"
+  },
+  {
+   "name": "Jatuka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 5309,
+   "source": "census"
+  },
+  {
+   "name": "Kaesth Kawai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 7518,
+   "source": "census"
+  },
+  {
+   "name": "Kanakpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 3307,
+   "source": "census"
+  },
+  {
+   "name": "Kanhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 834,
+   "source": "census"
+  },
+  {
+   "name": "Kotma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 2888,
+   "source": "census"
+  },
+  {
+   "name": "Lehara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 17373,
+   "source": "census"
+  },
+  {
+   "name": "Madhepur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 1716,
+   "source": "census"
+  },
+  {
+   "name": "Mamobihat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 9498,
+   "source": "census"
+  },
+  {
+   "name": "Mir Chak",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 538,
+   "source": "census"
+  },
+  {
+   "name": "Narotimpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 1679,
+   "source": "census"
+  },
+  {
+   "name": "Paik Tola",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 3470,
+   "source": "census"
+  },
+  {
+   "name": "Paithan Kawai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 11038,
+   "source": "census"
+  },
+  {
+   "name": "Pandaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 4177,
+   "source": "census"
+  },
+  {
+   "name": "Phulban",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 2470,
+   "source": "census"
+  },
+  {
+   "name": "Raghopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 22403,
+   "source": "census"
+  },
+  {
+   "name": "Raje",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 13051,
+   "source": "census"
+  },
+  {
+   "name": "Sukhwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 1634,
+   "source": "census"
+  },
+  {
+   "name": "Tariati",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 2590,
+   "source": "census"
+  },
+  {
+   "name": "Tatuwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 5771,
+   "source": "census"
+  },
+  {
+   "name": "Ujan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Manigachhi",
+   "population": 5856,
+   "source": "census"
+  },
+  {
+   "name": "Awam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2027,
+   "source": "census"
+  },
+  {
+   "name": "Baika",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 3755,
+   "source": "census"
+  },
+  {
+   "name": "Barhmotar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 117,
+   "source": "census"
+  },
+  {
+   "name": "Batha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 5558,
+   "source": "census"
+  },
+  {
+   "name": "Bathay",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2664,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 1019,
+   "source": "census"
+  },
+  {
+   "name": "Bisuhat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 1708,
+   "source": "census"
+  },
+  {
+   "name": "Chaka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 516,
+   "source": "census"
+  },
+  {
+   "name": "Dadpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2349,
+   "source": "census"
+  },
+  {
+   "name": "Deona",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 3379,
+   "source": "census"
+  },
+  {
+   "name": "Dhanirampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 849,
+   "source": "census"
+  },
+  {
+   "name": "Dhankaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 241,
+   "source": "census"
+  },
+  {
+   "name": "Ejrahta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 8451,
+   "source": "census"
+  },
+  {
+   "name": "Kaithwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 7810,
+   "source": "census"
+  },
+  {
+   "name": "Kathra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 8336,
+   "source": "census"
+  },
+  {
+   "name": "Khidarpura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 7,
+   "source": "census"
+  },
+  {
+   "name": "Kokraha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 8927,
+   "source": "census"
+  },
+  {
+   "name": "Kurson",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 5054,
+   "source": "census"
+  },
+  {
+   "name": "Lagma Rambhadar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 5866,
+   "source": "census"
+  },
+  {
+   "name": "Lodiami",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 657,
+   "source": "census"
+  },
+  {
+   "name": "Machhaita",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2434,
+   "source": "census"
+  },
+  {
+   "name": "Madaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 1314,
+   "source": "census"
+  },
+  {
+   "name": "Mahia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2889,
+   "source": "census"
+  },
+  {
+   "name": "Mahthor",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 6679,
+   "source": "census"
+  },
+  {
+   "name": "Nadhiami",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 7181,
+   "source": "census"
+  },
+  {
+   "name": "Naraenpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 3315,
+   "source": "census"
+  },
+  {
+   "name": "Pachahi Machhaita",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 496,
+   "source": "census"
+  },
+  {
+   "name": "Patai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 3642,
+   "source": "census"
+  },
+  {
+   "name": "Phakirna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 562,
+   "source": "census"
+  },
+  {
+   "name": "Phulwaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 1113,
+   "source": "census"
+  },
+  {
+   "name": "Pokhar Bhinda",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 4862,
+   "source": "census"
+  },
+  {
+   "name": "Raja Kharwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 3443,
+   "source": "census"
+  },
+  {
+   "name": "Sakatraipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2099,
+   "source": "census"
+  },
+  {
+   "name": "Sherpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2377,
+   "source": "census"
+  },
+  {
+   "name": "Sirampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2126,
+   "source": "census"
+  },
+  {
+   "name": "Sotharia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 400,
+   "source": "census"
+  },
+  {
+   "name": "Tangha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 7057,
+   "source": "census"
+  },
+  {
+   "name": "Tardi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Tardih",
+   "population": 2020,
+   "source": "census"
+  },
+  {
+   "name": "Adhloam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 5898,
+   "source": "census"
+  },
+  {
+   "name": "Alinagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 6876,
+   "lat": 26.0747089,
+   "lon": 86.2567949,
+   "source": "census"
+  },
+  {
+   "name": "Andauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3799,
+   "lat": 26.0845009,
+   "lon": 86.2100827,
+   "source": "census"
+  },
+  {
+   "name": "Antaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3541,
+   "lat": 26.0697839,
+   "lon": 86.1667036,
+   "source": "census"
+  },
+  {
+   "name": "Askaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 2736,
+   "source": "census"
+  },
+  {
+   "name": "Baghela",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 932,
+   "source": "census"
+  },
+  {
+   "name": "Chak Khoka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 192,
+   "source": "census"
+  },
+  {
+   "name": "Chak Milki",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 926,
+   "source": "census"
+  },
+  {
+   "name": "Chamropatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 1950,
+   "source": "census"
+  },
+  {
+   "name": "Dhamsayn",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 8406,
+   "source": "census"
+  },
+  {
+   "name": "Dhamwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 5092,
+   "source": "census"
+  },
+  {
+   "name": "Gadaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 8466,
+   "source": "census"
+  },
+  {
+   "name": "Gorkha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 1490,
+   "source": "census"
+  },
+  {
+   "name": "Hanuman Nagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 2478,
+   "source": "census"
+  },
+  {
+   "name": "Haritha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 12621,
+   "source": "census"
+  },
+  {
+   "name": "Haritha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 402,
+   "source": "census"
+  },
+  {
+   "name": "Harsinghpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 8099,
+   "source": "census"
+  },
+  {
+   "name": "Jaitipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 4814,
+   "source": "census"
+  },
+  {
+   "name": "Kataha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 867,
+   "source": "census"
+  },
+  {
+   "name": "Kiratpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 1414,
+   "lat": 26.0163527,
+   "lon": 86.3627314,
+   "source": "census"
+  },
+  {
+   "name": "Kortho",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3860,
+   "source": "census"
+  },
+  {
+   "name": "Lahata",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3069,
+   "source": "census"
+  },
+  {
+   "name": "Lilpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 2670,
+   "source": "census"
+  },
+  {
+   "name": "Milki",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 348,
+   "source": "census"
+  },
+  {
+   "name": "Mirzapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3874,
+   "source": "census"
+  },
+  {
+   "name": "Mohiuddipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 12640,
+   "source": "census"
+  },
+  {
+   "name": "Motipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 6536,
+   "lat": 26.0825748,
+   "lon": 86.1768276,
+   "source": "census"
+  },
+  {
+   "name": "Nankar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 1654,
+   "source": "census"
+  },
+  {
+   "name": "Narma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 2818,
+   "source": "census"
+  },
+  {
+   "name": "Nuruddinpur Dost",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3030,
+   "source": "census"
+  },
+  {
+   "name": "Pirauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 2649,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Udai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3022,
+   "source": "census"
+  },
+  {
+   "name": "Rashidpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 1746,
+   "source": "census"
+  },
+  {
+   "name": "Rupaspur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 1498,
+   "source": "census"
+  },
+  {
+   "name": "Shampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3530,
+   "source": "census"
+  },
+  {
+   "name": "Sisouni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3724,
+   "source": "census"
+  },
+  {
+   "name": "Sohat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 3144,
+   "source": "census"
+  },
+  {
+   "name": "Tumaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 2757,
+   "source": "census"
+  },
+  {
+   "name": "Urgawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Alinagar",
+   "population": 229,
+   "source": "census"
+  },
+  {
+   "name": "Achalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1466,
+   "source": "census"
+  },
+  {
+   "name": "Amaithi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 6195,
+   "source": "census"
+  },
+  {
+   "name": "Az Rakbe Mahinam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 225,
+   "source": "census"
+  },
+  {
+   "name": "Baigani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 5499,
+   "source": "census"
+  },
+  {
+   "name": "Balni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 3475,
+   "source": "census"
+  },
+  {
+   "name": "Barhampatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 5546,
+   "source": "census"
+  },
+  {
+   "name": "Batho",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 4079,
+   "source": "census"
+  },
+  {
+   "name": "Bikupatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1872,
+   "source": "census"
+  },
+  {
+   "name": "Bishunathpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 7587,
+   "source": "census"
+  },
+  {
+   "name": "Deoram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 4456,
+   "source": "census"
+  },
+  {
+   "name": "Ganesh Banauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 4318,
+   "source": "census"
+  },
+  {
+   "name": "Hari Bhauor",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 12462,
+   "source": "census"
+  },
+  {
+   "name": "Harpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 3057,
+   "source": "census"
+  },
+  {
+   "name": "Itaharwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1696,
+   "source": "census"
+  },
+  {
+   "name": "Jakauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 2567,
+   "source": "census"
+  },
+  {
+   "name": "Jarshon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 10903,
+   "source": "census"
+  },
+  {
+   "name": "Katwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1817,
+   "source": "census"
+  },
+  {
+   "name": "Khamhan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1477,
+   "source": "census"
+  },
+  {
+   "name": "Kishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 2738,
+   "source": "census"
+  },
+  {
+   "name": "Labani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 2292,
+   "source": "census"
+  },
+  {
+   "name": "Lachhmanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 389,
+   "source": "census"
+  },
+  {
+   "name": "Madhopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 4766,
+   "source": "census"
+  },
+  {
+   "name": "Mahinawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 15896,
+   "source": "census"
+  },
+  {
+   "name": "Moazampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 3800,
+   "source": "census"
+  },
+  {
+   "name": "Mokarampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 3570,
+   "source": "census"
+  },
+  {
+   "name": "Nawada",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 8020,
+   "source": "census"
+  },
+  {
+   "name": "Panchupatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1483,
+   "source": "census"
+  },
+  {
+   "name": "Parkhotimpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 415,
+   "source": "census"
+  },
+  {
+   "name": "Pohadi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 13604,
+   "source": "census"
+  },
+  {
+   "name": "Ramauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 7572,
+   "source": "census"
+  },
+  {
+   "name": "Rarhiam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 5199,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 1180,
+   "source": "census"
+  },
+  {
+   "name": "Sajhwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 4727,
+   "source": "census"
+  },
+  {
+   "name": "Semraon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 6921,
+   "source": "census"
+  },
+  {
+   "name": "Sherampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 22,
+   "source": "census"
+  },
+  {
+   "name": "Sirampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 5570,
+   "source": "census"
+  },
+  {
+   "name": "Supaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 2473,
+   "source": "census"
+  },
+  {
+   "name": "Tarauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 2312,
+   "source": "census"
+  },
+  {
+   "name": "Upardaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Benipur",
+   "population": 3394,
+   "source": "census"
+  },
+  {
+   "name": "Abdullahpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1753,
+   "source": "census"
+  },
+  {
+   "name": "Ahiapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 138,
+   "source": "census"
+  },
+  {
+   "name": "Ahila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3356,
+   "source": "census"
+  },
+  {
+   "name": "Ahmad Sujawal",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 999,
+   "source": "census"
+  },
+  {
+   "name": "Amapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 479,
+   "source": "census"
+  },
+  {
+   "name": "Andama",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2465,
+   "source": "census"
+  },
+  {
+   "name": "Asgaon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2571,
+   "source": "census"
+  },
+  {
+   "name": "Az Rakbe Basdeopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1532,
+   "source": "census"
+  },
+  {
+   "name": "Badh Basti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2323,
+   "source": "census"
+  },
+  {
+   "name": "Balaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1099,
+   "source": "census"
+  },
+  {
+   "name": "Balbhadarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3770,
+   "source": "census"
+  },
+  {
+   "name": "Bali Bagraul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1350,
+   "source": "census"
+  },
+  {
+   "name": "Balia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 813,
+   "source": "census"
+  },
+  {
+   "name": "Ballupur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 903,
+   "source": "census"
+  },
+  {
+   "name": "Baluahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 537,
+   "source": "census"
+  },
+  {
+   "name": "Baluahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 433,
+   "source": "census"
+  },
+  {
+   "name": "Bankipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1183,
+   "source": "census"
+  },
+  {
+   "name": "Baraur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1181,
+   "source": "census"
+  },
+  {
+   "name": "Barheta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 5169,
+   "source": "census"
+  },
+  {
+   "name": "Baruara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 5044,
+   "source": "census"
+  },
+  {
+   "name": "Basatpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4013,
+   "source": "census"
+  },
+  {
+   "name": "Basdeopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2329,
+   "source": "census"
+  },
+  {
+   "name": "Bastauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 544,
+   "source": "census"
+  },
+  {
+   "name": "Bazidpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3784,
+   "source": "census"
+  },
+  {
+   "name": "Bedipatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1276,
+   "source": "census"
+  },
+  {
+   "name": "Bela Yakub",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2794,
+   "source": "census"
+  },
+  {
+   "name": "Bhairopatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4050,
+   "source": "census"
+  },
+  {
+   "name": "Bhatani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 538,
+   "source": "census"
+  },
+  {
+   "name": "Birnia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2350,
+   "source": "census"
+  },
+  {
+   "name": "Bishambharpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 235,
+   "source": "census"
+  },
+  {
+   "name": "Bishambharpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 222,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur Manora",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1792,
+   "source": "census"
+  },
+  {
+   "name": "Biuni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3652,
+   "source": "census"
+  },
+  {
+   "name": "Chak Aga",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 209,
+   "source": "census"
+  },
+  {
+   "name": "Chak Gonauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 72,
+   "source": "census"
+  },
+  {
+   "name": "Chak Mahnauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 10,
+   "source": "census"
+  },
+  {
+   "name": "Chak Maksudpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1113,
+   "source": "census"
+  },
+  {
+   "name": "Chakka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 92,
+   "source": "census"
+  },
+  {
+   "name": "Chataria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1341,
+   "source": "census"
+  },
+  {
+   "name": "Chhaprar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3561,
+   "source": "census"
+  },
+  {
+   "name": "Chintamanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1252,
+   "source": "census"
+  },
+  {
+   "name": "Dagarsam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2354,
+   "source": "census"
+  },
+  {
+   "name": "Dalaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2017,
+   "source": "census"
+  },
+  {
+   "name": "Dalaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 110,
+   "source": "census"
+  },
+  {
+   "name": "Darhar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2667,
+   "source": "census"
+  },
+  {
+   "name": "Dasrathpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 393,
+   "source": "census"
+  },
+  {
+   "name": "Dekuli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4927,
+   "source": "census"
+  },
+  {
+   "name": "Deokali",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 5980,
+   "source": "census"
+  },
+  {
+   "name": "Dharnipatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1113,
+   "source": "census"
+  },
+  {
+   "name": "Dilawarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4342,
+   "source": "census"
+  },
+  {
+   "name": "Ekmi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1620,
+   "source": "census"
+  },
+  {
+   "name": "Fatehpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 884,
+   "source": "census"
+  },
+  {
+   "name": "Gangapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1394,
+   "source": "census"
+  },
+  {
+   "name": "Gangia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1941,
+   "source": "census"
+  },
+  {
+   "name": "Ganipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1566,
+   "source": "census"
+  },
+  {
+   "name": "Gehumi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2804,
+   "source": "census"
+  },
+  {
+   "name": "Gharghata",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 451,
+   "source": "census"
+  },
+  {
+   "name": "Ghorghata",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1383,
+   "source": "census"
+  },
+  {
+   "name": "Gobindpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1861,
+   "source": "census"
+  },
+  {
+   "name": "Gopipatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 883,
+   "source": "census"
+  },
+  {
+   "name": "Gorhia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3217,
+   "source": "census"
+  },
+  {
+   "name": "Gundauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2062,
+   "source": "census"
+  },
+  {
+   "name": "Harpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2405,
+   "source": "census"
+  },
+  {
+   "name": "Hasanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1108,
+   "source": "census"
+  },
+  {
+   "name": "Hem Naraenpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 341,
+   "source": "census"
+  },
+  {
+   "name": "Jagdispur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 961,
+   "source": "census"
+  },
+  {
+   "name": "Jalwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2981,
+   "source": "census"
+  },
+  {
+   "name": "Jiwanpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1479,
+   "source": "census"
+  },
+  {
+   "name": "Jogiara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3281,
+   "source": "census"
+  },
+  {
+   "name": "Kamrauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1727,
+   "source": "census"
+  },
+  {
+   "name": "Kansi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3400,
+   "source": "census"
+  },
+  {
+   "name": "Kapchhahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2762,
+   "source": "census"
+  },
+  {
+   "name": "Khaira Kunji",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 9427,
+   "source": "census"
+  },
+  {
+   "name": "Kheraj Shahpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1586,
+   "source": "census"
+  },
+  {
+   "name": "Kherajpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3991,
+   "source": "census"
+  },
+  {
+   "name": "Kherajpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 202,
+   "source": "census"
+  },
+  {
+   "name": "Kishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 558,
+   "source": "census"
+  },
+  {
+   "name": "Kokat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2950,
+   "source": "census"
+  },
+  {
+   "name": "Kusothar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2970,
+   "source": "census"
+  },
+  {
+   "name": "Lachhmipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1560,
+   "source": "census"
+  },
+  {
+   "name": "Madhuban",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2831,
+   "source": "census"
+  },
+  {
+   "name": "Mahpara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1427,
+   "source": "census"
+  },
+  {
+   "name": "Mahua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 7,
+   "source": "census"
+  },
+  {
+   "name": "Maniari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2777,
+   "source": "census"
+  },
+  {
+   "name": "Mathia urf Madhopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 310,
+   "source": "census"
+  },
+  {
+   "name": "Mekna Baida",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 5543,
+   "source": "census"
+  },
+  {
+   "name": "Mirzapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1205,
+   "source": "census"
+  },
+  {
+   "name": "Musapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1102,
+   "source": "census"
+  },
+  {
+   "name": "Nehalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 513,
+   "source": "census"
+  },
+  {
+   "name": "Ojhaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4862,
+   "source": "census"
+  },
+  {
+   "name": "Padri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3491,
+   "source": "census"
+  },
+  {
+   "name": "Pansiha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2282,
+   "source": "census"
+  },
+  {
+   "name": "Parauna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 705,
+   "source": "census"
+  },
+  {
+   "name": "Phakila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 646,
+   "source": "census"
+  },
+  {
+   "name": "Pingi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2101,
+   "source": "census"
+  },
+  {
+   "name": "Pirari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 645,
+   "source": "census"
+  },
+  {
+   "name": "Pirari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4688,
+   "source": "census"
+  },
+  {
+   "name": "Pokhar Bhinda",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1019,
+   "source": "census"
+  },
+  {
+   "name": "Premjiwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2650,
+   "source": "census"
+  },
+  {
+   "name": "Purkhopatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 3590,
+   "source": "census"
+  },
+  {
+   "name": "Raghaipura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2240,
+   "source": "census"
+  },
+  {
+   "name": "Raja Rauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 605,
+   "source": "census"
+  },
+  {
+   "name": "Rambhadarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2709,
+   "source": "census"
+  },
+  {
+   "name": "Ramnagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 429,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Dakhli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 72,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Madan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1231,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Ramdeo urf Chand Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 4476,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Rauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 331,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur Kalan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 494,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur Khurd",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1889,
+   "source": "census"
+  },
+  {
+   "name": "Rosan Chak",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 36,
+   "source": "census"
+  },
+  {
+   "name": "Salaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 779,
+   "source": "census"
+  },
+  {
+   "name": "Semra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2605,
+   "source": "census"
+  },
+  {
+   "name": "Senduar Gopal",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 2342,
+   "source": "census"
+  },
+  {
+   "name": "Shahpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 749,
+   "source": "census"
+  },
+  {
+   "name": "Shankarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 246,
+   "source": "census"
+  },
+  {
+   "name": "Siram Pipra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1622,
+   "source": "census"
+  },
+  {
+   "name": "Sirdilpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1929,
+   "source": "census"
+  },
+  {
+   "name": "Sobhan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 146,
+   "source": "census"
+  },
+  {
+   "name": "Sobhan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1315,
+   "source": "census"
+  },
+  {
+   "name": "Sobhan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1265,
+   "source": "census"
+  },
+  {
+   "name": "Tara Lahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 8804,
+   "source": "census"
+  },
+  {
+   "name": "Tarauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 351,
+   "source": "census"
+  },
+  {
+   "name": "Teunga",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1268,
+   "source": "census"
+  },
+  {
+   "name": "Ughara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 15622,
+   "source": "census"
+  },
+  {
+   "name": "Yakubpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Bahadurpur",
+   "population": 1465,
+   "source": "census"
+  },
+  {
+   "name": "Ama Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1379,
+   "source": "census"
+  },
+  {
+   "name": "Araila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 5356,
+   "source": "census"
+  },
+  {
+   "name": "Baghela",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 481,
+   "source": "census"
+  },
+  {
+   "name": "Baghela",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 5,
+   "source": "census"
+  },
+  {
+   "name": "Baghela",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 3959,
+   "source": "census"
+  },
+  {
+   "name": "Bahupatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1608,
+   "source": "census"
+  },
+  {
+   "name": "Banswara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 4577,
+   "source": "census"
+  },
+  {
+   "name": "Barhmotara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1753,
+   "source": "census"
+  },
+  {
+   "name": "Basant",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 4097,
+   "source": "census"
+  },
+  {
+   "name": "Bharaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 339,
+   "source": "census"
+  },
+  {
+   "name": "Bhawanipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 255,
+   "source": "census"
+  },
+  {
+   "name": "Bhawanipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 3477,
+   "source": "census"
+  },
+  {
+   "name": "Bihari Makund",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1640,
+   "source": "census"
+  },
+  {
+   "name": "Bisaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1859,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2046,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2320,
+   "source": "census"
+  },
+  {
+   "name": "Chandauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 542,
+   "source": "census"
+  },
+  {
+   "name": "Chhatauna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2116,
+   "source": "census"
+  },
+  {
+   "name": "Dabhrauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 188,
+   "source": "census"
+  },
+  {
+   "name": "Dath",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1204,
+   "source": "census"
+  },
+  {
+   "name": "Dih lahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 12136,
+   "source": "census"
+  },
+  {
+   "name": "Godaipatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2908,
+   "source": "census"
+  },
+  {
+   "name": "Gopalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 923,
+   "source": "census"
+  },
+  {
+   "name": "Gorhaila",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 3942,
+   "source": "census"
+  },
+  {
+   "name": "Gorhiari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 4494,
+   "source": "census"
+  },
+  {
+   "name": "Gorwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1712,
+   "source": "census"
+  },
+  {
+   "name": "Gorwara Barhmotar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 103,
+   "source": "census"
+  },
+  {
+   "name": "Hasanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2169,
+   "source": "census"
+  },
+  {
+   "name": "Hichhaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1267,
+   "source": "census"
+  },
+  {
+   "name": "Husenabad",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2293,
+   "source": "census"
+  },
+  {
+   "name": "Jamalpur urf Santpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1887,
+   "source": "census"
+  },
+  {
+   "name": "Kali",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1796,
+   "source": "census"
+  },
+  {
+   "name": "Khusro Sarae",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 182,
+   "source": "census"
+  },
+  {
+   "name": "Kolhatta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2906,
+   "source": "census"
+  },
+  {
+   "name": "Lauara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 473,
+   "source": "census"
+  },
+  {
+   "name": "Madhopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1508,
+   "source": "census"
+  },
+  {
+   "name": "Mahamadpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 943,
+   "source": "census"
+  },
+  {
+   "name": "Mahamadpur Sinduar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2831,
+   "source": "census"
+  },
+  {
+   "name": "Mahnauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 339,
+   "source": "census"
+  },
+  {
+   "name": "Mahnauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1032,
+   "source": "census"
+  },
+  {
+   "name": "Manhara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 824,
+   "source": "census"
+  },
+  {
+   "name": "Moro",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 3128,
+   "source": "census"
+  },
+  {
+   "name": "Mustafapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1885,
+   "source": "census"
+  },
+  {
+   "name": "Narsara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 4477,
+   "source": "census"
+  },
+  {
+   "name": "Neam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 4762,
+   "source": "census"
+  },
+  {
+   "name": "Panchobh",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 8865,
+   "lat": 26.1281042,
+   "lon": 85.8316541,
+   "source": "census"
+  },
+  {
+   "name": "Pandaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1145,
+   "source": "census"
+  },
+  {
+   "name": "Patori",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 4691,
+   "source": "census"
+  },
+  {
+   "name": "Phulwaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2973,
+   "source": "census"
+  },
+  {
+   "name": "Phulwaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 814,
+   "source": "census"
+  },
+  {
+   "name": "Poaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1269,
+   "source": "census"
+  },
+  {
+   "name": "Rajwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 622,
+   "source": "census"
+  },
+  {
+   "name": "Rampatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1132,
+   "source": "census"
+  },
+  {
+   "name": "Rampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1063,
+   "source": "census"
+  },
+  {
+   "name": "Rampur Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 3638,
+   "lat": 26.1225991,
+   "lon": 85.8182511,
+   "source": "census"
+  },
+  {
+   "name": "Ratanpura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 3749,
+   "source": "census"
+  },
+  {
+   "name": "Ratanpura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2782,
+   "source": "census"
+  },
+  {
+   "name": "Rupauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 5809,
+   "source": "census"
+  },
+  {
+   "name": "Saidpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 959,
+   "source": "census"
+  },
+  {
+   "name": "Thalwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 7381,
+   "lat": 26.077465,
+   "lon": 85.8958983,
+   "source": "census"
+  },
+  {
+   "name": "Tisi Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1991,
+   "source": "census"
+  },
+  {
+   "name": "Uchauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1699,
+   "source": "census"
+  },
+  {
+   "name": "Udhopatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 1184,
+   "source": "census"
+  },
+  {
+   "name": "Ughra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 2526,
+   "source": "census"
+  },
+  {
+   "name": "Urra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hanumannagar",
+   "population": 218,
+   "source": "census"
+  },
+  {
+   "name": "Akbarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1551,
+   "source": "census"
+  },
+  {
+   "name": "Aliabad",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1861,
+   "source": "census"
+  },
+  {
+   "name": "Anantpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 4804,
+   "source": "census"
+  },
+  {
+   "name": "Anar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 4484,
+   "source": "census"
+  },
+  {
+   "name": "Anpatti Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1327,
+   "source": "census"
+  },
+  {
+   "name": "Balia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1664,
+   "source": "census"
+  },
+  {
+   "name": "Bans Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 4464,
+   "lat": 25.9786766,
+   "lon": 85.9251076,
+   "source": "census"
+  },
+  {
+   "name": "Berai Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1273,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1659,
+   "source": "census"
+  },
+  {
+   "name": "Chandanpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 6838,
+   "source": "census"
+  },
+  {
+   "name": "Chikni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 608,
+   "source": "census"
+  },
+  {
+   "name": "Debipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1434,
+   "source": "census"
+  },
+  {
+   "name": "Dhiropatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 384,
+   "source": "census"
+  },
+  {
+   "name": "Ghosrama",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 4039,
+   "source": "census"
+  },
+  {
+   "name": "Hajipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 520,
+   "source": "census"
+  },
+  {
+   "name": "Hajipur Biranpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 518,
+   "source": "census"
+  },
+  {
+   "name": "Hawasa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 2783,
+   "source": "census"
+  },
+  {
+   "name": "Horil Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1534,
+   "source": "census"
+  },
+  {
+   "name": "Madhu Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1024,
+   "source": "census"
+  },
+  {
+   "name": "Mahamadpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 30,
+   "source": "census"
+  },
+  {
+   "name": "Mahamadpur Sirnia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 2004,
+   "source": "census"
+  },
+  {
+   "name": "Majhaulia Bisaipatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 3616,
+   "source": "census"
+  },
+  {
+   "name": "Makhanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 2283,
+   "source": "census"
+  },
+  {
+   "name": "Maksudpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 3518,
+   "source": "census"
+  },
+  {
+   "name": "Malahipatti Bahadurpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 11093,
+   "source": "census"
+  },
+  {
+   "name": "Mannupur Kharra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 3975,
+   "source": "census"
+  },
+  {
+   "name": "Manorathpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1829,
+   "source": "census"
+  },
+  {
+   "name": "Manorathpur Tulsi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1309,
+   "source": "census"
+  },
+  {
+   "name": "Mirzapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 7653,
+   "source": "census"
+  },
+  {
+   "name": "Parmanandpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1517,
+   "source": "census"
+  },
+  {
+   "name": "Parmar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 228,
+   "source": "census"
+  },
+  {
+   "name": "Pator",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 7978,
+   "lat": 26.0639873,
+   "lon": 85.951632,
+   "source": "census"
+  },
+  {
+   "name": "Paurao",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 5075,
+   "source": "census"
+  },
+  {
+   "name": "Pipraulia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1516,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 11292,
+   "source": "census"
+  },
+  {
+   "name": "Ratanpura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 668,
+   "source": "census"
+  },
+  {
+   "name": "Singhauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 3933,
+   "source": "census"
+  },
+  {
+   "name": "Sirampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 3521,
+   "source": "census"
+  },
+  {
+   "name": "Sirnia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 26767,
+   "source": "census"
+  },
+  {
+   "name": "Siwaisinghpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 1490,
+   "source": "census"
+  },
+  {
+   "name": "Sobhai Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 959,
+   "source": "census"
+  },
+  {
+   "name": "Sobhnath Patti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 799,
+   "source": "census"
+  },
+  {
+   "name": "Usma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Hayaghat",
+   "population": 2259,
+   "source": "census"
+  },
+  {
+   "name": "Adharpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3348,
+   "source": "census"
+  },
+  {
+   "name": "Amta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3837,
+   "source": "census"
+  },
+  {
+   "name": "Athar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 24339,
+   "source": "census"
+  },
+  {
+   "name": "Baghauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 10261,
+   "source": "census"
+  },
+  {
+   "name": "Baghra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2275,
+   "source": "census"
+  },
+  {
+   "name": "Baheri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 21872,
+   "source": "census"
+  },
+  {
+   "name": "Bakmandar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1980,
+   "source": "census"
+  },
+  {
+   "name": "Balgaon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 6314,
+   "source": "census"
+  },
+  {
+   "name": "Bandh Jhanjhar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 412,
+   "source": "census"
+  },
+  {
+   "name": "Bandhuli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 5190,
+   "source": "census"
+  },
+  {
+   "name": "Behrauna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2030,
+   "source": "census"
+  },
+  {
+   "name": "Benta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1117,
+   "lat": 25.982901,
+   "lon": 85.9329557,
+   "source": "census"
+  },
+  {
+   "name": "Bhachhi Asli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 10770,
+   "source": "census"
+  },
+  {
+   "name": "Bhagawatipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 969,
+   "source": "census"
+  },
+  {
+   "name": "Bharwari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 4155,
+   "source": "census"
+  },
+  {
+   "name": "Bhawani Nimaithi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2310,
+   "source": "census"
+  },
+  {
+   "name": "Bithauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 8448,
+   "source": "census"
+  },
+  {
+   "name": "Chak Raipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1483,
+   "source": "census"
+  },
+  {
+   "name": "Chaka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2918,
+   "source": "census"
+  },
+  {
+   "name": "Chakla",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 208,
+   "source": "census"
+  },
+  {
+   "name": "Chakla",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 925,
+   "source": "census"
+  },
+  {
+   "name": "Chakwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1684,
+   "lat": 25.9728896,
+   "lon": 85.9291041,
+   "source": "census"
+  },
+  {
+   "name": "Chilha Asli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1227,
+   "source": "census"
+  },
+  {
+   "name": "Dadarwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1139,
+   "source": "census"
+  },
+  {
+   "name": "Dhanauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 7195,
+   "source": "census"
+  },
+  {
+   "name": "Dhobepur Bansara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 4319,
+   "source": "census"
+  },
+  {
+   "name": "Dilawarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3081,
+   "source": "census"
+  },
+  {
+   "name": "Dohat Narain",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3835,
+   "source": "census"
+  },
+  {
+   "name": "Dubauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2127,
+   "source": "census"
+  },
+  {
+   "name": "Dumri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 400,
+   "source": "census"
+  },
+  {
+   "name": "Gangdah",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3598,
+   "source": "census"
+  },
+  {
+   "name": "Gujrauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 9005,
+   "source": "census"
+  },
+  {
+   "name": "Harachha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3765,
+   "source": "census"
+  },
+  {
+   "name": "Haridih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 32612,
+   "source": "census"
+  },
+  {
+   "name": "Hathauri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 11792,
+   "source": "census"
+  },
+  {
+   "name": "Inay",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 6768,
+   "source": "census"
+  },
+  {
+   "name": "Jadupatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1112,
+   "source": "census"
+  },
+  {
+   "name": "Jurja",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 12862,
+   "source": "census"
+  },
+  {
+   "name": "Kalyanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 660,
+   "source": "census"
+  },
+  {
+   "name": "Kapi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 979,
+   "source": "census"
+  },
+  {
+   "name": "Kargawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1248,
+   "source": "census"
+  },
+  {
+   "name": "Khagrahata",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1546,
+   "source": "census"
+  },
+  {
+   "name": "Khagri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 209,
+   "source": "census"
+  },
+  {
+   "name": "Kharari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2075,
+   "source": "census"
+  },
+  {
+   "name": "Kumar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1026,
+   "source": "census"
+  },
+  {
+   "name": "Kushiam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2087,
+   "source": "census"
+  },
+  {
+   "name": "Lagupur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 973,
+   "source": "census"
+  },
+  {
+   "name": "Madhuban",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2287,
+   "source": "census"
+  },
+  {
+   "name": "Maheshpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 900,
+   "source": "census"
+  },
+  {
+   "name": "Mahua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 616,
+   "source": "census"
+  },
+  {
+   "name": "Mankopatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 462,
+   "source": "census"
+  },
+  {
+   "name": "Mataunia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 4579,
+   "source": "census"
+  },
+  {
+   "name": "Naradapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 772,
+   "source": "census"
+  },
+  {
+   "name": "Nimaithi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2551,
+   "source": "census"
+  },
+  {
+   "name": "Paghari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 4416,
+   "source": "census"
+  },
+  {
+   "name": "Partapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1536,
+   "source": "census"
+  },
+  {
+   "name": "Ramauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3334,
+   "source": "census"
+  },
+  {
+   "name": "Rampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 581,
+   "source": "census"
+  },
+  {
+   "name": "Sadhua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3039,
+   "source": "census"
+  },
+  {
+   "name": "Sadhua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 678,
+   "source": "census"
+  },
+  {
+   "name": "Salha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 536,
+   "source": "census"
+  },
+  {
+   "name": "Samadhpura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3358,
+   "source": "census"
+  },
+  {
+   "name": "Samastipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 989,
+   "source": "census"
+  },
+  {
+   "name": "Sankhara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3377,
+   "source": "census"
+  },
+  {
+   "name": "Semram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 5574,
+   "source": "census"
+  },
+  {
+   "name": "Semri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 2402,
+   "source": "census"
+  },
+  {
+   "name": "Serwamanor",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 4616,
+   "source": "census"
+  },
+  {
+   "name": "Sher",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 3937,
+   "source": "census"
+  },
+  {
+   "name": "Sonwan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 1603,
+   "source": "census"
+  },
+  {
+   "name": "Sosari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 4983,
+   "source": "census"
+  },
+  {
+   "name": "Thathupur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 7518,
+   "source": "census"
+  },
+  {
+   "name": "Turki",
+   "aliases": [],
+   "kind": "village",
+   "block": "Baheri",
+   "population": 5516,
+   "source": "census"
+  },
+  {
+   "name": "Afzala",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 14595,
+   "source": "census"
+  },
+  {
+   "name": "Akbarpur Baik",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 6329,
+   "source": "census"
+  },
+  {
+   "name": "Andhiari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 731,
+   "source": "census"
+  },
+  {
+   "name": "Arjuna Bijulia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1263,
+   "source": "census"
+  },
+  {
+   "name": "Athar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1694,
+   "source": "census"
+  },
+  {
+   "name": "Auranga Usuri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 5303,
+   "source": "census"
+  },
+  {
+   "name": "Awan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3919,
+   "source": "census"
+  },
+  {
+   "name": "Az Rakbe Gobindpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 378,
+   "source": "census"
+  },
+  {
+   "name": "Balia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3080,
+   "source": "census"
+  },
+  {
+   "name": "Belgaun",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 855,
+   "source": "census"
+  },
+  {
+   "name": "Bhaini",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 5782,
+   "source": "census"
+  },
+  {
+   "name": "Bhanta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1925,
+   "source": "census"
+  },
+  {
+   "name": "Birampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 2855,
+   "source": "census"
+  },
+  {
+   "name": "Changwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1187,
+   "source": "census"
+  },
+  {
+   "name": "Deokali",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 7060,
+   "source": "census"
+  },
+  {
+   "name": "Dumri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 4012,
+   "source": "census"
+  },
+  {
+   "name": "Fakirana",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1158,
+   "source": "census"
+  },
+  {
+   "name": "Gambhiria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1113,
+   "source": "census"
+  },
+  {
+   "name": "Gaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1777,
+   "source": "census"
+  },
+  {
+   "name": "Gayri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1510,
+   "source": "census"
+  },
+  {
+   "name": "Hanshi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 2633,
+   "source": "census"
+  },
+  {
+   "name": "Hanti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3275,
+   "source": "census"
+  },
+  {
+   "name": "Harpatti Gobindpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 89,
+   "source": "census"
+  },
+  {
+   "name": "Harpur Kalan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 5150,
+   "source": "census"
+  },
+  {
+   "name": "Jagarnathpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1780,
+   "source": "census"
+  },
+  {
+   "name": "Jagdispur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 5227,
+   "source": "census"
+  },
+  {
+   "name": "Jaikishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1255,
+   "source": "census"
+  },
+  {
+   "name": "Kahuwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3764,
+   "source": "census"
+  },
+  {
+   "name": "Kamar Kalan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3587,
+   "source": "census"
+  },
+  {
+   "name": "Kataya",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3844,
+   "source": "census"
+  },
+  {
+   "name": "Ladha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1795,
+   "source": "census"
+  },
+  {
+   "name": "Lalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 834,
+   "source": "census"
+  },
+  {
+   "name": "Mahamadpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 3364,
+   "source": "census"
+  },
+  {
+   "name": "Mahua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1887,
+   "source": "census"
+  },
+  {
+   "name": "Manorbhoram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 6772,
+   "source": "census"
+  },
+  {
+   "name": "Mirzapur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 2452,
+   "source": "census"
+  },
+  {
+   "name": "Murwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 4483,
+   "source": "census"
+  },
+  {
+   "name": "Naraenpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 2775,
+   "source": "census"
+  },
+  {
+   "name": "Nausta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 807,
+   "source": "census"
+  },
+  {
+   "name": "Neuri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 12328,
+   "source": "census"
+  },
+  {
+   "name": "Padri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 6908,
+   "source": "census"
+  },
+  {
+   "name": "Paghari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 4163,
+   "source": "census"
+  },
+  {
+   "name": "Pakhram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 28209,
+   "source": "census"
+  },
+  {
+   "name": "Parhat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 222,
+   "source": "census"
+  },
+  {
+   "name": "Patania",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 4849,
+   "lat": 25.9390879,
+   "lon": 86.1797243,
+   "source": "census"
+  },
+  {
+   "name": "Ramnagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 6730,
+   "source": "census"
+  },
+  {
+   "name": "Rampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 818,
+   "source": "census"
+  },
+  {
+   "name": "Rasulpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1434,
+   "source": "census"
+  },
+  {
+   "name": "Rohar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 17506,
+   "source": "census"
+  },
+  {
+   "name": "Saduka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 482,
+   "source": "census"
+  },
+  {
+   "name": "Sahasram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 4760,
+   "source": "census"
+  },
+  {
+   "name": "Saho",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 27390,
+   "source": "census"
+  },
+  {
+   "name": "Shiunagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 8383,
+   "source": "census"
+  },
+  {
+   "name": "Shiwpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 309,
+   "source": "census"
+  },
+  {
+   "name": "Sihol",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1839,
+   "source": "census"
+  },
+  {
+   "name": "Sirsia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 462,
+   "source": "census"
+  },
+  {
+   "name": "Sogaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 701,
+   "source": "census"
+  },
+  {
+   "name": "Sonbihat",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 2732,
+   "source": "census"
+  },
+  {
+   "name": "Sonpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 4562,
+   "source": "census"
+  },
+  {
+   "name": "Supaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 19617,
+   "source": "census"
+  },
+  {
+   "name": "Talibpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 1023,
+   "source": "census"
+  },
+  {
+   "name": "Uchti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Biraul",
+   "population": 8387,
+   "source": "census"
+  },
+  {
+   "name": "Asma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 1412,
+   "source": "census"
+  },
+  {
+   "name": "Bhagwanpur Bhit",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 163,
+   "source": "census"
+  },
+  {
+   "name": "Borwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 1218,
+   "source": "census"
+  },
+  {
+   "name": "Burheb",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 615,
+   "source": "census"
+  },
+  {
+   "name": "Burheb Inaitpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 5567,
+   "source": "census"
+  },
+  {
+   "name": "Chharapatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 1097,
+   "source": "census"
+  },
+  {
+   "name": "Dathua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 4416,
+   "source": "census"
+  },
+  {
+   "name": "Dohatha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 1217,
+   "source": "census"
+  },
+  {
+   "name": "Dompathi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 194,
+   "source": "census"
+  },
+  {
+   "name": "Faizullahpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 2747,
+   "source": "census"
+  },
+  {
+   "name": "Ghanshyampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 6237,
+   "lat": 26.0599057,
+   "lon": 86.3255453,
+   "source": "census"
+  },
+  {
+   "name": "Godhaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 2840,
+   "source": "census"
+  },
+  {
+   "name": "Gulma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 5252,
+   "source": "census"
+  },
+  {
+   "name": "Hardowarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 4339,
+   "source": "census"
+  },
+  {
+   "name": "Jadupatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 9786,
+   "source": "census"
+  },
+  {
+   "name": "Kortho",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 17915,
+   "source": "census"
+  },
+  {
+   "name": "Mahathwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 4523,
+   "source": "census"
+  },
+  {
+   "name": "Padari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 2980,
+   "source": "census"
+  },
+  {
+   "name": "Pali",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 13125,
+   "source": "census"
+  },
+  {
+   "name": "Phakirana",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 28,
+   "source": "census"
+  },
+  {
+   "name": "Pohadi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 18643,
+   "source": "census"
+  },
+  {
+   "name": "Punahad",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 5350,
+   "source": "census"
+  },
+  {
+   "name": "Salahpur Lagma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 7224,
+   "source": "census"
+  },
+  {
+   "name": "Semadeori",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 305,
+   "source": "census"
+  },
+  {
+   "name": "Shahpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 9513,
+   "source": "census"
+  },
+  {
+   "name": "Supaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 1474,
+   "source": "census"
+  },
+  {
+   "name": "Tumaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Ghanshyampur",
+   "population": 5030,
+   "source": "census"
+  },
+  {
+   "name": "Amahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 339,
+   "source": "census"
+  },
+  {
+   "name": "Bhandaria",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 1133,
+   "source": "census"
+  },
+  {
+   "name": "Bhobhaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 1820,
+   "source": "census"
+  },
+  {
+   "name": "Bholi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 919,
+   "source": "census"
+  },
+  {
+   "name": "Birdipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 2721,
+   "source": "census"
+  },
+  {
+   "name": "Danha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 5424,
+   "source": "census"
+  },
+  {
+   "name": "Dhangha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 3012,
+   "source": "census"
+  },
+  {
+   "name": "Jagson",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 3128,
+   "source": "census"
+  },
+  {
+   "name": "Jamalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 12792,
+   "source": "census"
+  },
+  {
+   "name": "Jhagarua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 11079,
+   "source": "census"
+  },
+  {
+   "name": "Kandwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 1570,
+   "source": "census"
+  },
+  {
+   "name": "Khaisa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 3892,
+   "source": "census"
+  },
+  {
+   "name": "Kubaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 3043,
+   "source": "census"
+  },
+  {
+   "name": "Narkatia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 1085,
+   "source": "census"
+  },
+  {
+   "name": "Rasiari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 25253,
+   "source": "census"
+  },
+  {
+   "name": "Tarwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 2744,
+   "source": "census"
+  },
+  {
+   "name": "Tatari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kiratpur",
+   "population": 1469,
+   "source": "census"
+  },
+  {
+   "name": "Aadharpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 5832,
+   "source": "census"
+  },
+  {
+   "name": "Adhlar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 500,
+   "source": "census"
+  },
+  {
+   "name": "Adhlar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 649,
+   "source": "census"
+  },
+  {
+   "name": "Ahisa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1707,
+   "source": "census"
+  },
+  {
+   "name": "Akhtwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 5862,
+   "source": "census"
+  },
+  {
+   "name": "Asi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 7702,
+   "source": "census"
+  },
+  {
+   "name": "Baijnathpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 963,
+   "source": "census"
+  },
+  {
+   "name": "Balthari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 2688,
+   "source": "census"
+  },
+  {
+   "name": "Bangrahata",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 2308,
+   "source": "census"
+  },
+  {
+   "name": "Bangrasi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3619,
+   "source": "census"
+  },
+  {
+   "name": "Bargawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3596,
+   "source": "census"
+  },
+  {
+   "name": "Basuli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1337,
+   "source": "census"
+  },
+  {
+   "name": "Bath",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3521,
+   "source": "census"
+  },
+  {
+   "name": "Bauram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 11455,
+   "source": "census"
+  },
+  {
+   "name": "Belwara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1985,
+   "source": "census"
+  },
+  {
+   "name": "Bhuskan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1700,
+   "source": "census"
+  },
+  {
+   "name": "Bishunpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 2222,
+   "source": "census"
+  },
+  {
+   "name": "Ganauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 2383,
+   "source": "census"
+  },
+  {
+   "name": "Gauramansingh",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3375,
+   "source": "census"
+  },
+  {
+   "name": "Hasanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 701,
+   "source": "census"
+  },
+  {
+   "name": "Hasopur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 490,
+   "source": "census"
+  },
+  {
+   "name": "Kahuwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1475,
+   "source": "census"
+  },
+  {
+   "name": "Kanhai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 8446,
+   "source": "census"
+  },
+  {
+   "name": "Kasraund",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 11538,
+   "source": "census"
+  },
+  {
+   "name": "Kasraund",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 4609,
+   "source": "census"
+  },
+  {
+   "name": "Kothram",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 4407,
+   "source": "census"
+  },
+  {
+   "name": "Kunauni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1717,
+   "source": "census"
+  },
+  {
+   "name": "Lagwa Bais",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3858,
+   "source": "census"
+  },
+  {
+   "name": "Magura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1469,
+   "source": "census"
+  },
+  {
+   "name": "Mahuwar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1796,
+   "source": "census"
+  },
+  {
+   "name": "Malhi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1023,
+   "source": "census"
+  },
+  {
+   "name": "Mansara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 4400,
+   "source": "census"
+  },
+  {
+   "name": "Mansara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 4516,
+   "source": "census"
+  },
+  {
+   "name": "Misrauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 894,
+   "source": "census"
+  },
+  {
+   "name": "Nadai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3722,
+   "source": "census"
+  },
+  {
+   "name": "Nankar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 300,
+   "source": "census"
+  },
+  {
+   "name": "Nari Bhadawn",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 17716,
+   "source": "census"
+  },
+  {
+   "name": "Nasahara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1309,
+   "source": "census"
+  },
+  {
+   "name": "Palawa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3919,
+   "source": "census"
+  },
+  {
+   "name": "Parasrama",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 3565,
+   "source": "census"
+  },
+  {
+   "name": "Pharshahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 750,
+   "source": "census"
+  },
+  {
+   "name": "Punach",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1429,
+   "source": "census"
+  },
+  {
+   "name": "Rauta",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 969,
+   "source": "census"
+  },
+  {
+   "name": "Tenduwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1205,
+   "source": "census"
+  },
+  {
+   "name": "Tira",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1165,
+   "source": "census"
+  },
+  {
+   "name": "Uphraul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Gora Bauram",
+   "population": 1320,
+   "source": "census"
+  },
+  {
+   "name": "Aber",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1230,
+   "source": "census"
+  },
+  {
+   "name": "Aber urf Rambari",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1335,
+   "source": "census"
+  },
+  {
+   "name": "Asman",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 3308,
+   "source": "census"
+  },
+  {
+   "name": "Aso",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1906,
+   "source": "census"
+  },
+  {
+   "name": "Atraha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 173,
+   "source": "census"
+  },
+  {
+   "name": "Aurahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1569,
+   "source": "census"
+  },
+  {
+   "name": "Bahrampur urf Masankhon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 5275,
+   "source": "census"
+  },
+  {
+   "name": "Bairo",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 584,
+   "source": "census"
+  },
+  {
+   "name": "Balaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 4889,
+   "source": "census"
+  },
+  {
+   "name": "Bargaon",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 5823,
+   "source": "census"
+  },
+  {
+   "name": "Barhampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2066,
+   "source": "census"
+  },
+  {
+   "name": "Barna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 7493,
+   "source": "census"
+  },
+  {
+   "name": "Barsanda",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 146,
+   "source": "census"
+  },
+  {
+   "name": "Basaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 617,
+   "source": "census"
+  },
+  {
+   "name": "Ber",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 5602,
+   "source": "census"
+  },
+  {
+   "name": "Bhadahar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 4771,
+   "source": "census"
+  },
+  {
+   "name": "Bhatwan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 234,
+   "source": "census"
+  },
+  {
+   "name": "Bisharia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 4037,
+   "source": "census"
+  },
+  {
+   "name": "Chingri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 3490,
+   "source": "census"
+  },
+  {
+   "name": "Darbepur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 381,
+   "source": "census"
+  },
+  {
+   "name": "Dharshyam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1373,
+   "source": "census"
+  },
+  {
+   "name": "Dinmo",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 6012,
+   "source": "census"
+  },
+  {
+   "name": "Dubaha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 917,
+   "source": "census"
+  },
+  {
+   "name": "Fakirana Kalyan Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 607,
+   "source": "census"
+  },
+  {
+   "name": "Geaspur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 973,
+   "source": "census"
+  },
+  {
+   "name": "Ghordaur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2022,
+   "source": "census"
+  },
+  {
+   "name": "Ghorsar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2171,
+   "source": "census"
+  },
+  {
+   "name": "Gora",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2863,
+   "source": "census"
+  },
+  {
+   "name": "Gothani",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 3455,
+   "source": "census"
+  },
+  {
+   "name": "Harauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 5249,
+   "source": "census"
+  },
+  {
+   "name": "Harnagar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 5075,
+   "source": "census"
+  },
+  {
+   "name": "Hathauri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1704,
+   "source": "census"
+  },
+  {
+   "name": "Hathra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 4141,
+   "source": "census"
+  },
+  {
+   "name": "Hirni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 7783,
+   "source": "census"
+  },
+  {
+   "name": "Jafarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2199,
+   "source": "census"
+  },
+  {
+   "name": "Jhajhra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 4679,
+   "source": "census"
+  },
+  {
+   "name": "Kachhua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1444,
+   "source": "census"
+  },
+  {
+   "name": "Kalna Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 592,
+   "source": "census"
+  },
+  {
+   "name": "Khesraha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1639,
+   "source": "census"
+  },
+  {
+   "name": "Khotas Kalana",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1918,
+   "source": "census"
+  },
+  {
+   "name": "Ladiami",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2944,
+   "source": "census"
+  },
+  {
+   "name": "Laranch Bhadaul",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 866,
+   "source": "census"
+  },
+  {
+   "name": "Larni",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 612,
+   "source": "census"
+  },
+  {
+   "name": "Lodipur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 829,
+   "source": "census"
+  },
+  {
+   "name": "Maharajpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 912,
+   "source": "census"
+  },
+  {
+   "name": "Mahri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2231,
+   "source": "census"
+  },
+  {
+   "name": "Mahri Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 477,
+   "source": "census"
+  },
+  {
+   "name": "Maibi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 761,
+   "source": "census"
+  },
+  {
+   "name": "Majhiam",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1058,
+   "source": "census"
+  },
+  {
+   "name": "Manaitha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2214,
+   "source": "census"
+  },
+  {
+   "name": "Manoripur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 500,
+   "source": "census"
+  },
+  {
+   "name": "Missi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1279,
+   "source": "census"
+  },
+  {
+   "name": "Mohim Buzurg",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2201,
+   "source": "census"
+  },
+  {
+   "name": "Mohim Khurd",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2735,
+   "source": "census"
+  },
+  {
+   "name": "Naraenpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 4670,
+   "source": "census"
+  },
+  {
+   "name": "Pach Hara Buzrug",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1885,
+   "source": "census"
+  },
+  {
+   "name": "Pachhara Khurd",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 880,
+   "source": "census"
+  },
+  {
+   "name": "Paika Charai",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 3376,
+   "source": "census"
+  },
+  {
+   "name": "Pakahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 5700,
+   "source": "census"
+  },
+  {
+   "name": "Pando",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1154,
+   "source": "census"
+  },
+  {
+   "name": "Pirori",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 701,
+   "source": "census"
+  },
+  {
+   "name": "Sanauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1764,
+   "source": "census"
+  },
+  {
+   "name": "Sanauli",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 223,
+   "source": "census"
+  },
+  {
+   "name": "Sanichara",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1048,
+   "source": "census"
+  },
+  {
+   "name": "Semraha",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2693,
+   "source": "census"
+  },
+  {
+   "name": "Shahpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1324,
+   "source": "census"
+  },
+  {
+   "name": "Siripur urf Sukmarpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 686,
+   "source": "census"
+  },
+  {
+   "name": "Sultanpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 2944,
+   "source": "census"
+  },
+  {
+   "name": "Tasmanpatti",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 560,
+   "source": "census"
+  },
+  {
+   "name": "Tole Khaki Daspur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 255,
+   "source": "census"
+  },
+  {
+   "name": "Uda",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan",
+   "population": 1643,
+   "source": "census"
+  },
+  {
+   "name": "Adalpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1990,
+   "source": "census"
+  },
+  {
+   "name": "Anrahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2369,
+   "source": "census"
+  },
+  {
+   "name": "Barania",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2353,
+   "source": "census"
+  },
+  {
+   "name": "Beltharwa",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 498,
+   "source": "census"
+  },
+  {
+   "name": "Bhaluka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1790,
+   "source": "census"
+  },
+  {
+   "name": "Bhirua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 9354,
+   "source": "census"
+  },
+  {
+   "name": "Bishunia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1538,
+   "source": "census"
+  },
+  {
+   "name": "Burhia Sukhrasi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1036,
+   "source": "census"
+  },
+  {
+   "name": "Dharampur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 625,
+   "lat": 26.221083,
+   "lon": 86.2258346,
+   "source": "census"
+  },
+  {
+   "name": "Godaipura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 500,
+   "source": "census"
+  },
+  {
+   "name": "Goram Dih",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 297,
+   "source": "census"
+  },
+  {
+   "name": "Gulma",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 4245,
+   "source": "census"
+  },
+  {
+   "name": "Harnahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2316,
+   "lat": 25.7980734,
+   "lon": 86.3559423,
+   "source": "census"
+  },
+  {
+   "name": "Itahar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 5654,
+   "source": "census"
+  },
+  {
+   "name": "Kaunia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2925,
+   "source": "census"
+  },
+  {
+   "name": "Kewatgawan",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 12013,
+   "source": "census"
+  },
+  {
+   "name": "Khalasin",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1427,
+   "source": "census"
+  },
+  {
+   "name": "Kola",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1619,
+   "source": "census"
+  },
+  {
+   "name": "Kolatoka",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 766,
+   "source": "census"
+  },
+  {
+   "name": "Mahadeo Math",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 4063,
+   "source": "census"
+  },
+  {
+   "name": "Mahisanr urf Narkatia",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1178,
+   "source": "census"
+  },
+  {
+   "name": "Mahisaut",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2861,
+   "source": "census"
+  },
+  {
+   "name": "Pipra",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1681,
+   "source": "census"
+  },
+  {
+   "name": "Piprahi",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 472,
+   "source": "census"
+  },
+  {
+   "name": "Raepur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2050,
+   "source": "census"
+  },
+  {
+   "name": "Reota",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 17285,
+   "source": "census"
+  },
+  {
+   "name": "Samhaura",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2302,
+   "source": "census"
+  },
+  {
+   "name": "Sima",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 5820,
+   "source": "census"
+  },
+  {
+   "name": "Sisauna",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 3948,
+   "source": "census"
+  },
+  {
+   "name": "Sughrain",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 15165,
+   "source": "census"
+  },
+  {
+   "name": "Tilakpur",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 1910,
+   "source": "census"
+  },
+  {
+   "name": "Tilkeswar",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 6266,
+   "source": "census"
+  },
+  {
+   "name": "Ujua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 2158,
+   "source": "census"
+  },
+  {
+   "name": "Urthua",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 3296,
+   "source": "census"
+  },
+  {
+   "name": "Usri",
+   "aliases": [],
+   "kind": "village",
+   "block": "Kusheshwar Asthan Purbi",
+   "population": 5047,
+   "source": "census"
+  },
+  {
+   "name": "Shobhnathpatti",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0559636,
+   "lon": 85.9559798,
+   "source": "osm"
+  },
+  {
+   "name": "Bishanpur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0422184,
+   "lon": 85.9248555,
+   "source": "osm"
+  },
+  {
+   "name": "Sidhauli",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0466622,
+   "lon": 85.9373975,
+   "source": "osm"
+  },
+  {
+   "name": "Pauram",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0180255,
+   "lon": 85.8931357,
+   "source": "osm"
+  },
+  {
+   "name": "Paharpur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0272376,
+   "lon": 85.9766543,
+   "source": "osm"
+  },
+  {
+   "name": "Rajkha",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0229619,
+   "lon": 85.9798408,
+   "source": "osm"
+  },
+  {
+   "name": "Jorja",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0140965,
+   "lon": 85.9869325,
+   "source": "osm"
+  },
+  {
+   "name": "Kunwar",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0032586,
+   "lon": 85.9923291,
+   "source": "osm"
+  },
+  {
+   "name": "Sankherha",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.9960938,
+   "lon": 85.9958053,
+   "source": "osm"
+  },
+  {
+   "name": "Bagra",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.985746,
+   "lon": 86.0150957,
+   "source": "osm"
+  },
+  {
+   "name": "Adowan",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.966104,
+   "lon": 86.021297,
+   "source": "osm"
+  },
+  {
+   "name": "Thathopur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.9735166,
+   "lon": 86.027627,
+   "source": "osm"
+  },
+  {
+   "name": "Muriya",
+   "aliases": [
+    "मुरिया"
+   ],
+   "kind": "village",
+   "lat": 26.2016996,
+   "lon": 86.0159379,
+   "source": "osm"
+  },
+  {
+   "name": "Gausaghat",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.1732621,
+   "lon": 85.9509373,
+   "source": "osm"
+  },
+  {
+   "name": "Ratanpur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.069953,
+   "lon": 85.9014183,
+   "source": "osm"
+  },
+  {
+   "name": "Atahar",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0750365,
+   "lon": 86.0511231,
+   "source": "osm"
+  },
+  {
+   "name": "Katasa",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2065247,
+   "lon": 85.7361191,
+   "source": "osm"
+  },
+  {
+   "name": "Tarsarai",
+   "aliases": [],
+   "kind": "suburb",
+   "lat": 26.1963303,
+   "lon": 86.0267579,
+   "source": "osm"
+  },
+  {
+   "name": "Madhopatti",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2291966,
+   "lon": 85.8331722,
+   "source": "osm"
+  },
+  {
+   "name": "Yogiara",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.4321888,
+   "lon": 85.7402229,
+   "source": "osm"
+  },
+  {
+   "name": "Garri",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.396944,
+   "lon": 85.759052,
+   "source": "osm"
+  },
+  {
+   "name": "Nanaura",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2366309,
+   "lon": 85.9044009,
+   "source": "osm"
+  },
+  {
+   "name": "Maknahi",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2004506,
+   "lon": 85.8407736,
+   "source": "osm"
+  },
+  {
+   "name": "Brahmpur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.8826239,
+   "lon": 86.2466669,
+   "source": "osm"
+  },
+  {
+   "name": "Asho",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.8742837,
+   "lon": 86.244564,
+   "source": "osm"
+  },
+  {
+   "name": "Uchchatti",
+   "aliases": [],
+   "kind": "village",
+   "lat": 25.9195732,
+   "lon": 86.2544829,
+   "source": "osm"
+  },
+  {
+   "name": "Doghra",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.3575018,
+   "lon": 85.7283086,
+   "source": "osm"
+  },
+  {
+   "name": "Latraha",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.3655336,
+   "lon": 85.7220107,
+   "source": "osm"
+  },
+  {
+   "name": "Thengha",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.1347408,
+   "lon": 86.315546,
+   "source": "osm"
+  },
+  {
+   "name": "Pohaddi",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0381649,
+   "lon": 86.1622578,
+   "source": "osm"
+  },
+  {
+   "name": "Mahinam",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.0214627,
+   "lon": 86.1658144,
+   "source": "osm"
+  },
+  {
+   "name": "Chhotaipatti",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2317452,
+   "lon": 85.9910895,
+   "source": "osm"
+  },
+  {
+   "name": "Loam",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2149341,
+   "lon": 85.9962931,
+   "source": "osm"
+  },
+  {
+   "name": "Mansukh Nagar",
+   "aliases": [],
+   "kind": "neighbourhood",
+   "lat": 26.1186256,
+   "lon": 85.8805755,
+   "source": "osm"
+  },
+  {
+   "name": "Dighiyar",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.2729395,
+   "lon": 85.946543,
+   "source": "osm"
+  },
+  {
+   "name": "Tarsarai",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.1948391,
+   "lon": 86.0120703,
+   "source": "osm"
+  },
+  {
+   "name": "Posanpura",
+   "aliases": [],
+   "kind": "neighbourhood",
+   "lat": 26.1506887,
+   "lon": 85.9161878,
+   "source": "osm"
+  },
+  {
+   "name": "Shastri Nagar",
+   "aliases": [],
+   "kind": "neighbourhood",
+   "lat": 26.1478675,
+   "lon": 85.9105841,
+   "source": "osm"
+  },
+  {
+   "name": "Vaidehi Nagar",
+   "aliases": [],
+   "kind": "neighbourhood",
+   "lat": 26.1523087,
+   "lon": 85.9141826,
+   "source": "osm"
+  },
+  {
+   "name": "Brahma Sthan",
+   "aliases": [],
+   "kind": "neighbourhood",
+   "lat": 26.1735147,
+   "lon": 85.9474997,
+   "source": "osm"
+  },
+  {
+   "name": "Badhiyapur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.1724387,
+   "lon": 85.9422762,
+   "source": "osm"
+  },
+  {
+   "name": "Sara Mohanpur",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.1677063,
+   "lon": 85.9244036,
+   "source": "osm"
+  },
+  {
+   "name": "Baigni",
+   "aliases": [],
+   "kind": "village",
+   "lat": 26.1026945,
+   "lon": 86.1459057,
+   "source": "osm"
+  }
+ ]
+}

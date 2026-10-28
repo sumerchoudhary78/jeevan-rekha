@@ -21,6 +21,14 @@
     .dot.live { background: var(--ok); animation: pulse 1.2s infinite; }
     .dot.speaking { background: var(--brand); }
     .dot.thinking { background: var(--high); animation: pulse 0.8s infinite; }
+    .meter { flex: 0 0 64px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; margin-left: auto; }
+    .meter span { display: block; height: 100%; width: 0; background: var(--ok); transition: width 80ms linear; }
+    .meter.muted span { background: var(--ink-3); }
+    .hints { margin: 14px auto 0; text-align: left; font-size: 13px; color: var(--ink-2); max-width: 340px; }
+    .hints b { color: var(--ink); }
+    .hints ol { margin: 6px 0 0; padding-left: 18px; }
+    .hints li { margin: 4px 0; }
+    .hints .gloss { display: block; color: var(--ink-3); font-size: 12px; }
     @keyframes pulse { 50% { opacity: 0.3; } }
     .chat { flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; max-height: 430px; }
     .empty { margin: auto; text-align: center; color: var(--ink-3); font-size: 14px; padding: 0 20px; }
@@ -63,10 +71,13 @@
           <input id="caller" value="+91 98100 00001">
         </label>
       </div>
-      <div class="status"><span class="dot" id="dot"></span><span id="status">Ready. Press the green button to call.</span></div>
+      <div class="status"><span class="dot" id="dot"></span><span id="status">Ready. Press the green button to call.</span>
+        <span class="meter muted" id="meter" title="Microphone level"><span></span></span></div>
     </div>
     <div class="chat" id="chat">
-      <div class="empty" id="empty">Speak naturally, in Hindi, English, Tamil or Telugu, like a real distress call.<br><br>Use headphones so the agent's voice is not picked up by your mic.</div>
+      <div class="empty" id="empty">Speak naturally, in Hindi, English, Tamil or Telugu, like a real distress call.
+        <b>Speak after the tone:</b> the line is one-way while the agent talks. Use headphones so the agent's voice is not picked up by your mic.
+        <div class="hints" id="hints"></div></div>
     </div>
     <div class="understood" id="understood">
       <h3>What the AI has understood</h3>

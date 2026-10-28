@@ -17,22 +17,27 @@
     ol { color: var(--ink-2); padding-left: 20px; }
     ol li { margin: 6px 0; }
     .note { font-size: 13px; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 32px; }
+    .why { font-size: 14px; color: var(--ink-2); max-width: 680px; border-left: 3px solid var(--line); padding-left: 12px; }
+    .tip { font-size: 14px; color: var(--ink-2); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; }
   </style>
 </head>
 <body>
   <main>
     <div class="brand"><span class="brand-mark">ज</span> Jeevan Rekha</div>
     <h1>When the flood helpline is busy, an AI answers.</h1>
-    <p class="lead">In a flood, disaster helplines are flooded too. Jeevan Rekha takes overflow calls in Hindi, Tamil, Telugu and English, asks only what a rescue boat needs, reads numbers back to avoid fatal mishearings, merges duplicate reports and hands human dispatchers a ranked queue.</p>
+    <p class="lead">In a flood, disaster helplines are flooded too. Jeevan Rekha takes overflow calls in Hindi, Tamil, Telugu and English, asks only what a rescue boat needs, reads numbers back to avoid fatal mishearings, recognises people already reported and hands human dispatchers a ranked queue.</p>
+    <p class="why">In July 2026 Kosi floodwater cut six villages of Kusheshwar Asthan, Darbhanga, off from the mainland; thousands were stranded (<a href="https://www.socialnews.xyz/2026/07/18/bihar-flood-situation-worsens-in-darbhanga-20-villages-inundated">IANS</a>). In Chennai during Cyclone Michaung, residents calling the corporation's flood helpline found no one answering or the lines constantly busy (<a href="https://www.thenewsminute.com/amp/story/tamil-nadu/chennai-floods-helplines-inundated-people-struggle-to-contact-authorities">The News Minute</a>).</p>
     <div class="cards">
-      <a class="card" href="/caller"><h2>📞 Call the helpline</h2><p>Talk to the AI call-taker from your browser, as a person stranded by a flood would.</p></a>
+      <a class="card" href="/caller?lang=en-IN&amp;district=patna"><h2>📞 Call in English</h2><p>Talk to the AI call-taker from your browser as someone stranded in Patna. Sample lines are on the phone screen.</p></a>
+      <a class="card" href="/caller?lang=hi-IN&amp;district=darbhanga"><h2>📞 हिन्दी में कॉल करें</h2><p>Call in Hindi as someone stranded in Darbhanga, with English glosses for the sample lines.</p></a>
       <a class="card" href="/control"><h2>🗺 Control room</h2><p>Watch calls being answered live, cases merging, and the rescue queue reprioritising. Includes a flood-night simulation.</p></a>
     </div>
+    <p class="tip">Try it: open the control room, press <b>Simulate flood night</b>, then call in Hindi from Bahera near the Shiv temple, or in English from Kankarbagh near the Hanuman temple. Both groups are already reported, so the AI asks whether you are with them. Use Chrome and headphones, and speak after the tone.</p>
     <h2 style="font-size:18px">How it works</h2>
     <ol>
       <li>Caller audio streams to <b>Muse Voice Transcribe</b>, biased with the district's village and landmark names, which is what makes noisy phone audio usable.</li>
       <li><b>Muse Spark</b> runs the conversation: one question at a time, in the caller's language, until location, confirmed headcount and vulnerable people are known.</li>
-      <li>Each report becomes a case. Muse Spark judges whether it duplicates an open case nearby (same people, same building) and merges it, never lowering urgency or headcount.</li>
+      <li>While the caller is on the line, the agent checks the live case board: if a group at the same place (or this phone number) is already reported, it asks once whether the caller is with them and joins the call to that case only on a yes. Recorded calls, which cannot be asked, go to a Muse Spark duplicate judge. Merges never lower urgency or headcount.</li>
       <li>Cases are ranked by urgency, vulnerable people, headcount and waiting time. Humans assign boats; the AI never refuses or deprioritises anyone.</li>
     </ol>
     <p class="note">Built for the Meta Global AI Developer Hackathon 2026. Demo data only: scripted calls, synthetic voices, no real helpline is connected.</p>

@@ -69,6 +69,8 @@ function caseCard(c) {
     <div class="badges">
       ${vulnerable}
       ${c.reports.length > 1 ? `<span class="badge b-ok">${c.reports.length} calls merged</span>` : ''}
+      ${c.reports.some((r) => r.joinedByCaller) ? '<span class="badge b-ok" title="A caller confirmed on the line that they are part of this group">caller confirmed same group</span>' : ''}
+      ${c.notDuplicateOf?.length ? `<span class="badge b-neutral" title="The caller said they are not part of these groups">caller: not ${esc(c.notDuplicateOf.join(', '))}</span>` : ''}
       ${c.needsCallback ? '<span class="badge u-high">needs callback: details missing</span>' : ''}
       ${c.possibleDuplicateOf ? `<span class="badge u-medium" title="A human should check">possible duplicate of ${esc(c.possibleDuplicateOf)}</span>` : ''}
       ${c.assignedTeam ? `<span class="badge b-ok">${esc(c.assignedTeam)}</span>` : ''}
@@ -106,7 +108,7 @@ function drawPhoto(canvas, c) {
   let img = photoCache.get(key);
   if (!img) {
     img = new Image();
-    img.src = `/api/cases/${c.id}/photo?t=${c.photoEvidence.at}`;
+    img.src = `/api/cases/${c.photoEvidence.caseId ?? c.id}/photo?t=${c.photoEvidence.at}`; // a joined case keeps the image where it was sent
     photoCache.set(key, img);
   }
   const paint = () => {

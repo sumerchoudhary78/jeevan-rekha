@@ -1,8 +1,32 @@
 const $ = (id) => document.getElementById(id);
+const esc = (s = '') => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const FRAME_SAMPLES = 1920; // 80 ms at 24 kHz
+
+// Lines to try, per language, with an English gloss for people who don't speak it.
+const HINTS = {
+  'en-IN': [
+    ['Hello, I am in Kankarbagh sector three in Patna, near the Hanuman temple. The water is rising.'],
+    ['We are four people. My father is eighty and cannot walk.'],
+    ['The water is up to the windows now.'],
+  ],
+  'hi-IN': [
+    ['हम दरभंगा के बहेड़ा गांव में फंसे हैं, शिव मंदिर के पीछे।', 'We are stuck in Bahera village, Darbhanga, behind the Shiv temple.'],
+    ['हम तीस लोग हैं।', 'We are thirty people. Listen for the digit-by-digit read-back.'],
+    ['पानी खिड़की तक है।', 'The water is up to the window.'],
+  ],
+  'ta-IN': [
+    ['சென்னை வேளச்சேரி, விஜயநகர், பிள்ளையார் கோவில் அருகில்.', 'Velachery, Vijayanagar, Chennai, near the Pillaiyar temple.'],
+    ['நாங்கள் நான்கு பேர்.', 'We are four people.'],
+  ],
+  'te-IN': [
+    ['విజయవాడ సింగ్ నగర్, డాబా గార్డెన్స్ దగ్గర.', 'Singh Nagar, Vijayawada, near Dabha Gardens.'],
+    ['మా ఇంట్లో ఆరుగురు ఉన్నాం.', 'There are six of us at home.'],
+  ],
+};
 
 let ws, audioCtx, micStream, workletNode;
 let agentSpeaking = false;
+let level = 0; // microphone level, for the meter
 let pending = new Float32Array(0);
 let partialEl = null;
 let callComplete = false;
@@ -10,6 +34,18 @@ let caseId = null;
 
 const config = await fetch('/api/config').then((r) => r.json());
 for (const d of config.districts) $('district').append(new Option(`${d.name}, ${d.state}`, d.key));
+// Each page load is a new caller; calling again from the same page is a repeat caller.
+const digits = (n) => String(Math.floor(Math.random() * 10 ** n)).padStart(n, '0');
+$('caller').value = `+91 98${digits(3)} ${digits(5)}`;
+
+function renderHints() {
+  if (!$('hints')) return; // cleared once a call has started
+  const lines = HINTS[$('lang').value] ?? [];
+  $('hints').innerHTML = lines.length
+    ? `<b>Try saying</b><ol>${lines.map(([t, gloss]) => `<li>${esc(t)}${gloss ? `<span class="gloss">${esc(gloss)}</span>` : ''}</li>`).join('')}</ol>`
+    : '';
+}
+$('lang').onchange = renderHints;
 
 function setStatus(text, state = '') {
   $('status').textContent = text;
@@ -49,6 +85,26 @@ function pickVoice(lang) {
   return voices.find((v) => v.lang === lang) ?? voices.find((v) => v.lang.startsWith(lang.slice(0, 2)));
 }
 
+// A short tone when the agent has finished: the line is one-way while it talks, so this is
+// the caller's cue to speak.
+function tone() {
+  return new Promise((resolve) => {
+    if (!audioCtx) return resolve();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    const t = audioCtx.currentTime;
+    osc.frequency.value = 880;
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(0.2, t + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.18);
+    osc.connect(gain).connect(audioCtx.destination);
+    osc.onended = resolve;
+    setTimeout(resolve, 400); // a suspended AudioContext never ends the tone
+    osc.start(t);
+    osc.stop(t + 0.2);
+  });
+}
+
 function speak(text, lang) {
   return new Promise((resolve) => {
     const u = new SpeechSynthesisUtterance(text);
@@ -57,22 +113,47 @@ function speak(text, lang) {
     if (voice) u.voice = voice;
     u.rate = 1.0;
     agentSpeaking = true;
-    setStatus('Agent speaking…', 'speaking');
-    const finish = () => {
+    setStatus('Agent speaking · wait for the tone', 'speaking');
+    let done = false;
+    const finish = async () => {
+      if (done) return;
+      done = true;
+      clearTimeout(stuck);
+      if (!callComplete) {
+        await tone();
+        await new Promise((r) => setTimeout(r, 150)); // let the tone die away before the mic opens
+      }
       agentSpeaking = false;
-      if (!callComplete) setStatus('Listening… speak now', 'live');
+      if (!callComplete) setStatus('Your turn · speak now', 'live');
       resolve();
     };
+    // Chrome sometimes never fires onend; never leave the caller's mic closed.
+    const stuck = setTimeout(() => {
+      speechSynthesis.cancel();
+      finish();
+    }, 4000 + text.length * 120);
     u.onend = finish;
     u.onerror = finish;
     speechSynthesis.speak(u);
   });
 }
 
+function drawMeter() {
+  if (!ws) return;
+  const bar = $('meter').firstElementChild;
+  bar.style.width = `${Math.min(100, level * 600)}%`;
+  $('meter').classList.toggle('muted', agentSpeaking);
+  level *= 0.8;
+  requestAnimationFrame(drawMeter);
+}
+
 // Mic samples arrive in small blocks; send fixed 80 ms PCM16 frames.
 // While the agent talks, send silence so its own voice is not transcribed
 // and the stream keeps its real-time pace.
 function onSamples(samples) {
+  let sum = 0;
+  for (const s of samples) sum += s * s;
+  level = Math.max(level, Math.sqrt(sum / samples.length));
   const merged = new Float32Array(pending.length + samples.length);
   merged.set(pending);
   merged.set(samples, pending.length);
@@ -139,6 +220,7 @@ async function startCall() {
     }
   };
   ws.onclose = () => endCall();
+  requestAnimationFrame(drawMeter);
   $('settings').querySelectorAll('select,input').forEach((el) => (el.disabled = true));
   $('callBtn').className = 'call-btn end';
   $('callBtn').textContent = '✕';
@@ -153,6 +235,8 @@ function endCall() {
   audioCtx = null;
   speechSynthesis.cancel();
   agentSpeaking = false;
+  $('meter').firstElementChild.style.width = '0';
+  $('meter').classList.add('muted');
   $('settings').querySelectorAll('select,input').forEach((el) => (el.disabled = false));
   $('callBtn').className = 'call-btn start';
   $('callBtn').textContent = '✆';
@@ -194,4 +278,5 @@ speechSynthesis.getVoices();
 const query = new URLSearchParams(location.search);
 if (query.has('lang')) $('lang').value = query.get('lang');
 if (query.has('district')) $('district').value = query.get('district');
+renderHints();
 if (query.get('autocall') === '1') startCall().catch((err) => setStatus(`Could not start: ${err.message}`));
