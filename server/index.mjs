@@ -14,6 +14,7 @@ import { gazetteer } from '../lib/gazetteer.mjs';
 import { applyPhotoEvidence } from '../lib/intake.mjs';
 import { modelsInUse } from '../lib/meta.mjs';
 import { analysePhoto } from '../lib/photo.mjs';
+import { speechConfig, synthesiseSpeech } from '../lib/speech.mjs';
 import { CaseStore } from '../lib/store.mjs';
 import { runSurge } from '../lib/surge.mjs';
 
@@ -24,6 +25,7 @@ const bus = new EventEmitter();
 const sseClients = new Set();
 const photos = new Map(); // caseId -> { mime, bytes } of the latest photo (demo: kept in memory)
 let surgeRunning = false;
+let speechRequests = 0;
 const stats = { callsAnswered: 0, merged: 0 };
 bus.on('call', (e) => {
   if (e.type === 'started') stats.callsAnswered++;
@@ -49,10 +51,20 @@ const json = (res, status, body) => {
   res.end(JSON.stringify(body));
 };
 
-async function readJson(req) {
-  let body = '';
-  for await (const chunk of req) body += chunk;
-  return body ? JSON.parse(body) : {};
+async function readJson(req, maxBytes = Infinity) {
+  const chunks = [];
+  let bytes = 0;
+  for await (const chunk of req) {
+    bytes += chunk.length;
+    if (bytes > maxBytes) throw Object.assign(new Error('Request body is too large.'), { status: 413 });
+    chunks.push(chunk);
+  }
+  const body = Buffer.concat(chunks).toString('utf8');
+  try {
+    return body ? JSON.parse(body) : {};
+  } catch {
+    throw Object.assign(new Error('Expected a JSON request body.'), { status: 400 });
+  }
 }
 
 async function handleApi(req, res, url) {
@@ -65,7 +77,27 @@ async function handleApi(req, res, url) {
   }
   if (url.pathname === '/api/config') {
     const districts = Object.entries(gazetteer).map(([key, d]) => ({ key, name: d.places.find((p) => p.kind === 'district').name, state: d.state, center: d.center }));
-    return json(res, 200, { districts, models: modelsInUse() });
+    return json(res, 200, { districts, models: modelsInUse(), speech: speechConfig() });
+  }
+  if (url.pathname === '/api/speech' && req.method === 'POST') {
+    res.setHeader('Cache-Control', 'no-store');
+    if (speechRequests >= 4) return json(res, 429, { error: 'Voice service is busy. Please try again shortly.' });
+    const controller = new AbortController();
+    const cancel = () => controller.abort();
+    res.on('close', cancel);
+    speechRequests++;
+    try {
+      const body = await readJson(req, 16 * 1024);
+      const audio = await synthesiseSpeech(body, { signal: controller.signal });
+      if (!res.destroyed) {
+        res.writeHead(200, { 'Content-Type': 'audio/mpeg', 'Content-Length': audio.length });
+        res.end(audio);
+      }
+    } finally {
+      speechRequests--;
+      res.off('close', cancel);
+    }
+    return;
   }
   if (url.pathname === '/api/cases' && req.method === 'GET') {
     return json(res, 200, store.list({ includeClosed: url.searchParams.has('all') }));
@@ -142,7 +174,9 @@ const server = createServer((req, res) => {
     res.setHeader('Set-Cookie', `jr_access=${PASSCODE}; Path=/; HttpOnly; SameSite=Lax; Max-Age=2592000`);
   }
   if (url.pathname.startsWith('/api/')) {
-    handleApi(req, res, url).catch((err) => json(res, 500, { error: err.message }));
+    handleApi(req, res, url).catch((err) => {
+      if (!res.destroyed) json(res, err.status ?? 500, { error: err.message });
+    });
   } else {
     serveStatic(res, url.pathname);
   }
@@ -164,8 +198,15 @@ server.on('upgrade', (req, socket, head) => {
     });
     ws.on('message', (data, isBinary) => {
       if (isBinary) return session.audio(data);
-      const msg = JSON.parse(data.toString());
-      if (msg.type === 'hangup') ws.close();
+      try {
+        const msg = JSON.parse(data.toString());
+        if (msg?.type === 'hangup') ws.close();
+        if (msg?.type === 'location' && !session.setLocation(msg.position)) {
+          send({ type: 'error', code: 'location', message: 'Location could not be used. Tell the agent the rescue address.' });
+        }
+      } catch {
+        send({ type: 'error', message: 'Invalid call message.' });
+      }
     });
     ws.on('close', () => session.end());
   });
@@ -175,4 +216,4 @@ if (!process.env.MODEL_API_KEY) {
   console.error('MODEL_API_KEY is not set. Copy .env.example to .env and run with: npm start');
   process.exit(1);
 }
-server.listen(PORT, () => console.log(`Jeevan Rekha on http://localhost:${PORT}  (caller: /caller, control room: /control)`));
+server.listen(PORT, () => console.log(`Jeevan Rekha on http://localhost:${server.address().port}  (caller: /caller, control room: /control)`));

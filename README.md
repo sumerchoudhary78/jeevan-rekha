@@ -146,6 +146,12 @@ npm start                   # http://localhost:8787
 - `/caller`: the browser phone. Use headphones so the agent's voice isn't picked up by the mic, and speak after the tone.
 - `/control`: the control room. **Simulate flood night** replays the 24-call surge.
 
+Location is picked from the caller's device when a call starts (browser permission
+required). The caller can turn **Use my location for this rescue** off when reporting
+for someone elsewhere. Each case has a map link; selecting a case card or marker
+highlights that case and shows its location and device accuracy. Selection stays
+in place as the queue updates. See [location and case-map behavior](docs/LOCATION.md).
+
 Evaluations and tools:
 
 ```sh
@@ -168,12 +174,18 @@ Deploy (Modal, CPU only): `modal secret create jeevan-rekha-meta MODEL_API_KEY=�
 
 Models: `LLM_BASE_URL` / `LLM_MODEL` / `LLM_API_KEY` choose the triage model (default in `.env.example`: Muse Spark Open on Baseten); `AGENT_LLM_*` choose the live conversation model (hosted Muse Spark). The control room header shows which model serves each role.
 
+Agent voice: add `ELEVENLABS_API_KEY` to `.env` to enable ElevenLabs spoken replies.
+`ELEVENLABS_MODEL_ID` (default `eleven_v3`) and `ELEVENLABS_VOICE_ID` (default stock
+George) are optional. Without a key, or after a voice-service error, the caller uses
+the device voice. Restart the server and reload `/caller` after changing settings.
+See [voice setup and deployment](docs/VOICE.md).
+
 ## Architecture
 
 ```
 browser phone ──24 kHz PCM16──▶ /ws/call ──▶ CallSession
                                               │  Muse Voice Transcribe (realtime, keyword + language biasing)
-                                              │  Muse Spark call-taker turn  ──▶ spoken reply (browser TTS)
+                                              │  Muse Spark call-taker turn  ──▶ ElevenLabs speech (device fallback)
                                               ▼
                                               │  place check + case board notes ◀── case store
 recorded calls ──▶ transcribe ──▶ extract ──▶ intake: gazetteer geocoding ▸ duplicate judge ▸ merge / open
@@ -187,12 +199,15 @@ caller photo ──▶ SAM 3.1 + Muse Spark ──────▶ photo evidence
 | `lib/asr-realtime.mjs` | Realtime Muse Voice Transcribe client |
 | `lib/agent.mjs` | Call-taker policy and turn schema |
 | `lib/call-session.mjs` | One live call: audio in, agent turns out, case updates |
+| `lib/location.mjs` | Device-coordinate validation and rescue-location policy |
 | `lib/intake.mjs` | Duplicate judgement, merging, photo evidence |
 | `lib/gazetteer.mjs` | Keyword lists, place resolution, and the sound-key matcher (`suggestPlaces`) across Latin and Devanagari |
 | `lib/place-check.mjs` | Per-call place confirmation: what to tell the agent, one read-back per place, when a place counts as confirmed |
 | `lib/case-board.mjs` | Per-call case board: open cases at the caller's place or from their number, what to tell the agent, when a "yes" joins the call to a case |
 | `lib/store.mjs` | Case store and priority |
 | `lib/photo.mjs` | SAM 3.1 person segmentation and scene assessment |
+| `lib/speech.mjs` | Server-side ElevenLabs speech generation |
+| `public/speech.js` | Reply playback, cancellation and device-voice fallback |
 | `lib/surge.mjs` | Flood-night replay |
 | `server/index.mjs` | HTTP, SSE and WebSocket server |
 | `public/` | Caller phone, control room, landing page |
@@ -202,9 +217,9 @@ caller photo ──▶ SAM 3.1 + Muse Spark ──────▶ photo evidence
 
 - Demo only: no real helpline is connected; telephony (Exotel/Twilio) would replace the browser phone.
 - Muse Voice Transcribe covers Hindi, Bengali, Marathi, Tamil, Telugu, Kannada and English among Indian languages; not Malayalam, Assamese or Odia yet. Kerala and Assam, two of the states hit hardest by floods, are out of reach until it does.
-- Spoken replies use the browser's speech synthesis; Meta's API has no text-to-speech model.
+- ElevenLabs spoken replies require a separate API key and add a synthesis round trip. Device voices are used when the key is absent or generation fails; their language coverage depends on the browser and installed voices.
 - The browser phone is half-duplex: while the agent speaks it sends silence (so it never transcribes itself), so a caller who talks over the agent is not heard and the agent asks again. A tone marks when the line is open. Tested end to end through a real microphone (speech played from laptop speakers); no human caller has been tested yet.
-- The live demo's gazetteer covers 7 districts (41 places); three places resolve only to their district centre and are marked approximate. The district-scale list is measured for Darbhanga only and is not used live.
+- Spoken-place geocoding covers 7 districts (41 places); three places resolve only to their district centre and are marked approximate. Shared device coordinates can place a caller outside that list. The district-scale list is measured for Darbhanga only and is not used live.
 - Keyword biasing is capped at 500 keywords, fewer than one district's village names (918 in Darbhanga), and it can substitute a listed name for an unlisted village (see Results). Biasing per block, once the caller's block is known, is not built.
 - Census names are in Latin script only, so Hindi transcripts match them by sound, never by exact spelling; short names (two consonants, such as *Konia* or *Dhoi*) can only match exactly. Sound matching handles Latin and Devanagari; Tamil and Telugu place names are matched by spelling only.
 - The case board matches by gazetteer place, distance and phone number. Two different groups with the same landmark in the same village depend on the caller's answer.

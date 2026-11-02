@@ -49,7 +49,7 @@ https://sumerchoudhary78--jeevan-rekha-web.us-east.modal.run/?code=PASSCODE (pas
 
 ## Built with
 
-Node.js, WebSockets, node:sqlite, Leaflet + OpenStreetMap, Web Audio (AudioWorklet), browser speech synthesis.
+Node.js, WebSockets, node:sqlite, Leaflet + OpenStreetMap, Web Audio (AudioWorklet), ElevenLabs speech with device-voice fallback (requires the optional ElevenLabs key on the demo server).
 
 ---
 

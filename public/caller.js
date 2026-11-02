@@ -1,3 +1,6 @@
+import { SpeechPlayer } from './speech.js';
+import { locateDevice } from './location.js';
+
 const $ = (id) => document.getElementById(id);
 const esc = (s = '') => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const FRAME_SAMPLES = 1920; // 80 ms at 24 kHz
@@ -25,6 +28,9 @@ const HINTS = {
 };
 
 let ws, audioCtx, micStream, workletNode;
+let speechPlayer;
+let endCallTimer;
+let locationController;
 let agentSpeaking = false;
 let level = 0; // microphone level, for the meter
 let pending = new Float32Array(0);
@@ -76,13 +82,18 @@ function showRecord(record, caseId) {
     ['Water', record.water_level.replaceAll('_', ' ')],
     ['Urgency', `<span class="badge u-${record.urgency}">${record.urgency}</span>`],
   ];
-  $('record').innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
+  $('record').innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${k === 'Urgency' ? v : esc(v)}</dd>`).join('');
   $('understood').classList.add('show');
 }
 
-function pickVoice(lang) {
-  const voices = speechSynthesis.getVoices();
-  return voices.find((v) => v.lang === lang) ?? voices.find((v) => v.lang.startsWith(lang.slice(0, 2)));
+function showCaseOnMap(message) {
+  if (!message.caseId) return;
+  caseId = message.caseId;
+  $('photoBtn').disabled = false;
+  $('caseMap').href = `/control?case=${encodeURIComponent(caseId)}`;
+  $('caseMap').textContent = `View case ${caseId} on the map ↗`;
+  $('caseMap').classList.add('show');
+  $('understood').classList.add('show');
 }
 
 // A short tone when the agent has finished: the line is one-way while it talks, so this is
@@ -102,39 +113,6 @@ function tone() {
     setTimeout(resolve, 400); // a suspended AudioContext never ends the tone
     osc.start(t);
     osc.stop(t + 0.2);
-  });
-}
-
-function speak(text, lang) {
-  return new Promise((resolve) => {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang;
-    const voice = pickVoice(lang);
-    if (voice) u.voice = voice;
-    u.rate = 1.0;
-    agentSpeaking = true;
-    setStatus('Agent speaking · wait for the tone', 'speaking');
-    let done = false;
-    const finish = async () => {
-      if (done) return;
-      done = true;
-      clearTimeout(stuck);
-      if (!callComplete) {
-        await tone();
-        await new Promise((r) => setTimeout(r, 150)); // let the tone die away before the mic opens
-      }
-      agentSpeaking = false;
-      if (!callComplete) setStatus('Your turn · speak now', 'live');
-      resolve();
-    };
-    // Chrome sometimes never fires onend; never leave the caller's mic closed.
-    const stuck = setTimeout(() => {
-      speechSynthesis.cancel();
-      finish();
-    }, 4000 + text.length * 120);
-    u.onend = finish;
-    u.onerror = finish;
-    speechSynthesis.speak(u);
   });
 }
 
@@ -173,26 +151,61 @@ function onSamples(samples) {
 }
 
 async function startCall() {
+  clearTimeout(endCallTimer);
   callComplete = false;
+  agentSpeaking = true;
+  pending = new Float32Array(0);
+  partialEl = null;
   caseId = null;
+  $('callBtn').disabled = true;
   $('photoBtn').disabled = true;
   $('done').classList.remove('show');
   $('chat').innerHTML = '';
   $('understood').classList.remove('show');
+  $('caseMap').classList.remove('show');
   setStatus('Connecting…', 'thinking');
 
-  micStream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } });
+  const microphone = navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } });
+  locationController = new AbortController();
+  const locationSignal = locationController.signal;
+  const sharing = $('shareLocation').checked;
+  $('locationStatus').textContent = sharing ? 'Finding your location… You can continue speaking.' : 'Rescue is elsewhere. Tell the agent its address.';
+  const locationTask = sharing ? locateDevice({ signal: locationSignal }).then(
+    (position) => ({ position }), (error) => ({ error }),
+  ) : Promise.resolve({});
+  micStream = await microphone;
   audioCtx = new AudioContext({ sampleRate: 24000 });
+  await audioCtx.resume();
+  speechPlayer = new SpeechPlayer({
+    audioContext: audioCtx,
+    provider: config.speech?.provider,
+    onFallback: () => bubble('agent', 'Voice service unavailable. Continuing with the device voice.'),
+  });
   await audioCtx.audioWorklet.addModule('/pcm-worklet.js');
   workletNode = new AudioWorkletNode(audioCtx, 'pcm-capture');
   workletNode.port.onmessage = (e) => onSamples(e.data);
   audioCtx.createMediaStreamSource(micStream).connect(workletNode);
 
   const params = new URLSearchParams({ lang: $('lang').value, district: $('district').value, caller: $('caller').value });
-  ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws/call?${params}`);
-  ws.binaryType = 'arraybuffer';
-  ws.onmessage = async (e) => {
+  const socket = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws/call?${params}`);
+  ws = socket;
+  socket.onopen = async () => {
+    const { position, error } = await locationTask;
+    if (ws !== socket || locationSignal.aborted) return;
+    if (error) $('locationStatus').textContent = error.message;
+    if (position && socket.readyState === WebSocket.OPEN) {
+      socket.send(JSON.stringify({ type: 'location', position }));
+      $('locationStatus').textContent = `Location shared · accurate to about ${Math.ceil(position.accuracy)} m. Tell the agent if rescue is somewhere else.`;
+    }
+  };
+  let replies = Promise.resolve();
+  let pendingReplies = 0;
+  socket.binaryType = 'arraybuffer';
+  socket.onmessage = (e) => {
+    if (ws !== socket) return;
     const msg = JSON.parse(e.data);
+    showCaseOnMap(msg);
+    if (msg.record?.rescue_at_device === 'no') $('locationStatus').textContent = 'Using the rescue address you reported; your device is elsewhere.';
     if (msg.type === 'partial') {
       if (!partialEl) partialEl = bubble('caller', '', 'partial');
       partialEl.lastChild.textContent = msg.text;
@@ -202,44 +215,65 @@ async function startCall() {
       bubble('caller', msg.text);
       setStatus('Thinking…', 'thinking');
     } else if (msg.type === 'agent') {
-      if (msg.caseId) {
-        caseId = msg.caseId;
-        $('photoBtn').disabled = false;
-      }
-      bubble('agent', msg.text);
-      showRecord(msg.record, msg.caseId);
-      if (msg.complete) callComplete = true;
-      await speak(msg.text, msg.lang);
-      if (msg.complete) {
-        $('done').textContent = `Case ${msg.caseId ?? ''} is with the rescue control room.`;
-        $('done').classList.add('show');
-        setTimeout(endCall, 800);
-      }
+      pendingReplies++;
+      agentSpeaking = true; // also mute during synthesis and between queued replies
+      replies = replies.then(async () => {
+        if (ws !== socket) return;
+        bubble('agent', msg.text);
+        showRecord(msg.record, msg.caseId);
+        if (msg.complete) callComplete = true;
+        setStatus('Agent speaking · wait for the tone', 'speaking');
+        try {
+          await speechPlayer.speak(msg.text, msg.lang);
+        } catch (error) {
+          if (ws === socket) bubble('agent', error.message);
+        }
+        if (ws !== socket) return;
+        if (msg.complete) {
+          $('done').textContent = `Case ${msg.caseId ?? ''} is with the rescue control room.`;
+          $('done').classList.add('show');
+          endCallTimer = setTimeout(() => { if (ws === socket) endCall(); }, 800);
+        } else if (pendingReplies === 1) {
+          await tone();
+          await new Promise((r) => setTimeout(r, 150)); // let the tone die away before the mic opens
+          if (ws === socket && pendingReplies === 1) {
+            agentSpeaking = false;
+            setStatus('Your turn · speak now', 'live');
+          }
+        }
+      }).finally(() => { pendingReplies--; });
     } else if (msg.type === 'error') {
+      if (msg.code === 'location') $('locationStatus').textContent = msg.message;
       bubble('agent', `⚠ ${msg.message}`);
     }
   };
-  ws.onclose = () => endCall();
+  socket.onclose = () => { if (ws === socket) endCall(); };
   requestAnimationFrame(drawMeter);
   $('settings').querySelectorAll('select,input').forEach((el) => (el.disabled = true));
   $('callBtn').className = 'call-btn end';
   $('callBtn').textContent = '✕';
+  $('callBtn').disabled = false;
 }
 
 function endCall() {
-  if (ws?.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ type: 'hangup' }));
-  ws?.close();
+  clearTimeout(endCallTimer);
+  locationController?.abort();
+  speechPlayer?.cancel();
+  speechPlayer = null;
+  const socket = ws;
   ws = null;
+  if (socket?.readyState === WebSocket.OPEN) socket.send(JSON.stringify({ type: 'hangup' }));
+  socket?.close();
   micStream?.getTracks().forEach((t) => t.stop());
   audioCtx?.close();
   audioCtx = null;
-  speechSynthesis.cancel();
   agentSpeaking = false;
   $('meter').firstElementChild.style.width = '0';
   $('meter').classList.add('muted');
   $('settings').querySelectorAll('select,input').forEach((el) => (el.disabled = false));
   $('callBtn').className = 'call-btn start';
   $('callBtn').textContent = '✆';
+  $('callBtn').disabled = false;
   if (!callComplete) setStatus('Call ended.');
   else setStatus('Call complete. Help is being coordinated.');
 }
@@ -271,12 +305,16 @@ $('photoInput').onchange = async () => {
     'The rescue team can see it.';
 };
 
-$('callBtn').onclick = () => (ws ? endCall() : startCall().catch((err) => { setStatus(`Could not start: ${err.message}`); endCall(); }));
-speechSynthesis.getVoices();
+function couldNotStart(error) {
+  endCall();
+  setStatus(`Could not start: ${error.message}`);
+}
+$('callBtn').onclick = () => (ws ? endCall() : startCall().catch(couldNotStart));
+globalThis.speechSynthesis?.getVoices();
 
 // Kiosk / test mode: /caller?autocall=1&lang=hi-IN&district=darbhanga starts the call on load.
 const query = new URLSearchParams(location.search);
 if (query.has('lang')) $('lang').value = query.get('lang');
 if (query.has('district')) $('district').value = query.get('district');
 renderHints();
-if (query.get('autocall') === '1') startCall().catch((err) => setStatus(`Could not start: ${err.message}`));
+if (query.get('autocall') === '1') startCall().catch(couldNotStart);

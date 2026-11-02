@@ -22,6 +22,12 @@
     .col h2 { margin: 0; padding: 12px 16px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; }
     .scroll { overflow-y: auto; flex: 1; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
     #map { height: 100%; width: 100%; }
+    #mapCol { position: relative; }
+    .map-selection { position: absolute; top: 12px; left: 56px; right: 12px; z-index: 500; padding: 10px 12px;
+      border: 1px solid var(--line); border-radius: 10px; background: var(--panel); box-shadow: var(--shadow); font-size: 13px; pointer-events: none; }
+    .map-selection strong { display: block; }
+    .map-selection span { display: block; color: var(--ink-2); font-size: 12px; }
+    .case-map-link { margin-top: 8px; padding: 3px 0; border: 0; background: transparent; color: var(--brand); font-size: 12px; text-decoration: underline; }
     .call { border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--panel-2); font-size: 13px; }
     .call.live { border-color: var(--brand); }
     .call .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 6px; }
@@ -36,6 +42,8 @@
     .case.high { border-left-color: var(--high); }
     .case.medium { border-left-color: var(--medium); }
     .case.assigned { opacity: 0.65; }
+    .case.selected { outline: 2px solid var(--brand); outline-offset: 1px; background: var(--agent); opacity: 1; }
+    .case:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
     .case.flash { animation: flash 1.2s; }
     @keyframes flash { from { background: var(--agent); } }
     .case .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
@@ -81,7 +89,9 @@
       <h2>AI call-takers <span id="liveLabel"></span></h2>
       <div class="scroll" id="calls"><div class="empty">Overflow calls appear here as the AI answers them.</div></div>
     </section>
-    <section class="col" id="mapCol"><div id="map"></div></section>
+    <section class="col" id="mapCol"><div id="map"></div>
+      <div class="map-selection" id="mapSelection" role="status"><strong>Select a rescue case</strong><span>Pick a case card or map marker to see its location.</span></div>
+    </section>
     <section class="col">
       <h2>Rescue queue <span>by priority</span></h2>
       <div class="scroll" id="queue"><div class="empty">No open cases.</div></div>

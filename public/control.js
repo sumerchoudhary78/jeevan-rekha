@@ -10,6 +10,10 @@ const markers = new Map();
 let mergedCount = 0;
 let callsAnswered = 0;
 let fitted = false;
+let selectedCaseId = null;
+const requestedCase = new URLSearchParams(location.search).get('case');
+let pendingCaseId = /^JR-\d+$/.test(requestedCase ?? '') ? requestedCase : null;
+let accuracyCircle = null;
 
 const map = L.map('map', { zoomControl: true }).setView([25.9, 85.6], 7);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -22,6 +26,47 @@ const waited = (c) => {
   return min < 1 ? 'just now' : `${min} min waiting`;
 };
 const people = (c) => (c.headcountMax ? (c.headcountMin === c.headcountMax ? c.headcountMax : `${c.headcountMin}–${c.headcountMax}`) : '?');
+const locationLabel = (c) => c.locationSource === 'device'
+  ? `Device location · accuracy about ${Math.ceil(c.locationAccuracy ?? 0)} m`
+  : 'Location reported by caller';
+
+function renderSelection() {
+  accuracyCircle?.remove();
+  accuracyCircle = null;
+  const c = cases.get(selectedCaseId);
+  if (!c) {
+    $('mapSelection').innerHTML = '<strong>Select a rescue case</strong><span>Pick a case card or map marker to see its location.</span>';
+    return;
+  }
+  $('mapSelection').innerHTML = `<strong>${esc(c.id)} · ${esc(c.place || c.area || c.landmark || 'Rescue location')}</strong><span>${
+    c.lat == null || c.lon == null ? 'Location still being collected' :
+    `${esc(locationLabel(c))} · ${c.lat.toFixed(5)}, ${c.lon.toFixed(5)}`}</span>`;
+  if (c.locationSource === 'device' && c.lat != null && c.lon != null && Number.isFinite(c.locationAccuracy)) {
+    accuracyCircle = L.circle([c.lat, c.lon], {
+      radius: Math.max(1, c.locationAccuracy), color: '#0f6e5c', fillOpacity: 0.08, weight: 1, interactive: false,
+    }).addTo(map);
+    markers.get(c.id)?.bringToFront();
+  }
+}
+
+function selectCase(id, { scroll = false } = {}) {
+  const c = cases.get(id);
+  if (!c || !['open', 'assigned'].includes(c.status)) return;
+  map.closePopup();
+  selectedCaseId = id;
+  pendingCaseId = null;
+  const url = new URL(location.href);
+  url.searchParams.set('case', id);
+  history.replaceState(null, '', url);
+  renderQueue();
+  const marker = markers.get(id);
+  if (marker) {
+    if (accuracyCircle) map.fitBounds(accuracyCircle.getBounds(), { maxZoom: 16, padding: [35, 35] });
+    else map.setView(marker.getLatLng(), 13);
+    marker.bringToFront().openPopup();
+  }
+  if (scroll) $('queue').querySelector(`[data-id="${id}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
 
 function renderStats() {
   const open = [...cases.values()].filter((c) => c.status === 'open' || c.status === 'assigned');
@@ -34,28 +79,35 @@ function renderStats() {
 
 function renderMarker(c) {
   const existing = markers.get(c.id);
-  if (c.lat == null || c.status === 'rescued' || c.status === 'merged') {
+  if (c.lat == null || c.lon == null || c.status === 'rescued' || c.status === 'merged') {
     existing?.remove();
     markers.delete(c.id);
     return;
   }
-  const radius = 8 + Math.min(c.headcountMax || 1, 60) / 3;
-  const style = { radius, color: COLORS[c.urgency], fillColor: COLORS[c.urgency], fillOpacity: c.status === 'assigned' ? 0.2 : 0.55, weight: 2 };
-  const popup = `<b>${c.id}</b> · ${esc(c.urgency)}<br>${esc(c.place ?? c.area)}${c.landmark ? ` · ${esc(c.landmark)}` : ''}<br>${people(c)} people · ${c.reports.length} report(s)${c.approximate ? '<br><i>approximate location</i>' : ''}`;
+  const selected = c.id === selectedCaseId;
+  const radius = 8 + Math.min(c.headcountMax || 1, 60) / 3 + (selected ? 3 : 0);
+  const style = { radius, color: selected ? '#0f6e5c' : COLORS[c.urgency], fillColor: COLORS[c.urgency], fillOpacity: c.status === 'assigned' ? 0.2 : 0.55, weight: selected ? 4 : 2 };
+  const popup = `<b>${esc(c.id)}</b> · ${esc(c.urgency)}<br>${esc(c.place || c.area || 'Shared rescue location')}${c.landmark ? ` · ${esc(c.landmark)}` : ''}<br>${people(c)} people · ${c.reports.length} report(s)<br>${esc(locationLabel(c))}${c.approximate ? '<br><i>address or position still approximate</i>' : ''}`;
   if (existing) {
+    const previous = existing.getLatLng();
     existing.setLatLng([c.lat, c.lon]).setStyle(style).setRadius(radius).setPopupContent(popup);
+    if (selected && (previous.lat !== c.lat || previous.lng !== c.lon)) map.panTo([c.lat, c.lon]);
   } else {
-    // Spread markers that share a gazetteer point so they stay clickable.
-    const jitter = () => (Math.random() - 0.5) * 0.004;
-    const m = L.circleMarker([c.lat + jitter(), c.lon + jitter()], style).bindPopup(popup).addTo(map);
+    const m = L.circleMarker([c.lat, c.lon], style).bindPopup(popup).bindTooltip(c.id).addTo(map);
+    m.on('click', () => selectCase(c.id, { scroll: true }));
     markers.set(c.id, m);
   }
+  if (selected) markers.get(c.id).bringToFront();
 }
 
 function caseCard(c) {
   const el = document.createElement('div');
-  el.className = `case ${c.urgency} ${c.status}`;
+  el.className = `case ${c.urgency} ${c.status}${c.id === selectedCaseId ? ' selected' : ''}`;
   el.dataset.id = c.id;
+  el.tabIndex = 0;
+  el.setAttribute('role', 'group');
+  el.setAttribute('aria-label', `Rescue case ${c.id}; press Enter to show on map`);
+  if (c.id === selectedCaseId) el.setAttribute('aria-current', 'true');
   const vulnerable = c.vulnerable.map((v) => `<span class="badge b-neutral">${esc(v.replaceAll('_', ' '))}</span>`).join('');
   const transcripts = c.reports.map((r) => `<pre>${esc(r.transcript)}</pre>`).join('');
   el.innerHTML = `
@@ -63,7 +115,7 @@ function caseCard(c) {
       <span><span class="badge u-${c.urgency}">${c.urgency}</span> <span class="tiny">${c.id}</span></span>
       <span class="prio" title="priority score">${c.priority}</span>
     </div>
-    <div class="where">${esc(c.place ?? c.area ?? 'Unknown location')}${c.landmark ? ` · <span class="muted">${esc(c.landmark)}</span>` : ''}</div>
+    <div class="where">${esc(c.place || c.area || (c.locationSource === 'device' ? 'Shared rescue location' : 'Unknown location'))}${c.landmark ? ` · <span class="muted">${esc(c.landmark)}</span>` : ''}</div>
     <div class="facts">${people(c)} people${c.headcountConfirmed ? ' ✓' : ''} · water ${esc(c.waterLevel.replaceAll('_', ' '))} · ${waited(c)}</div>
     <div class="facts">${esc(c.summary)}</div>
     <div class="badges">
@@ -75,6 +127,7 @@ function caseCard(c) {
       ${c.possibleDuplicateOf ? `<span class="badge u-medium" title="A human should check">possible duplicate of ${esc(c.possibleDuplicateOf)}</span>` : ''}
       ${c.assignedTeam ? `<span class="badge b-ok">${esc(c.assignedTeam)}</span>` : ''}
       ${c.approximate ? '<span class="badge b-neutral">approx. location</span>' : ''}
+      ${c.locationSource === 'device' ? `<span class="badge b-ok">device location ±${Math.ceil(c.locationAccuracy ?? 0)} m</span>` : ''}
       ${c.photoEvidence ? `<span class="badge b-ok">📷 SAM 3.1 counted ${c.photoEvidence.samCount}</span>` : ''}
     </div>
     <div class="btns">
@@ -93,10 +146,10 @@ function caseCard(c) {
       return;
     }
     if (e.target.closest('details')) return;
-    if (c.lat != null) {
-      map.setView([c.lat, c.lon], 13);
-      markers.get(c.id)?.openPopup();
-    }
+    selectCase(c.id);
+  };
+  el.onkeydown = (e) => {
+    if (e.target === el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); selectCase(c.id); }
   };
   return el;
 }
@@ -134,12 +187,22 @@ function renderQueue(flashId) {
   const open = [...cases.values()]
     .filter((c) => c.status === 'open' || c.status === 'assigned')
     .sort((a, b) => (a.status === b.status ? b.priority - a.priority : a.status === 'open' ? -1 : 1));
+  if (selectedCaseId && !open.some((c) => c.id === selectedCaseId)) {
+    selectedCaseId = null;
+    map.closePopup();
+    const url = new URL(location.href);
+    url.searchParams.delete('case');
+    history.replaceState(null, '', url);
+  }
   $('queue').replaceChildren(...(open.length ? open.map(caseCard) : [Object.assign(document.createElement('div'), { className: 'empty', textContent: 'No open cases.' })]));
   if (flashId) $('queue').querySelector(`[data-id="${flashId}"]`)?.classList.add('flash');
   for (const c of cases.values()) renderMarker(c);
+  for (const [id, marker] of markers) if (!cases.has(id)) { marker.remove(); markers.delete(id); }
+  renderSelection();
   renderStats();
-  if (!fitted && markers.size) {
-    map.fitBounds(L.featureGroup([...markers.values()]).getBounds().pad(0.3));
+  if (pendingCaseId && open.some((c) => c.id === pendingCaseId)) return selectCase(pendingCaseId, { scroll: true });
+  if (!selectedCaseId && !fitted && markers.size) {
+    map.fitBounds(L.featureGroup([...markers.values()]).getBounds().pad(0.3), { maxZoom: 14 });
     fitted = markers.size > 3;
   }
 }
@@ -150,9 +213,10 @@ function callCard(callId, meta) {
   $('calls').querySelector('.empty')?.remove();
   const el = document.createElement('div');
   el.className = 'call live';
-  el.innerHTML = `<div class="head"><b>${meta.simulated ? 'Recorded call' : 'Live call'} · ${esc(LANG_NAMES[meta.lang] ?? '')}</b><span class="badge b-ok">answering</span></div><div class="lines"></div><div class="outcome"></div>`;
+  el.innerHTML = `<div class="head"><b>${meta.simulated ? 'Recorded call' : 'Live call'} · ${esc(LANG_NAMES[meta.lang] ?? '')}</b><span class="badge b-ok">answering</span></div><div class="lines"></div><div class="outcome"></div><button class="case-map-link" hidden>Show case on map</button>`;
   $('calls').prepend(el);
   call = { el, live: true, partial: null };
+  el.querySelector('.case-map-link').onclick = () => selectCase(call.caseId, { scroll: true });
   calls.set(callId, call);
   callsAnswered++;
   return call;
@@ -173,6 +237,12 @@ function onCallEvent(e) {
   if (e.type === 'started') return callCard(e.callId, e), renderStats();
   const call = calls.get(e.callId) ?? callCard(e.callId, e);
   const outcome = call.el.querySelector('.outcome');
+  if (e.caseId) {
+    call.caseId = e.caseId;
+    const link = call.el.querySelector('.case-map-link');
+    link.hidden = false;
+    link.textContent = `Show ${e.caseId} on map`;
+  }
   switch (e.type) {
     case 'partial': {
       if (!call.partial) {
